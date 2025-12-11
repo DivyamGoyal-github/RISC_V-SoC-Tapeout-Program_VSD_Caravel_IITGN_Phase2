@@ -191,7 +191,6 @@ module user_project_wrapper(...);
 
 # **Running RTL Simulations**
 
-![RTL Simulation](https://source.unsplash.com/featured/?simulation,verilog,rtl)
 
 ### **1. Install simulator**
 
