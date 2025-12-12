@@ -1,0 +1,138 @@
+Information: Building the design 'pc3d01_wrapper'. (HDL-193)
+Error:  Source file for 'pc3d01_wrapper' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
+*** Presto compilation terminated with 1 errors. ***
+Information: Building the design 'pc3b03ed_wrapper'. (HDL-193)
+Error:  Source file for 'pc3b03ed_wrapper' was not analyzed by this release of the compiler; re-analyze it. (ELAB-343)
+*** Presto compilation terminated with 1 errors. ***
+Warning: Unable to resolve reference 'pc3d01_wrapper' in 'chip_io'. (LINK-5)
+Warning: Unable to resolve reference 'pc3b03ed_wrapper' in 'chip_io'. (LINK-5)
+Warning: Unable to resolve reference 'pc3b03ed_wrapper' in 'mprj_io'. (LINK-5)
+Information: Updating design information... (UID-85)
+Information: Timing loop detected. (OPT-150)
+	chip_core/housekeeping/U350/I chip_core/housekeeping/U350/Z chip_core/housekeeping/U256/I chip_core/housekeeping/U256/Z chip_core/housekeeping/wbbd_sck_reg/CP chip_core/housekeeping/wbbd_sck_reg/QN chip_core/housekeeping/U3165/I chip_core/housekeeping/U3165/ZN chip_core/housekeeping/U3160/I0 chip_core/housekeeping/U3160/Z chip_core/housekeeping/U371/I chip_core/housekeeping/U371/Z chip_core/housekeeping/U361/I chip_core/housekeeping/U361/Z chip_core/housekeeping/U289/I chip_core/housekeeping/U289/Z chip_core/housekeeping/U251/I chip_core/housekeeping/U251/Z chip_core/housekeeping/pll_ena_reg/CP chip_core/housekeeping/pll_ena_reg/Q chip_core/pll/U29/A2 chip_core/pll/U29/ZN chip_core/pll/ringosc/iss/U4/I chip_core/pll/ringosc/iss/U4/ZN chip_core/pll/ringosc/iss/reseten0/EN chip_core/pll/ringosc/iss/reseten0/ZN chip_core/pll/pll_control/tval_reg[6]/CP chip_core/pll/pll_control/tval_reg[6]/Q chip_core/pll/pll_control/U122/I chip_core/pll/pll_control/U122/ZN chip_core/pll/pll_control/U29/A chip_core/pll/pll_control/U29/ZN chip_core/pll/pll_control/U28/A chip_core/pll/pll_control/U28/ZN chip_core/pll/pll_control/U27/A chip_core/pll/pll_control/U27/ZN chip_core/pll/pll_control/U26/A1 chip_core/pll/pll_control/U26/ZN chip_core/pll/pll_control/U25/A chip_core/pll/pll_control/U25/ZN chip_core/pll/pll_control/U22/A1 chip_core/pll/pll_control/U22/ZN chip_core/pll/pll_control/U21/A chip_core/pll/pll_control/U21/ZN chip_core/pll/pll_control/U7/I chip_core/pll/pll_control/U7/ZN chip_core/pll/U7/I0 chip_core/pll/U7/Z chip_core/pll/ringosc/dstage[5].id/U1/I chip_core/pll/ringosc/dstage[5].id/U1/ZN chip_core/pll/ringosc/dstage[5].id/delayen0/EN chip_core/pll/ringosc/dstage[5].id/delayen0/ZN chip_core/clock_ctrl/ext_clk_syncd_reg/CP chip_core/clock_ctrl/ext_clk_syncd_reg/Q chip_core/clock_ctrl/U9/I1 chip_core/clock_ctrl/U9/Z chip_core/clock_ctrl/U8/I0 chip_core/clock_ctrl/U8/Z chip_core/U1/I chip_core/U1/Z 
+Information: Timing loop detected. (OPT-150)
+	chip_core/housekeeping/U253/I chip_core/housekeeping/U253/Z chip_core/housekeeping/gpio_configure_reg[3][3]/CP chip_core/housekeeping/gpio_configure_reg[3][3]/Q chip_core/housekeeping/U3166/A1 chip_core/housekeeping/U3166/ZN chip_core/housekeeping/U3162/A1 chip_core/housekeeping/U3162/ZN chip_core/housekeeping/U3161/A2 chip_core/housekeeping/U3161/ZN chip_core/housekeeping/U3160/I1 chip_core/housekeeping/U3160/Z chip_core/housekeeping/U371/I chip_core/housekeeping/U371/Z chip_core/housekeeping/U361/I chip_core/housekeeping/U361/Z chip_core/housekeeping/U289/I chip_core/housekeeping/U289/Z 
+Warning: Disabling timing arc between pins 'CP' and 'Q' on cell 'chip_core/pll/pll_control/tval_reg[6]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'Q' on cell 'chip_core/housekeeping/gpio_configure_reg[3][3]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'Q' on cell 'chip_core/housekeeping/hkspi_disable_reg'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'Q' on cell 'chip_core/pll/pll_control/tval_reg[4]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'Q' on cell 'chip_core/pll/pll_control/tval_reg[3]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'Q' on cell 'chip_core/pll/pll_control/tval_reg[2]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'Q' on cell 'chip_core/pll/pll_control/tval_reg[5]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'I' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[0].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'I' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[0].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'I' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[0].id/delayenb0'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'Q' on cell 'chip_core/clock_ctrl/divider/syncN_reg[1]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'QN' on cell 'chip_core/clock_ctrl/divider/syncN_reg[1]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'Q' on cell 'chip_core/clock_ctrl/divider/syncN_reg[2]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'Q' on cell 'chip_core/clock_ctrl/divider/syncN_reg[0]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'QN' on cell 'chip_core/housekeeping/wbbd_sck_reg'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'QN' on cell 'chip_core/housekeeping/wbbd_busy_reg'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'Q' on cell 'chip_core/clock_ctrl/divider2/syncN_reg[1]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'QN' on cell 'chip_core/clock_ctrl/divider2/syncN_reg[1]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'Q' on cell 'chip_core/clock_ctrl/divider2/syncN_reg[2]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'Q' on cell 'chip_core/clock_ctrl/divider2/syncN_reg[0]'
+         to break a timing loop. (OPT-314)
+ 
+****************************************
+Report : qor
+Design : vsdcaravel
+Version: T-2022.03-SP5
+Date   : Fri Dec 12 19:02:03 2025
+****************************************
+
+
+  Timing Path Group (none)
+  -----------------------------------
+  Levels of Logic:               6.00
+  Critical Path Length:          3.73
+  Critical Path Slack:         uninit
+  Critical Path Clk Period:       n/a
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:       1453
+  Hierarchical Port Count:      14189
+  Leaf Cell Count:              25481
+  Buf/Inv Cell Count:            3677
+  Buf Cell Count:                 545
+  Inv Cell Count:                3137
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:     18657
+  Sequential Cell Count:         6824
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:   343795.630046
+  Noncombinational Area:
+                        431042.669125
+  Buf/Inv Area:          30296.819871
+  Total Buffer Area:          8292.84
+  Total Inverter Area:       22333.28
+  Macro/Black Box Area:   3986.640190
+  Net Area:              36088.906071
+  -----------------------------------
+  Cell Area:            778824.939361
+  Design Area:          814913.845432
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:         30249
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: nanodc.iitgn.ac.in
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                   11.25
+  Logic Optimization:                 11.36
+  Mapping Optimization:                9.00
+  -----------------------------------------
+  Overall Compile Time:               35.77
+  Overall Compile Wall Clock Time:    36.36
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1

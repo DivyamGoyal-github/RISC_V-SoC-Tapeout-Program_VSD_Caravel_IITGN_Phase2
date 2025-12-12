@@ -32,16 +32,15 @@ All steps follow the Makefile‑driven simulation flow, with corrected paths for
 │
 ├── synthesis/
 │   ├── vsdcaravel_synthesis.v        # 4M1L netlist (USED)
-│   ├── vsdcaravel_synthesis_mine.v   # 6M1L netlist (FAILED)
+│   ├── vsdcaravel_synthesis_6M1L.v   # 6M1L netlist (FAILED)
+├── synthesis_reports
 │   ├── area_post_synth.rpt
 │   ├── power_post_synth.rpt
 │   ├── qor_post_synth.rpt
-│   └── logs
 │
 ├── logs/
 │   ├── rtl.log
 │   ├── gls.log
-│   └── synthesis reports
 │
 └── assets/
     ├── rtl_wave.png
@@ -142,7 +141,7 @@ Synthesis was performed using **dc_shell** with two technology libraries:
 
 ### ❌ 6M1L — FAILED
 
-* Generated `vsdcaravel_synthesis_mine.v`
+* Generated `vsdcaravel_synthesis_6M1L.v`
 * Missing/incompatible cells → mapping errors
 
 ### ✅ 4M1L — SUCCESS
