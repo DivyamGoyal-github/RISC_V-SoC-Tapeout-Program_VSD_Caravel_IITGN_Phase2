@@ -51,6 +51,26 @@ All steps follow the Makefile‑driven simulation flow, with corrected paths for
 
 # 2. Environment Setup
 
+**Prerequisites** \
+Before using this repository, ensure you have the following dependencies installed:
+
+- SCL180 PDK ( SCL180 PDK)
+- RiscV32-uknown-elf.gcc (building functional simulation files)
+- Caravel User Project Framework from Efabless
+- Synopsys EDA tool Suite for Synthesis
+- Verilog Simulator (e.g., Icarus Verilog)
+- GTKWAVE (used for visualizing testbench waves)
+- Test Instructions
+- Repo Setup
+
+**Clone the repository:**
+```bash
+git clone https://github.com/vsdip/vsdRiscvScl180.git
+cd vsdRiscvScl180
+```
+
+Install required dependencies (ensure dc_shell and SCL180 PDK are properly set up).
+
 Before running simulations, export these paths according to your setup:
 
 ```bash
