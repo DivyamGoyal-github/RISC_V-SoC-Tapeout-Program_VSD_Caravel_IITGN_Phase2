@@ -309,11 +309,6 @@ This confirms:
 
 ---
 
-Here is the **new section only**, written so that it **fits cleanly into your existing README**, and placed **after “GLS Simulation Run” and before “Key Learnings from Day 3”**, exactly as you asked.
-
-You can **paste this section directly** into your markdown file.
-
----
 
 ````markdown
 ## Note on Topological-Aware Synthesis vs Standard Synthesis
