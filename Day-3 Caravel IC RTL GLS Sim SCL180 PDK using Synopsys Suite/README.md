@@ -153,6 +153,10 @@ After successful execution:
   sim_run.log
   ```
 
+<div align="center" >
+  <img src="./assets/rtl_passed.png" alt="rtl_passed" width="80%">
+</div>
+
 # RTL Log
 ```bash
 Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
@@ -200,6 +204,11 @@ This log confirms:
 * Successful compilation
 * Proper linking of SCL180 standard cells
 * Correct RTL functionality under VCS
+
+
+<div align="center" >
+  <img src="./assets/rtl_wave_form.png" alt="rtl_waveform" width="80%">
+</div>
 
 ---
 
@@ -282,6 +291,15 @@ make run
 ```
 vcs_gls_run.log
 ```
+
+<div align="center" >
+  <img src="./assets/gls_passed.png" alt="gls_passed" width="80%">
+</div>
+
+<div align="center" >
+  <img src="./assets/gls_waveform.png" alt="gls_waveform" width="80%">
+</div>
+
 
 This confirms:
 
