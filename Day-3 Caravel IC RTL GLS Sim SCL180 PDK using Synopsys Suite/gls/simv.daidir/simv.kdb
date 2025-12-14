@@ -1,0 +1,21 @@
+rc file Version 1.0
+
+[Design]
+COMPILE_PATH=/home/dgoyal/vsdRiscvScl180/gls
+VCS_HOME=/home/Synopsys/tools/vcs/U-2023.03
+VERDI_HOME=
+SystemC=FALSE
+UUM=FALSE
+KDB=FALSE
+USE_NOVAS_HOME=FALSE
+COSIM=FALSE
+TOP=ad01d1 ad01d2 ad01d4 adp1d0 adp1d1 adp1d2 adp1d4 ah01d0 ah01d2 ah01d4 an02d2 an02d7 an02da an03d2 an03d7 an03da an04d0 an04d1 an04d2 an04d7 an04da an12d1 an12d2 an12d4 aoi211d2 aoi211d4 aoi21d2 aoi221d2 aoi221d4 aoi2222d1 aoi2222d2 aoi2222d4 aoi222d2 aoi222d4 aoi22d2 aoi22d4 aoi311d2 aoi311d4 aoi31d2 aoi31d4 aoi321d2 aoi321d4 aoi322d2 aoi322d4 aoim211d2 aoim211d4 aoim21d2 aoim22d2 aoim22d4 aoim2m11d2 aoim2m11d4 aoim311d1 aoim311d2 aoim311d4 aoim31d2 aoim31d4 aoim3m11d1 aoim3m11d2 aoim3m11d4 aon211d2 aor211d2 aor21d2 aor21d4 aor221d2 aor221d4 aor222d2 aor222d4 aor22d2 aor22d4 aor311d1 aor311d2 aor311d4 aor31d2 bh01d1 bufbd1 bufbd2 bufbd3 bufbd4 bufbda bufbdf bufbdk buffd2 buffd4 buffd7 buftd1 buftd2 buftd4 buftd7 buftda cg01d1 cg01d2 cg01d4 clk2d2 cload1 decfq1 decfq2 decfq4 decrq1 decrq2 decrq4 denrq1 denrq2 denrq4 depfq1 depfq2 depfq4 deprq1 deprq2 deprq4 dfbfb1 dfbfb2 dfbfb4 dfbrb2 dfbrb4 dfcfb2 dfcfb4 dfcfq2 dfcfq4 dfcrb1 dfcrb2 dfcrb4 dfcrn2 dfcrn4 dfcrq2 dfcrq4 dfnfb1 dfnfb2 dfnfb4 dfnrb1 dfnrb2 dfnrb4 dfnrn2 dfpfb2 dfprb2 dfprb4 dl01d1 dl01d2 dl01d4 dl02d1 dl02d2 dl02d4 dl03d1 dl03d2 dl03d4 dl04d1 dl04d2 dl04d4 gclfsn1 gclfsn2 gclfsn4 gclfsn7 gclfsna gclrsn1 gclrsn2 gclrsn4 gclrsn7 gclrsna gcnfnn1 gcnfnn2 gcnfnn4 gcnfnn7 gcnfnna gcnrnn1 gcnrnn2 gcnrnn4 gcnrnn7 gcnrnna inv0da invbd2 invbd4 invbd7 invbda invbdf invtda jkbrb1 jkbrb2 jkbrb4 labhb1 labhb2 labhb4 lachq1 lachq2 lachq4 laclq1 laclq2 laclq4 lanhb1 lanhb2 lanhb4 lanhn1 lanhn2 lanhn4 lanhq1 lanhq2 lanhq4 lanht1 lanht2 lanht4 lanlb1 lanlb2 lanlb4 lanln1 lanln2 lanln4 lanlq1 lanlq2 lanlq4 mffnrb1 mffnrb2 mffnrb4 mi02d1 mi02d2 mi02d4 mx02d0 mx02d2 mx04d1 mx04d2 mx04d4 mx08d1 mx08d2 mx08d4 nd02d7 nd03d2 nd03d7 nd03da nd04d2 nd04d7 nd04da nd12d2 nd13d2 nd13d4 nd23d1 nd23d2 nd23d4 nr02da nr03d7 nr03da nr04d2 nr04d4 nr04d7 nr04da nr13d2 nr13d4 nr23d4 oai211d2 oai211d4 oai221d2 oai221d4 oai2222d1 oai2222d2 oai2222d4 oai222d2 oai222d4 oai22d2 oai311d2 oai311d4 oai31d2 oai31d4 oai321d2 oai321d4 oai322d2 oai322d4 oaim211d2 oaim21d2 oaim21d4 oaim22d2 oaim22d4 oaim2m11d1 oaim2m11d2 oaim2m11d4 oaim311d1 oaim311d2 oaim311d4 oaim31d1 oaim31d2 oaim31d4 oaim3m11d1 oaim3m11d2 oaim3m11d4 oan211d2 or02d2 or02d7 or02da or03d2 or03d4 or03d7 or03da or04d1 or04d2 or04d4 or04d7 or04da ora211d2 ora211d4 ora21d2 ora21d4 ora311d1 ora311d2 ora311d4 ora31d1 ora31d2 ora31d4 sdbfb1 sdbfb2 sdbfb4 sdbrb1 sdbrb2 sdbrb4 sdcfb1 sdcfb2 sdcfb4 sdcfq1 sdcfq2 sdcfq4 sdcrb1 sdcrb2 sdcrb4 sdcrn1 sdcrn2 sdcrn4 sdcrq1 sdcrq2 sdcrq4 sdnfb1 sdnfb2 sdnfb4 sdnrb1 sdnrb2 sdnrb4 sdnrn1 sdnrn2 sdnrn4 sdnrq1 sdnrq2 sdnrq4 sdpfb1 sdpfb2 sdpfb4 sdprb1 sdprb2 sdprb4 secfq1 secfq2 secfq4 secrq1 secrq2 secrq4 senrb1 senrb2 senrb4 senrq1 senrq2 senrq4 sepfq1 sepfq2 sepfq4 seprq1 seprq2 seprq4 skbrb1 skbrb2 skbrb4 slbhb1 slbhb2 slbhb4 slchq1 slchq2 slchq4 slclq1 slclq2 slclq4 slnhb1 slnhb2 slnhb4 slnhn1 slnhn2 slnhn4 slnhq1 slnhq2 slnhq4 slnht1 slnht2 slnht4 slnlb1 slnlb2 slnlb4 slnln1 slnln2 slnln4 slnlq1 slnlq2 slnlq4 srlab1 srlab2 srlab4 su01d0 su01d1 su01d2 su01d4 xn02d2 xn02d4 xn02d7 xn02da xr02d7 xr02da xr03d2 xr03d4 xr03d7 xr03da apc3d01 apv0a apv0i apvda apvdi pc3b01d pc3b01u pc3b01 pc3b02d pc3b02u pc3b02 pc3b03d pc3b03u pc3b03 pc3b04d pc3b04u pc3b04 pc3b05d pc3b05u pc3b05 pc3b21eu pc3b25eu pc3c01 pc3c02 pc3c03 pc3c04 pc3d00 pc3d01d pc3d01u pc3d11d pc3d11u pc3d11 pc3d21d pc3d21eu pc3d21u pc3d31d pc3d31u pc3d31 pc3o01hv pc3o01 pc3o02 pc3o03 pc3o04 pc3o05 pc3t01d pc3t01u pc3t01 pc3t02d pc3t02u pc3t02 pc3t03d pc3t03u pc3t03 pc3t04d pc3t04u pc3t04 pc3t05d pc3t05u pc3t05 pc3x11 pc3x12 pc3x13 pt3b01d pt3b01u pt3b01 pt3b02d pt3b02u pt3b03d pt3b03u pt3b03 pt3o01 pt3o02 pt3o03 pt3t01d pt3t01u pt3t01 pt3t02d pt3t02u pt3t02 pt3t03d pt3t03u pt3t03 pv0a pv0c pv0f pv0i pvda pvdc pvdi housekeeping_DW01_inc_1_DW01_inc_16 hkspi_tb 
+OPTION=-ssv -ssy 
+ELAB_OPTION=-ssv -ssy 
+
+[Value]
+WREALX=ffff534e50535f58
+WREALZ=ffff534e50535f5a
+
+[CompInfo]
+FLOW_OPTS=-ssv -ssy 

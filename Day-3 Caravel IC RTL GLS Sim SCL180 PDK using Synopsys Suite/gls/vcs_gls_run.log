@@ -1,0 +1,39 @@
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid this.
+Notice: timing checks disabled with +notimingcheck at compile-time
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version U-2023.03_Full64; Runtime version U-2023.03_Full64;  Dec 13 17:10 2025
+[SCL] 12/13/2025 17:10:07 Checking status for feature VCS-BASE-RUNTIME
+[SCL] 12/13/2025 17:10:07 PID:27786 Client:nanodc.iitgn.ac.in Server:27020@c2s.cdacb.in Checkout succeeded VCS-BASE-RUNTIME 2023.03 from VCS-Base-Runtime-Pkg
+Reading hkspi.hex
+hkspi.hex loaded into memory
+Memory 5 bytes = 0x93 0x00 0x00 0x00 0x93
+Read data = 0x11 (should be 0x11)
+Read register 0 = 0x00 (should be 0x00)
+Read register 1 = 0x04 (should be 0x04)
+Read register 2 = 0x56 (should be 0x56)
+Read register 3 = 0x11 (should be 0x11)
+Read register 4 = 0x00 (should be 0x00)
+Read register 5 = 0x00 (should be 0x00)
+Read register 6 = 0x00 (should be 0x00)
+Read register 7 = 0x00 (should be 0x00)
+Read register 8 = 0x02 (should be 0x02)
+Read register 9 = 0x01 (should be 0x01)
+Read register 10 = 0x00 (should be 0x00)
+Read register 11 = 0x00 (should be 0x00)
+Read register 12 = 0x00 (should be 0x00)
+Read register 13 = 0xff (should be 0xff)
+Read register 14 = 0xef (should be 0xef)
+Read register 15 = 0xff (should be 0xff)
+Read register 16 = 0x03 (should be 0x03)
+Read register 17 = 0x12 (should be 0x12)
+Read register 18 = 0x04 (should be 0x04)
+Monitor: Test HK SPI (GL) Passed
+$finish called from file "hkspi_tb.v", line 366.
+$finish at simulation time             52410000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 52410000 ps
+CPU Time:      0.290 seconds;       Data structure size:   4.3Mb
+Sat Dec 13 17:10:07 2025
+[SCL] 12/13/2025 17:10:07 PID:27786 Client:nanodc.iitgn.ac.in checkin (null) 

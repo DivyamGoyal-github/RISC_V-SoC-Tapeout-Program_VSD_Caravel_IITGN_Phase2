@@ -1,0 +1,1714 @@
+Command: vcs -full64 -sverilog -debug_access+all -l vcs_compile.log +define+FUNCTIONAL \
++define+SIM +incdir+../ +incdir+../..//rtl +incdir+../..//rtl/scl180_wrapper +incdir+/home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/iopad/cio250/4M1L/verilog/tsl18cio250/zero \
+hkspi_tb.v -o simv
+                         Chronologic VCS (TM)
+         Version U-2023.03_Full64 -- Sat Dec 13 16:45:48 2025
+
+                    Copyright (c) 1991 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'hkspi_tb.v'
+Parsing included file '../..//rtl/__uprj_netlists.v'.
+Parsing included file '../..//rtl/defines.v'.
+Back to file '../..//rtl/__uprj_netlists.v'.
+Parsing included file '../..//rtl/__user_project_wrapper.v'.
+Parsing included file '../..//rtl/defines.v'.
+Back to file '../..//rtl/__user_project_wrapper.v'.
+Parsing included file '../..//rtl/debug_regs.v'.
+Back to file '../..//rtl/__user_project_wrapper.v'.
+Back to file '../..//rtl/__uprj_netlists.v'.
+Back to file 'hkspi_tb.v'.
+Parsing included file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/defines.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/user_defines.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/pads.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/scl180_wrapper/pc3b03ed_wrapper.v'.
+Parsing included file '/home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/iopad/cio250/4M1L/verilog/tsl18cio250/zero/pc3b03ed.v'.
+Back to file '../..//rtl/scl180_wrapper/pc3b03ed_wrapper.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '/home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/iopad/cio250/4M1L/verilog/tsl18cio250/zero/pc3d21.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/scl180_wrapper/pc3d01_wrapper.v'.
+Parsing included file '/home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/iopad/cio250/4M1L/verilog/tsl18cio250/zero/pc3d01.v'.
+Back to file '../..//rtl/scl180_wrapper/pc3d01_wrapper.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/scl180_wrapper/pt3b02_wrapper.v'.
+Parsing included file '/home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/iopad/cio250/4M1L/verilog/tsl18cio250/zero/pt3b02.v'.
+Back to file '../..//rtl/scl180_wrapper/pt3b02_wrapper.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/digital_pll.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/digital_pll_controller.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/ring_osc2x13.v'.
+Parsing included file '/home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/stdcell/fs120/6M1L/verilog/vcs_sim_model/tsl18fs120_scl.v'.
+Back to file '../..//rtl/ring_osc2x13.v'.
+Parsing included file '../..//rtl/dummy_scl180_conb_1.v'.
+Back to file '../..//rtl/ring_osc2x13.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/caravel_clocking.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/user_id_programming.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/clock_div.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/mprj_io.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/chip_io.v'.
+Parsing included file '../..//rtl/pt3b02_wrapper1.v'.
+Back to file '../..//rtl/chip_io.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/housekeeping_spi.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/housekeeping.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/mprj_logic_high.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/mprj2_logic_high.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/mgmt_protect.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/mgmt_protect_hv.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/constant_block.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/gpio_control_block.v'.
+Parsing included file '../..//rtl/scl180_macro_sparecell.v'.
+Back to file '../..//rtl/gpio_control_block.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/gpio_defaults_block.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/gpio_signal_buffering.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/gpio_logic_high.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/xres_buf.v'.
+
+Warning-[EPIMD] Empty Port in Module Declaration
+../..//rtl/xres_buf.v, 30
+  There is empty port specified in module declaration.
+  
+
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/spare_logic_block.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/mgmt_core_wrapper.v'.
+Parsing included file '../..//rtl/mgmt_core.v'.
+Parsing included file '../..//rtl/RAM256.v'.
+Back to file '../..//rtl/mgmt_core.v'.
+Parsing included file '../..//rtl/RAM128.v'.
+Back to file '../..//rtl/mgmt_core.v'.
+Parsing included file '../..//rtl/VexRiscv_MinDebugCache.v'.
+Back to file '../..//rtl/mgmt_core.v'.
+Back to file '../..//rtl/mgmt_core_wrapper.v'.
+
+Warning-[CIWC] Ignored /* within /* */ comment
+../..//rtl/mgmt_core_wrapper.v, 40
+  Nested comments is found. Ignoring nested '/*'. 
+  /* 1.8V domain */
+  ^
+
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/vsdcaravel.v'.
+Parsing included file '../..//rtl/copyright_block.v'.
+Back to file '../..//rtl/vsdcaravel.v'.
+Parsing included file '../..//rtl/caravel_logo.v'.
+Back to file '../..//rtl/vsdcaravel.v'.
+Parsing included file '../..//rtl/caravel_motto.v'.
+Back to file '../..//rtl/vsdcaravel.v'.
+Parsing included file '../..//rtl/open_source.v'.
+Back to file '../..//rtl/vsdcaravel.v'.
+Parsing included file '../..//rtl/user_id_textblock.v'.
+Back to file '../..//rtl/vsdcaravel.v'.
+Parsing included file '../..//rtl/caravel_core.v'.
+Parsing included file '../..//rtl/mprj_io_buffer.v'.
+Back to file '../..//rtl/caravel_core.v'.
+Parsing included file '../..//rtl/manual_power_connections.v'.
+Back to file '../..//rtl/caravel_core.v'.
+Parsing included file '../..//rtl/empty_macro.v'.
+Back to file '../..//rtl/caravel_core.v'.
+Back to file '../..//rtl/vsdcaravel.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Parsing included file '../..//rtl/dummy_por.v'.
+Parsing included file '../..//rtl/dummy_schmittbuf.v'.
+Back to file '../..//rtl/dummy_por.v'.
+Back to file '../..//rtl/caravel_netlists.v'.
+Back to file 'hkspi_tb.v'.
+Parsing included file '../spiflash.v'.
+Back to file 'hkspi_tb.v'.
+Parsing included file '../tbuart.v'.
+Back to file 'hkspi_tb.v'.
+
+Warning-[IPDW] Identifier previously declared
+hkspi_tb.v, 134
+  Second declaration for identifier 'i' ignored
+  Identifier 'i' previously declared as integer. [hkspi_tb.v, 62]
+
+Top Level Modules:
+       pt3b02_wrapper
+       ad01d0
+       ad01d1
+       ad01d2
+       ad01d4
+       adp1d0
+       adp1d1
+       adp1d2
+       adp1d4
+       ah01d0
+       ah01d1
+       ah01d2
+       ah01d4
+       an02d0
+       an02d1
+       an02d2
+       an02d4
+       an02d7
+       an02da
+       an03d0
+       an03d1
+       an03d2
+       an03d4
+       an03d7
+       an03da
+       an04d0
+       an04d1
+       an04d2
+       an04d4
+       an04d7
+       an04da
+       an12d1
+       an12d2
+       an12d4
+       aoi211d1
+       aoi211d2
+       aoi211d4
+       aoi21d1
+       aoi21d2
+       aoi21d4
+       aoi221d1
+       aoi221d2
+       aoi221d4
+       aoi2222d1
+       aoi2222d2
+       aoi2222d4
+       aoi222d1
+       aoi222d2
+       aoi222d4
+       aoi22d1
+       aoi22d2
+       aoi22d4
+       aoi311d1
+       aoi311d2
+       aoi311d4
+       aoi31d1
+       aoi31d2
+       aoi31d4
+       aoi321d1
+       aoi321d2
+       aoi321d4
+       aoi322d1
+       aoi322d2
+       aoi322d4
+       aoim211d1
+       aoim211d2
+       aoim211d4
+       aoim21d1
+       aoim21d2
+       aoim21d4
+       aoim22d1
+       aoim22d2
+       aoim22d4
+       aoim2m11d1
+       aoim2m11d2
+       aoim2m11d4
+       aoim311d1
+       aoim311d2
+       aoim311d4
+       aoim31d1
+       aoim31d2
+       aoim31d4
+       aoim3m11d1
+       aoim3m11d2
+       aoim3m11d4
+       aon211d1
+       aon211d2
+       aon211d4
+       aor211d1
+       aor211d2
+       aor211d4
+       aor21d1
+       aor21d2
+       aor21d4
+       aor221d1
+       aor221d2
+       aor221d4
+       aor222d1
+       aor222d2
+       aor222d4
+       aor22d1
+       aor22d2
+       aor22d4
+       aor311d1
+       aor311d2
+       aor311d4
+       aor31d1
+       aor31d2
+       aor31d4
+       bh01d1
+       bufbd1
+       bufbd3
+       bufbd4
+       bufbda
+       bufbdk
+       buffd2
+       buffd3
+       buffd4
+       buftd1
+       buftd2
+       buftd4
+       buftd7
+       buftda
+       cg01d0
+       cg01d1
+       cg01d2
+       cg01d4
+       clk2d2
+       cload1
+       decfq1
+       decfq2
+       decfq4
+       decrq1
+       decrq2
+       decrq4
+       denrq1
+       denrq2
+       denrq4
+       depfq1
+       depfq2
+       depfq4
+       deprq1
+       deprq2
+       deprq4
+       dfbfb1
+       dfbfb2
+       dfbfb4
+       dfbrb2
+       dfbrb4
+       dfcfb1
+       dfcfb2
+       dfcfb4
+       dfcfq1
+       dfcfq2
+       dfcfq4
+       dfcrb1
+       dfcrb2
+       dfcrb4
+       dfcrn1
+       dfcrn2
+       dfcrn4
+       dfcrq1
+       dfcrq2
+       dfcrq4
+       dfnfb1
+       dfnfb2
+       dfnfb4
+       dfnrb1
+       dfnrb2
+       dfnrb4
+       dfnrn1
+       dfnrn2
+       dfnrn4
+       dfnrq1
+       dfnrq2
+       dfnrq4
+       dfpfb1
+       dfpfb2
+       dfpfb4
+       dfprb1
+       dfprb2
+       dfprb4
+       dl01d1
+       dl01d2
+       dl01d4
+       dl02d1
+       dl02d2
+       dl02d4
+       dl03d1
+       dl03d2
+       dl03d4
+       dl04d1
+       dl04d2
+       dl04d4
+       gclfsn1
+       gclfsn2
+       gclfsn4
+       gclfsn7
+       gclfsna
+       gclrsn1
+       gclrsn2
+       gclrsn4
+       gclrsn7
+       gclrsna
+       gcnfnn1
+       gcnfnn2
+       gcnfnn4
+       gcnfnn7
+       gcnfnna
+       gcnrnn1
+       gcnrnn2
+       gcnrnn4
+       gcnrnn7
+       gcnrnna
+       inv0d0
+       inv0d4
+       inv0da
+       invbda
+       invbdf
+       invbdk
+       invtda
+       jkbrb1
+       jkbrb2
+       jkbrb4
+       labhb1
+       labhb2
+       labhb4
+       lachq1
+       lachq2
+       lachq4
+       laclq1
+       laclq2
+       laclq4
+       lanhb1
+       lanhb2
+       lanhb4
+       lanhn1
+       lanhn2
+       lanhn4
+       lanhq1
+       lanhq2
+       lanhq4
+       lanht1
+       lanht2
+       lanht4
+       lanlb1
+       lanlb2
+       lanlb4
+       lanln1
+       lanln2
+       lanln4
+       lanlq1
+       lanlq2
+       lanlq4
+       mffnrb1
+       mffnrb2
+       mffnrb4
+       mi02d0
+       mi02d1
+       mi02d2
+       mi02d4
+       mx02d0
+       mx02d1
+       mx02d4
+       mx04d0
+       mx04d1
+       mx04d2
+       mx04d4
+       mx08d1
+       mx08d2
+       mx08d4
+       nd02d0
+       nd02d1
+       nd02d7
+       nd02da
+       nd03d0
+       nd03d1
+       nd03d2
+       nd03d4
+       nd03d7
+       nd03da
+       nd04d0
+       nd04d1
+       nd04d2
+       nd04d4
+       nd04d7
+       nd04da
+       nd12d0
+       nd12d1
+       nd12d2
+       nd12d4
+       nd13d1
+       nd13d2
+       nd13d4
+       nd23d1
+       nd23d2
+       nd23d4
+       nr02d0
+       nr02d1
+       nr02d4
+       nr02d7
+       nr02da
+       nr03d0
+       nr03d1
+       nr03d2
+       nr03d4
+       nr03d7
+       nr03da
+       nr04d0
+       nr04d1
+       nr04d2
+       nr04d4
+       nr04d7
+       nr04da
+       nr13d1
+       nr13d2
+       nr13d4
+       nr23d1
+       nr23d2
+       nr23d4
+       oai211d1
+       oai211d2
+       oai211d4
+       oai21d1
+       oai21d2
+       oai21d4
+       oai221d1
+       oai221d2
+       oai221d4
+       oai2222d1
+       oai2222d2
+       oai2222d4
+       oai222d1
+       oai222d2
+       oai222d4
+       oai22d1
+       oai22d2
+       oai22d4
+       oai311d1
+       oai311d2
+       oai311d4
+       oai31d1
+       oai31d2
+       oai31d4
+       oai321d1
+       oai321d2
+       oai321d4
+       oai322d1
+       oai322d2
+       oai322d4
+       oaim211d1
+       oaim211d2
+       oaim211d4
+       oaim21d1
+       oaim21d2
+       oaim21d4
+       oaim22d1
+       oaim22d2
+       oaim22d4
+       oaim2m11d1
+       oaim2m11d2
+       oaim2m11d4
+       oaim311d1
+       oaim311d2
+       oaim311d4
+       oaim31d1
+       oaim31d2
+       oaim31d4
+       oaim3m11d1
+       oaim3m11d2
+       oaim3m11d4
+       oan211d1
+       oan211d2
+       oan211d4
+       or02d0
+       or02d1
+       or02d4
+       or02d7
+       or02da
+       or03d0
+       or03d1
+       or03d2
+       or03d4
+       or03d7
+       or03da
+       or04d0
+       or04d1
+       or04d2
+       or04d4
+       or04d7
+       or04da
+       ora211d1
+       ora211d2
+       ora211d4
+       ora21d1
+       ora21d2
+       ora21d4
+       ora311d1
+       ora311d2
+       ora311d4
+       ora31d1
+       ora31d2
+       ora31d4
+       sdbfb1
+       sdbfb2
+       sdbfb4
+       sdbrb1
+       sdbrb2
+       sdbrb4
+       sdcfb1
+       sdcfb2
+       sdcfb4
+       sdcfq1
+       sdcfq2
+       sdcfq4
+       sdcrb1
+       sdcrb2
+       sdcrb4
+       sdcrn1
+       sdcrn2
+       sdcrn4
+       sdcrq1
+       sdcrq2
+       sdcrq4
+       sdnfb1
+       sdnfb2
+       sdnfb4
+       sdnrb1
+       sdnrb2
+       sdnrb4
+       sdnrn1
+       sdnrn2
+       sdnrn4
+       sdnrq1
+       sdnrq2
+       sdnrq4
+       sdpfb1
+       sdpfb2
+       sdpfb4
+       sdprb1
+       sdprb2
+       sdprb4
+       secfq1
+       secfq2
+       secfq4
+       secrq1
+       secrq2
+       secrq4
+       senrb1
+       senrb2
+       senrb4
+       senrq1
+       senrq2
+       senrq4
+       sepfq1
+       sepfq2
+       sepfq4
+       seprq1
+       seprq2
+       seprq4
+       skbrb1
+       skbrb2
+       skbrb4
+       slbhb1
+       slbhb2
+       slbhb4
+       slchq1
+       slchq2
+       slchq4
+       slclq1
+       slclq2
+       slclq4
+       slnhb1
+       slnhb2
+       slnhb4
+       slnhn1
+       slnhn2
+       slnhn4
+       slnhq1
+       slnhq2
+       slnhq4
+       slnht1
+       slnht2
+       slnht4
+       slnlb1
+       slnlb2
+       slnlb4
+       slnln1
+       slnln2
+       slnln4
+       slnlq1
+       slnlq2
+       slnlq4
+       srlab1
+       srlab2
+       srlab4
+       su01d0
+       su01d1
+       su01d2
+       su01d4
+       xn02d1
+       xn02d2
+       xn02d4
+       xn02d7
+       xn02da
+       xr02d1
+       xr02d2
+       xr02d4
+       xr02d7
+       xr02da
+       xr03d1
+       xr03d2
+       xr03d4
+       xr03d7
+       xr03da
+       gpio_signal_buffering
+       hkspi_tb
+TimeScale is 1 ns / 1 ps
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/pt3b02_wrapper1.v, 8
+pt3b02_wrapper_0, "pt3b02 pad( .I (1'b0),  .OEN (OE_N),  .PAD (PAD));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/pt3b02_wrapper1.v, 17
+pt3b02_wrapper_1, "pt3b02 pad( .I (1'b0),  .OEN (OE_N),  .PAD (PAD));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/chip_io.v, 1185
+chip_io, "mprj_io mprj_pads( .vddio (vddio),  .vssio (vssio),  .vccd (vccd),  .vssd (vssd),  .vdda1 (vdda1),  .vdda2 (vdda2),  .vssa1 (vssa1),  .vssa2 (vssa2),  .vddio_q (vddio_q),  .vssio_q (vssio_q),  .analog_a (analog_a),  .analog_b (analog_b),  .porb_h (porb_h),  .vccd_conb (mprj_io_one),  .io (mprj_io),  .io_out (mprj_io_out),  .oeb (mprj_io_oeb),  .enh (mprj_io_enh),  .inp_dis (mprj_io_inp_dis),  .ib_mode_sel (mprj_io_ib_mode_sel),  .vtrip_sel (mprj_io_vtrip_sel),  .holdover (mprj_io_holdover),  .slow_sel (mprj_io_slow_sel),  .analog_en (mprj_io_analog_en),  .analog_sel (mprj_io_analog_sel),  .analog_pol (mprj_io_analog_pol),  .dm (mprj_io_dm),  .io_in (mprj_io_in),  .analog_io (mprj_analog_io));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/mgmt_core.v, 8378
+mgmt_core, "RAM256 RAM256( .A0 (dff_bus_adr[7:0]),  .CLK (sys_clk),  .Di0 (dff_di),  .EN0 (dff_en),  .WE0 (dff_we),  .Do0 (dff_do));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/mgmt_core.v, 8387
+mgmt_core, "RAM128 RAM128( .A0 (dff2_bus_adr[6:0]),  .CLK (sys_clk),  .Di0 (dff2_di),  .EN0 (dff2_en),  .WE0 (dff2_we),  .Do0 (dff2_do));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/mgmt_core_wrapper.v, 128
+mgmt_core_wrapper, "mgmt_core core( .core_clk (core_clk),  .core_rstn (core_rstn),  .trap (trap),  .gpio_out_pad (gpio_out_pad),  .gpio_in_pad (gpio_in_pad),  .gpio_mode0_pad (gpio_mode0_pad),  .gpio_mode1_pad (gpio_mode1_pad),  .gpio_outenb_pad (gpio_outenb_pad),  .gpio_inenb_pad (gpio_inenb_pad),  .la_input (la_input),  .la_output (la_output),  .la_oenb (la_oenb),  .la_iena (la_iena),  .user_irq (irq),  .user_irq_ena (user_irq_ena),  .flash_cs_n (flash_csb),  .flash_clk (flash_clk),  .flash_io0_oeb (flash_io0_oeb),  .flash_io1_oeb (flash_io1_oeb),  .flash_io2_oeb (flash_io2_oeb),  .flash_io3_oeb (flash_io3_oeb),  .flash_io0_do (flash_io0_do),  .flash_io1_do (flash_io1_do),  .flash_io2_do (flash_io2_do),  .flash_io3_do (flash_io3_do),  .flash_io0_di (flash_io0_di),  .flas ... "
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/mgmt_protect.v, 123
+mgmt_protect, "mprj_logic_high mprj_logic_high_inst( .HI (mprj_logic1));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/gpio_control_block.v, 255
+gpio_control_block, " scl180_marco_sparecell spare_cell();"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 573
+caravel_core, "housekeeping housekeeping( .wb_clk_i (caravel_clk),  .wb_rstn_i (caravel_rstn),  .wb_adr_i (mprj_adr_o_core),  .wb_dat_i (mprj_dat_o_core),  .wb_sel_i (mprj_sel_o_core),  .wb_we_i (mprj_we_o_core),  .wb_cyc_i (hk_cyc_o),  .wb_stb_i (hk_stb_o),  .wb_ack_o (hk_ack_i),  .wb_dat_o (hk_dat_i),  .porb (porb_l),  .pll_ena (spi_pll_ena),  .pll_dco_ena (spi_pll_dco_ena),  .pll_div (spi_pll_div),  .pll_sel (spi_pll_sel),  .pll90_sel (spi_pll90_sel),  .pll_trim (spi_pll_trim),  .pll_bypass (ext_clk_sel),  .qspi_enabled (qspi_enabled),  .uart_enabled (uart_enabled),  .spi_enabled (spi_enabled),  .debug_mode (debug_mode),  .ser_tx (ser_tx),  .ser_rx (ser_rx),  .spi_sdi (spi_sdi),  .spi_csb (spi_csb),  .spi_sck (spi_sck),  .spi_sdo (spi_sdo),  .spi_sdoenb (spi_sdoenb ... "
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 710
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h1803)) gpio_defaults_block_0( .gpio_defaults (gpio_defaults[12:0]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 720
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h1803)) gpio_defaults_block_1( .gpio_defaults (gpio_defaults[25:13]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 730
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_2( .gpio_defaults (gpio_defaults[38:26]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 741
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0801)) gpio_defaults_block_3( .gpio_defaults (gpio_defaults[51:39]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 751
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_4( .gpio_defaults (gpio_defaults[64:52]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 763
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_5( .gpio_defaults (gpio_defaults[77:65]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 773
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_6( .gpio_defaults (gpio_defaults[90:78]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 783
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_7( .gpio_defaults (gpio_defaults[103:91]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 793
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_8( .gpio_defaults (gpio_defaults[116:104]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 803
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_9( .gpio_defaults (gpio_defaults[129:117]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 813
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_10( .gpio_defaults (gpio_defaults[142:130]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 823
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_11( .gpio_defaults (gpio_defaults[155:143]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 833
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_12( .gpio_defaults (gpio_defaults[168:156]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 843
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_13( .gpio_defaults (gpio_defaults[181:169]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 853
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_14( .gpio_defaults (gpio_defaults[194:182]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 863
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_15( .gpio_defaults (gpio_defaults[207:195]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 873
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_16( .gpio_defaults (gpio_defaults[220:208]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 883
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_17( .gpio_defaults (gpio_defaults[233:221]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 893
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_18( .gpio_defaults (gpio_defaults[246:234]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 903
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_19( .gpio_defaults (gpio_defaults[259:247]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 913
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_20( .gpio_defaults (gpio_defaults[272:260]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 923
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_21( .gpio_defaults (gpio_defaults[285:273]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 933
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_22( .gpio_defaults (gpio_defaults[298:286]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 943
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_23( .gpio_defaults (gpio_defaults[311:299]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 953
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_24( .gpio_defaults (gpio_defaults[324:312]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 963
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_25( .gpio_defaults (gpio_defaults[337:325]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 973
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_26( .gpio_defaults (gpio_defaults[350:338]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 983
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_27( .gpio_defaults (gpio_defaults[363:351]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 993
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_28( .gpio_defaults (gpio_defaults[376:364]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 1003
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_29( .gpio_defaults (gpio_defaults[389:377]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 1013
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_30( .gpio_defaults (gpio_defaults[402:390]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 1023
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_31( .gpio_defaults (gpio_defaults[415:403]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 1033
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_32( .gpio_defaults (gpio_defaults[428:416]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 1043
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_33( .gpio_defaults (gpio_defaults[441:429]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 1053
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_34( .gpio_defaults (gpio_defaults[454:442]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 1063
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_35( .gpio_defaults (gpio_defaults[467:455]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 1073
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_36( .gpio_defaults (gpio_defaults[480:468]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 1083
+caravel_core, "gpio_defaults_block #(.GPIO_CONFIG_INIT(13'h0403)) gpio_defaults_block_37( .gpio_defaults (gpio_defaults[493:481]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 1107
+caravel_core, "gpio_control_block gpio_control_bidir_1[1:0]( .gpio_defaults (gpio_defaults[25:0]),  .resetn (gpio_resetn_1_shifted[1:0]),  .serial_clock (gpio_clock_1_shifted[1:0]),  .serial_load (gpio_load_1_shifted[1:0]),  .resetn_out (gpio_resetn_1[1:0]),  .serial_clock_out (gpio_clock_1[1:0]),  .serial_load_out (gpio_load_1[1:0]),  .mgmt_gpio_in (mgmt_io_in[1:0]),  .mgmt_gpio_out (mgmt_io_out[1:0]),  .mgmt_gpio_oeb (mgmt_io_oeb[1:0]),  .one (mprj_io_one[1:0]),  .serial_data_in (gpio_serial_link_1_shifted[1:0]),  .serial_data_out (gpio_serial_link_1[1:0]),  .user_gpio_out (user_io_out[1:0]),  .user_gpio_oeb (user_io_oeb[1:0]),  .user_gpio_in (user_io_in[1:0]),  .pad_gpio_inenb (mprj_io_inp_dis[1:0]),  .pad_gpio_ib_mode_sel (mprj_io_ib_mode_sel[1:0]),  .pad_gpio_vtr ... "
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 1160
+caravel_core, "gpio_control_block gpio_control_in_1a[5:0]( .gpio_defaults (gpio_defaults[103:26]),  .resetn (gpio_resetn_1_shifted[7:2]),  .serial_clock (gpio_clock_1_shifted[7:2]),  .serial_load (gpio_load_1_shifted[7:2]),  .resetn_out (gpio_resetn_1[7:2]),  .serial_clock_out (gpio_clock_1[7:2]),  .serial_load_out (gpio_load_1[7:2]),  .mgmt_gpio_in (mgmt_io_in[7:2]),  .mgmt_gpio_out (mgmt_io_out[7:2]),  .mgmt_gpio_oeb (mprj_io_one[7:2]),  .one (mprj_io_one[7:2]),  .serial_data_in (gpio_serial_link_1_shifted[7:2]),  .serial_data_out (gpio_serial_link_1[7:2]),  .user_gpio_out (user_io_out[7:2]),  .user_gpio_oeb (user_io_oeb[7:2]),  .user_gpio_in (user_io_in[7:2]),  .pad_gpio_inenb (mprj_io_inp_dis[7:2]),  .pad_gpio_ib_mode_sel (mprj_io_ib_mode_sel[7:2]),  .pad_gpio_vtr ... "
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 1213
+caravel_core, "gpio_control_block gpio_control_in_1[(19 - 9):0]( .gpio_defaults (gpio_defaults[((19 * 13) - 1):104]),  .resetn (gpio_resetn_1_shifted[(19 - 1):8]),  .serial_clock (gpio_clock_1_shifted[(19 - 1):8]),  .serial_load (gpio_load_1_shifted[(19 - 1):8]),  .resetn_out (gpio_resetn_1[(19 - 1):8]),  .serial_clock_out (gpio_clock_1[(19 - 1):8]),  .serial_load_out (gpio_load_1[(19 - 1):8]),  .mgmt_gpio_in (mgmt_io_in[(19 - 1):8]),  .mgmt_gpio_out (mgmt_io_out[(19 - 1):8]),  .mgmt_gpio_oeb (mprj_io_one[(19 - 1):8]),  .one (mprj_io_one[(19 - 1):8]),  .serial_data_in (gpio_serial_link_1_shifted[(19 - 1):8]),  .serial_data_out (gpio_serial_link_1[(19 - 1):8]),  .user_gpio_out (user_io_out[(19 - 1):8]),  .user_gpio_oeb (user_io_oeb[(19 - 1):8]),  .user_gpio_in (user_io ... "
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 1266
+caravel_core, "gpio_control_block gpio_control_bidir_2[2:0]( .gpio_defaults (gpio_defaults[(((19 + 19) * 13) - 1):(((19 + 19) * 13) - 39)]),  .resetn (gpio_resetn_2_shifted[(19 - 1):(19 - 3)]),  .serial_clock (gpio_clock_2_shifted[(19 - 1):(19 - 3)]),  .serial_load (gpio_load_2_shifted[(19 - 1):(19 - 3)]),  .resetn_out (gpio_resetn_2[(19 - 1):(19 - 3)]),  .serial_clock_out (gpio_clock_2[(19 - 1):(19 - 3)]),  .serial_load_out (gpio_load_2[(19 - 1):(19 - 3)]),  .mgmt_gpio_in (mgmt_io_in[((19 + 19) - 1):((19 + 19) - 3)]),  .mgmt_gpio_out (mgmt_io_out[((19 + 19) - 1):((19 + 19) - 3)]),  .mgmt_gpio_oeb (mgmt_io_oeb[((19 + 19) - 1):((19 + 19) - 3)]),  .one (mprj_io_one[((19 + 19) - 1):((19 + 19) - 3)]),  .serial_data_in (gpio_serial_link_2_shifted[(19 - 1):(19 - 3)]),  .ser ... "
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 1319
+caravel_core, "gpio_control_block gpio_control_in_2[(19 - 4):0]( .gpio_defaults (gpio_defaults[(((19 + 19) * 13) - 40):(19 * 13)]),  .resetn (gpio_resetn_2_shifted[(19 - 4):0]),  .serial_clock (gpio_clock_2_shifted[(19 - 4):0]),  .serial_load (gpio_load_2_shifted[(19 - 4):0]),  .resetn_out (gpio_resetn_2[(19 - 4):0]),  .serial_clock_out (gpio_clock_2[(19 - 4):0]),  .serial_load_out (gpio_load_2[(19 - 4):0]),  .mgmt_gpio_in (mgmt_io_in[((19 + 19) - 4):19]),  .mgmt_gpio_out (mgmt_io_out[((19 + 19) - 4):19]),  .mgmt_gpio_oeb (mprj_io_one[((19 + 19) - 4):19]),  .one (mprj_io_one[((19 + 19) - 4):19]),  .serial_data_in (gpio_serial_link_2_shifted[(19 - 4):0]),  .serial_data_out (gpio_serial_link_2[(19 - 4):0]),  .user_gpio_out (user_io_out[((19 + 19) - 4):19]),  .user_gpio_ ... "
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 1373
+caravel_core, "user_id_programming #(.USER_PROJECT_ID(USER_PROJECT_ID)) user_id_value( .mask_rev (mask_rev));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/caravel_core.v, 1395
+caravel_core, "xres_buf rstb_level( .A (rstb_h),  .X (rstb_l));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+../..//rtl/vsdcaravel.v, 292
+vsdcaravel, "caravel_core chip_core( .vddio (vddio_core),  .vssio (vssio_core),  .vccd (vccd_core),  .vssd (vssd_core),  .vdda1 (vdda1_core),  .vdda2 (vdda2_core),  .vssa1 (vssa1_core),  .vssa2 (vssa2_core),  .vccd1 (vccd1_core),  .vccd2 (vccd2_core),  .vssd1 (vssd1_core),  .vssd2 (vssd2_core),  .porb_h (porb_h),  .por_l (por_l),  .rstb_h (rstb_h),  .clock_core (clock_core),  .gpio_out_core (gpio_out_core),  .gpio_in_core (gpio_in_core),  .gpio_mode0_core (gpio_mode0_core),  .gpio_mode1_core (gpio_mode1_core),  .gpio_outenb_core (gpio_outenb_core),  .gpio_inenb_core (gpio_inenb_core),  .flash_csb_frame (flash_csb_frame),  .flash_clk_frame (flash_clk_frame),  .flash_csb_oeb (flash_csb_oeb),  .flash_clk_oeb (flash_clk_oeb),  .flash_io0_oeb (flash_io0_oeb),  .flash_io1 ... "
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+hkspi_tb.v, 432
+hkspi_tb, "tbuart tbuart( .ser_rx (uart_tx));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[MBFFC] Missing braces in $fflush call.
+../spiflash.v, 279
+"$fflush;"
+  Braces '()' are missing in $fflush call. Assuming the call to be $fflush().
+  Please use $fflush() for correct verilog syntax.
+
+Notice: Ports coerced to inout, use -notice for details
+Starting vcs inline pass...
+
+543 modules and 33 UDPs read.
+recompiling module pc3b03ed
+recompiling module pc3b03ed_wrapper
+recompiling module pt3b02
+recompiling module pt3b02_wrapper
+recompiling module digital_pll
+recompiling module ad01d0
+recompiling module ad01d1
+recompiling module ad01d2
+recompiling module ad01d4
+recompiling module adp1d0
+recompiling module adp1d1
+recompiling module adp1d2
+recompiling module adp1d4
+recompiling module ah01d0
+recompiling module ah01d1
+recompiling module ah01d2
+recompiling module ah01d4
+recompiling module an02d0
+recompiling module an02d1
+recompiling module an02d2
+recompiling module an02d4
+recompiling module an02d7
+recompiling module an02da
+recompiling module an03d0
+recompiling module an03d1
+recompiling module an03d2
+recompiling module an03d4
+recompiling module an03d7
+recompiling module an03da
+recompiling module an04d0
+recompiling module an04d1
+recompiling module an04d2
+recompiling module an04d4
+recompiling module an04d7
+recompiling module an04da
+recompiling module an12d1
+recompiling module an12d2
+recompiling module an12d4
+recompiling module aoi211d1
+recompiling module aoi211d2
+recompiling module aoi211d4
+recompiling module aoi21d1
+recompiling module aoi21d2
+recompiling module aoi21d4
+recompiling module aoi221d1
+recompiling module aoi221d2
+recompiling module aoi221d4
+recompiling module aoi2222d1
+recompiling module aoi2222d2
+recompiling module aoi2222d4
+50 of 543 modules done
+recompiling module aoi222d1
+recompiling module aoi222d2
+recompiling module aoi222d4
+recompiling module aoi22d1
+recompiling module aoi22d2
+recompiling module aoi22d4
+recompiling module aoi311d1
+recompiling module aoi311d2
+recompiling module aoi311d4
+recompiling module aoi31d1
+recompiling module aoi31d2
+recompiling module aoi31d4
+recompiling module aoi321d1
+recompiling module aoi321d2
+recompiling module aoi321d4
+recompiling module aoi322d1
+recompiling module aoi322d2
+recompiling module aoi322d4
+recompiling module aoim211d1
+recompiling module aoim211d2
+recompiling module aoim211d4
+recompiling module aoim21d1
+recompiling module aoim21d2
+recompiling module aoim21d4
+recompiling module aoim22d1
+recompiling module aoim22d2
+recompiling module aoim22d4
+recompiling module aoim2m11d1
+recompiling module aoim2m11d2
+recompiling module aoim2m11d4
+recompiling module aoim311d1
+recompiling module aoim311d2
+recompiling module aoim311d4
+recompiling module aoim31d1
+recompiling module aoim31d2
+recompiling module aoim31d4
+recompiling module aoim3m11d1
+recompiling module aoim3m11d2
+recompiling module aoim3m11d4
+recompiling module aon211d1
+recompiling module aon211d2
+recompiling module aon211d4
+recompiling module aor211d1
+recompiling module aor211d2
+recompiling module aor211d4
+recompiling module aor21d1
+recompiling module aor21d2
+recompiling module aor21d4
+recompiling module aor221d1
+recompiling module aor221d2
+100 of 543 modules done
+recompiling module aor221d4
+recompiling module aor222d1
+recompiling module aor222d2
+recompiling module aor222d4
+recompiling module aor22d1
+recompiling module aor22d2
+recompiling module aor22d4
+recompiling module aor311d1
+recompiling module aor311d2
+recompiling module aor311d4
+recompiling module aor31d1
+recompiling module aor31d2
+recompiling module aor31d4
+recompiling module bh01d1
+recompiling module bufbd1
+recompiling module bufbd3
+recompiling module bufbd4
+recompiling module bufbd7
+recompiling module bufbda
+recompiling module bufbdk
+recompiling module buffd2
+recompiling module buffd3
+recompiling module buffd4
+recompiling module buffd7
+recompiling module buftd1
+recompiling module buftd2
+recompiling module buftd4
+recompiling module buftd7
+recompiling module buftda
+recompiling module cg01d0
+recompiling module cg01d1
+recompiling module cg01d2
+recompiling module cg01d4
+recompiling module clk2d2
+recompiling module cload1
+recompiling module decfq1
+recompiling module decfq2
+recompiling module decfq4
+recompiling module decrq1
+recompiling module decrq2
+recompiling module decrq4
+recompiling module denrq1
+recompiling module denrq2
+recompiling module denrq4
+recompiling module depfq1
+recompiling module depfq2
+recompiling module depfq4
+recompiling module deprq1
+recompiling module deprq2
+recompiling module deprq4
+150 of 543 modules done
+recompiling module dfbfb1
+recompiling module dfbfb2
+recompiling module dfbfb4
+recompiling module dfbrb2
+recompiling module dfbrb4
+recompiling module dfcfb1
+recompiling module dfcfb2
+recompiling module dfcfb4
+recompiling module dfcfq1
+recompiling module dfcfq2
+recompiling module dfcfq4
+recompiling module dfcrb1
+recompiling module dfcrb2
+recompiling module dfcrb4
+recompiling module dfcrn1
+recompiling module dfcrn2
+recompiling module dfcrn4
+recompiling module dfcrq1
+recompiling module dfcrq2
+recompiling module dfcrq4
+recompiling module dfnfb1
+recompiling module dfnfb2
+recompiling module dfnfb4
+recompiling module dfnrb1
+recompiling module dfnrb2
+recompiling module dfnrb4
+recompiling module dfnrn1
+recompiling module dfnrn2
+recompiling module dfnrn4
+recompiling module dfnrq1
+recompiling module dfnrq2
+recompiling module dfnrq4
+recompiling module dfpfb1
+recompiling module dfpfb2
+recompiling module dfpfb4
+recompiling module dfprb1
+recompiling module dfprb2
+recompiling module dfprb4
+recompiling module dl01d1
+recompiling module dl01d2
+recompiling module dl01d4
+recompiling module dl02d1
+recompiling module dl02d2
+recompiling module dl02d4
+recompiling module dl03d1
+recompiling module dl03d2
+recompiling module dl03d4
+recompiling module dl04d1
+recompiling module dl04d2
+recompiling module dl04d4
+200 of 543 modules done
+recompiling module gclfsn1
+recompiling module gclfsn2
+recompiling module gclfsn4
+recompiling module gclfsn7
+recompiling module gclfsna
+recompiling module gclrsn1
+recompiling module gclrsn2
+recompiling module gclrsn4
+recompiling module gclrsn7
+recompiling module gclrsna
+recompiling module gcnfnn1
+recompiling module gcnfnn2
+recompiling module gcnfnn4
+recompiling module gcnfnn7
+recompiling module gcnfnna
+recompiling module gcnrnn1
+recompiling module gcnrnn2
+recompiling module gcnrnn4
+recompiling module gcnrnn7
+recompiling module gcnrnna
+recompiling module inv0d0
+recompiling module inv0d4
+recompiling module inv0da
+recompiling module invbda
+recompiling module invbdf
+recompiling module invbdk
+recompiling module invtda
+recompiling module jkbrb1
+recompiling module jkbrb2
+recompiling module jkbrb4
+recompiling module labhb1
+recompiling module labhb2
+recompiling module labhb4
+recompiling module lachq1
+recompiling module lachq2
+recompiling module lachq4
+recompiling module laclq1
+recompiling module laclq2
+recompiling module laclq4
+recompiling module lanhb1
+recompiling module lanhb2
+recompiling module lanhb4
+recompiling module lanhn1
+recompiling module lanhn2
+recompiling module lanhn4
+recompiling module lanhq1
+recompiling module lanhq2
+recompiling module lanhq4
+recompiling module lanht1
+recompiling module lanht2
+250 of 543 modules done
+recompiling module lanht4
+recompiling module lanlb1
+recompiling module lanlb2
+recompiling module lanlb4
+recompiling module lanln1
+recompiling module lanln2
+recompiling module lanln4
+recompiling module lanlq1
+recompiling module lanlq2
+recompiling module lanlq4
+recompiling module mffnrb1
+recompiling module mffnrb2
+recompiling module mffnrb4
+recompiling module mi02d0
+recompiling module mi02d1
+recompiling module mi02d2
+recompiling module mi02d4
+recompiling module mx02d0
+recompiling module mx02d1
+recompiling module mx02d4
+recompiling module mx04d0
+recompiling module mx04d1
+recompiling module mx04d2
+recompiling module mx04d4
+recompiling module mx08d1
+recompiling module mx08d2
+recompiling module mx08d4
+recompiling module nd02d0
+recompiling module nd02d1
+recompiling module nd02d4
+recompiling module nd02d7
+recompiling module nd02da
+recompiling module nd03d0
+recompiling module nd03d1
+recompiling module nd03d2
+recompiling module nd03d4
+recompiling module nd03d7
+recompiling module nd03da
+recompiling module nd04d0
+recompiling module nd04d1
+recompiling module nd04d2
+recompiling module nd04d4
+recompiling module nd04d7
+recompiling module nd04da
+recompiling module nd12d0
+recompiling module nd12d1
+recompiling module nd12d2
+recompiling module nd12d4
+recompiling module nd13d1
+recompiling module nd13d2
+300 of 543 modules done
+recompiling module nd13d4
+recompiling module nd23d1
+recompiling module nd23d2
+recompiling module nd23d4
+recompiling module nr02d0
+recompiling module nr02d1
+recompiling module nr02d4
+recompiling module nr02d7
+recompiling module nr02da
+recompiling module nr03d0
+recompiling module nr03d1
+recompiling module nr03d2
+recompiling module nr03d4
+recompiling module nr03d7
+recompiling module nr03da
+recompiling module nr04d0
+recompiling module nr04d1
+recompiling module nr04d2
+recompiling module nr04d4
+recompiling module nr04d7
+recompiling module nr04da
+recompiling module nr13d1
+recompiling module nr13d2
+recompiling module nr13d4
+recompiling module nr23d1
+recompiling module nr23d2
+recompiling module nr23d4
+recompiling module oai211d1
+recompiling module oai211d2
+recompiling module oai211d4
+recompiling module oai21d1
+recompiling module oai21d2
+recompiling module oai21d4
+recompiling module oai221d1
+recompiling module oai221d2
+recompiling module oai221d4
+recompiling module oai2222d1
+recompiling module oai2222d2
+recompiling module oai2222d4
+recompiling module oai222d1
+recompiling module oai222d2
+recompiling module oai222d4
+recompiling module oai22d1
+recompiling module oai22d2
+recompiling module oai22d4
+recompiling module oai311d1
+recompiling module oai311d2
+recompiling module oai311d4
+recompiling module oai31d1
+recompiling module oai31d2
+350 of 543 modules done
+recompiling module oai31d4
+recompiling module oai321d1
+recompiling module oai321d2
+recompiling module oai321d4
+recompiling module oai322d1
+recompiling module oai322d2
+recompiling module oai322d4
+recompiling module oaim211d1
+recompiling module oaim211d2
+recompiling module oaim211d4
+recompiling module oaim21d1
+recompiling module oaim21d2
+recompiling module oaim21d4
+recompiling module oaim22d1
+recompiling module oaim22d2
+recompiling module oaim22d4
+recompiling module oaim2m11d1
+recompiling module oaim2m11d2
+recompiling module oaim2m11d4
+recompiling module oaim311d1
+recompiling module oaim311d2
+recompiling module oaim311d4
+recompiling module oaim31d1
+recompiling module oaim31d2
+recompiling module oaim31d4
+recompiling module oaim3m11d1
+recompiling module oaim3m11d2
+recompiling module oaim3m11d4
+recompiling module oan211d1
+recompiling module oan211d2
+recompiling module oan211d4
+recompiling module or02d0
+recompiling module or02d1
+recompiling module or02d4
+recompiling module or02d7
+recompiling module or02da
+recompiling module or03d0
+recompiling module or03d1
+recompiling module or03d2
+recompiling module or03d4
+recompiling module or03d7
+recompiling module or03da
+recompiling module or04d0
+recompiling module or04d1
+recompiling module or04d2
+recompiling module or04d4
+recompiling module or04d7
+recompiling module or04da
+recompiling module ora211d1
+recompiling module ora211d2
+400 of 543 modules done
+recompiling module ora211d4
+recompiling module ora21d1
+recompiling module ora21d2
+recompiling module ora21d4
+recompiling module ora311d1
+recompiling module ora311d2
+recompiling module ora311d4
+recompiling module ora31d1
+recompiling module ora31d2
+recompiling module ora31d4
+recompiling module sdbfb1
+recompiling module sdbfb2
+recompiling module sdbfb4
+recompiling module sdbrb1
+recompiling module sdbrb2
+recompiling module sdbrb4
+recompiling module sdcfb1
+recompiling module sdcfb2
+recompiling module sdcfb4
+recompiling module sdcfq1
+recompiling module sdcfq2
+recompiling module sdcfq4
+recompiling module sdcrb1
+recompiling module sdcrb2
+recompiling module sdcrb4
+recompiling module sdcrn1
+recompiling module sdcrn2
+recompiling module sdcrn4
+recompiling module sdcrq1
+recompiling module sdcrq2
+recompiling module sdcrq4
+recompiling module sdnfb1
+recompiling module sdnfb2
+recompiling module sdnfb4
+recompiling module sdnrb1
+recompiling module sdnrb2
+recompiling module sdnrb4
+recompiling module sdnrn1
+recompiling module sdnrn2
+recompiling module sdnrn4
+recompiling module sdnrq1
+recompiling module sdnrq2
+recompiling module sdnrq4
+recompiling module sdpfb1
+recompiling module sdpfb2
+recompiling module sdpfb4
+recompiling module sdprb1
+recompiling module sdprb2
+recompiling module sdprb4
+recompiling module secfq1
+450 of 543 modules done
+recompiling module secfq2
+recompiling module secfq4
+recompiling module secrq1
+recompiling module secrq2
+recompiling module secrq4
+recompiling module senrb1
+recompiling module senrb2
+recompiling module senrb4
+recompiling module senrq1
+recompiling module senrq2
+recompiling module senrq4
+recompiling module sepfq1
+recompiling module sepfq2
+recompiling module sepfq4
+recompiling module seprq1
+recompiling module seprq2
+recompiling module seprq4
+recompiling module skbrb1
+recompiling module skbrb2
+recompiling module skbrb4
+recompiling module slbhb1
+recompiling module slbhb2
+recompiling module slbhb4
+recompiling module slchq1
+recompiling module slchq2
+recompiling module slchq4
+recompiling module slclq1
+recompiling module slclq2
+recompiling module slclq4
+recompiling module slnhb1
+recompiling module slnhb2
+recompiling module slnhb4
+recompiling module slnhn1
+recompiling module slnhn2
+recompiling module slnhn4
+recompiling module slnhq1
+recompiling module slnhq2
+recompiling module slnhq4
+recompiling module slnht1
+recompiling module slnht2
+recompiling module slnht4
+recompiling module slnlb1
+recompiling module slnlb2
+recompiling module slnlb4
+recompiling module slnln1
+recompiling module slnln2
+recompiling module slnln4
+recompiling module slnlq1
+recompiling module slnlq2
+recompiling module slnlq4
+500 of 543 modules done
+recompiling module srlab1
+recompiling module srlab2
+recompiling module srlab4
+recompiling module su01d0
+recompiling module su01d1
+recompiling module su01d2
+recompiling module su01d4
+recompiling module xn02d1
+recompiling module xn02d2
+recompiling module xn02d4
+recompiling module xn02d7
+recompiling module xn02da
+recompiling module xr02d1
+recompiling module xr02d2
+recompiling module xr02d4
+recompiling module xr02d7
+recompiling module xr02da
+recompiling module xr03d1
+recompiling module xr03d2
+recompiling module xr03d4
+recompiling module xr03d7
+recompiling module xr03da
+recompiling module dummy_scl180_conb_1
+recompiling module delay_stage
+recompiling module user_id_programming
+recompiling module chip_io
+recompiling module housekeeping_spi
+recompiling module housekeeping
+recompiling module mgmt_protect
+recompiling module constant_block
+recompiling module gpio_control_block
+recompiling module gpio_defaults_block
+recompiling module gpio_signal_buffering
+recompiling module xres_buf
+recompiling module RAM256
+recompiling module VexRiscv
+recompiling module InstructionCache
+recompiling module mgmt_core_wrapper
+recompiling module mprj_io_buffer
+recompiling module dummy_por
+recompiling module spiflash
+recompiling module tbuart
+recompiling module hkspi_tb
+All of 543 modules done
+make[1]: Entering directory `/home/dgoyal/vsdRiscvScl180/dv/hkspi/csrc'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/home/Synopsys/tools/vcs/U-2023.03/linux64/lib -L/home/Synopsys/tools/vcs/U-2023.03/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _22206_archive_1.so \
+objs/udps/iJuDZ.o objs/udps/Nginy.o objs/udps/QRIPd.o objs/udps/U9Crq.o objs/udps/eLUxc.o \
+objs/udps/Tcvek.o objs/udps/i0psV.o objs/udps/TB6Ix.o objs/udps/aLBRD.o objs/udps/V7WvH.o \
+objs/udps/FqLFq.o objs/udps/yz1uR.o objs/udps/RUKVA.o objs/udps/afYMY.o objs/udps/fsCp2.o \
+objs/udps/USMy8.o objs/udps/PSwnp.o objs/udps/f0xYg.o objs/udps/tw5vQ.o objs/udps/qwM0m.o \
+objs/udps/KME4Y.o objs/udps/h5bqa.o objs/udps/Gdmn6.o objs/udps/U6qjI.o objs/udps/DtgyT.o \
+objs/udps/K79QG.o objs/udps/dUm5G.o objs/udps/ymc5r.o objs/udps/AENcr.o objs/udps/wIL7Z.o \
+objs/udps/uQKHy.o objs/udps/dxA5k.o objs/udps/iYgyp.o  SIM_l.o      rmapats_mop.o \
+rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf \
+-lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /home/Synopsys/tools/vcs/U-2023.03/linux64/lib/vcs_tls.o \
+-Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /home/Synopsys/tools/vcs/U-2023.03/linux64/lib/vcs_save_restore_new.o \
+-ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/home/dgoyal/vsdRiscvScl180/dv/hkspi/csrc'
+CPU time: 4.158 seconds to compile + .382 seconds to elab + .212 seconds to link
