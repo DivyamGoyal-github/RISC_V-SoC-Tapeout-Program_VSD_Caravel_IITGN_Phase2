@@ -1,0 +1,72 @@
+./caravel_openframe.v:130:    wire porb_h;
+./caravel_openframe.v:131:    wire porb_l;
+./caravel_openframe.v:132:    wire por_l;
+./caravel_openframe.v:193:	.porb_h(porb_h),
+./caravel_openframe.v:194:	.porb_l(porb_l),
+./caravel_openframe.v:195:	.por_l(por_l),
+./caravel_openframe.v:241:	.porb_h(porb_h),
+./caravel_openframe.v:242:	.porb_l(porb_l),
+./caravel_openframe.v:243:	.por_l(por_l),
+./dummy_por.v:20:module dummy_por(
+./dummy_por.v:27:    output porb_h,
+./dummy_por.v:28:    output porb_l,
+./dummy_por.v:29:    output por_l
+./dummy_por.v:76:	.X(porb_h)
+./dummy_por.v:80:    assign porb_l = porb_h;
+./dummy_por.v:83:    assign por_l = ~porb_l;
+./__openframe_project_wrapper.v:51:    input	 porb_h,	// power-on reset, sense inverted, 3.3V domain
+./__openframe_project_wrapper.v:52:    input	 porb_l,	// power-on reset, sense inverted, 1.8V domain
+./__openframe_project_wrapper.v:53:    input	 por_l,		// power-on reset, noninverted, 1.8V domain
+./__openframe_project_wrapper.v:120:	    .porb_h(porb_h),
+./__openframe_project_wrapper.v:121:	    .porb_l(porb_l),
+./__openframe_project_wrapper.v:122:	    .por_l(por_l),
+./caravel_core.v:63:    output porb_h,
+./caravel_core.v:64:    output por_l,
+./caravel_core.v:531:        .porb(porb_l),
+./caravel_core.v:594:        .porb(porb_l),
+./caravel_core.v:1385:    dummy_por por (
+./caravel_core.v:1392:		.porb_h(porb_h),
+./caravel_core.v:1393:		.porb_l(porb_l),
+./caravel_core.v:1394:		.por_l(por_l)
+./pads.v:87:		.ENABLE_H(porb_h), \
+./pads.v:89:		.ENABLE_VDDA_H(porb_h), \
+./pads.v:130:		.ENABLE_H(porb_h),	\
+./pads.v:132:		.ENABLE_VDDA_H(porb_h), \
+./pads.v:163:		.ENABLE_H(porb_h),	\
+./pads.v:165:		.ENABLE_VDDA_H(porb_h), \
+./pads.v:205:		.ENABLE_H(porb_h), \
+./pads.v:207:		.ENABLE_VDDA_H(porb_h), \
+./caravel_clocking.v:24:    input porb,		// Master (negative sense) reset from power-on-reset
+./caravel_netlists.v:28:    //`include "dummy_por.v"
+./caravel_netlists.v:95:    `include "dummy_por.v"
+./mgmt_core.v:83:	input wire por_l_in,
+./mgmt_core.v:84:	output wire por_l_out,
+./mgmt_core.v:85:	input wire porb_h_in,
+./mgmt_core.v:86:	output wire porb_h_out
+./mgmt_core.v:1828:assign por_l_out = por_l_in;
+./mgmt_core.v:1829:assign porb_h_out = porb_h_in;
+./caravel.v:175:  wire porb_h;
+./caravel.v:176:  wire porb_l;
+./caravel.v:177:  wire por_l;
+./caravel.v:254:      .porb_h(porb_h),
+./caravel.v:255:      .por(por_l),
+./caravel.v:312:      .porb_h(porb_h),
+./caravel.v:313:      .por_l(por_l),
+./mprj_io.v:40:    input porb_h,
+./mprj_io.v:86:	    .ENABLE_VDDA_H(porb_h),
+./mprj_io.v:117:	    .ENABLE_VDDA_H(porb_h),
+./chip_io.v:64:	input  porb_h,
+./chip_io.v:65:	input  por,
+./chip_io.v:112:    // and setting enh to porb_h.
+./chip_io.v:116:    assign mprj_io_enh = {`MPRJ_IO_PADS{porb_h}};
+./chip_io.v:778:  wire \mprj_pads.porb_h ;
+./chip_io.v:1122:		.ENABLE_H(porb_h),	 	  // Power-on-reset
+./chip_io.v:1199:		.porb_h(porb_h),
+./housekeeping.v:82:    input porb,
+./vsdcaravel.v:175:  wire porb_h;
+./vsdcaravel.v:176:  wire porb_l;
+./vsdcaravel.v:177:  wire por_l;
+./vsdcaravel.v:254:      .porb_h(porb_h),
+./vsdcaravel.v:255:      .por(por_l),
+./vsdcaravel.v:312:      .porb_h(porb_h),
+./vsdcaravel.v:313:      .por_l(por_l),

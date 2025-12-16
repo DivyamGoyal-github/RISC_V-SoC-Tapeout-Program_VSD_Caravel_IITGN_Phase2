@@ -1,0 +1,26 @@
+========================================
+Blackbox Modules Report
+========================================
+
+Date: Tue Dec 16 17:39:25 2025
+Design: vsdcaravel
+
+----------------------------------------
+Module: RAM128
+----------------------------------------
+  Design Status: PRESENT (blackbox)
+  Instance Count: 1
+  Instances:
+    - chip_core/soc/core/RAM128
+
+----------------------------------------
+Module: RAM256
+----------------------------------------
+  Design Status: PRESENT (blackbox)
+  Instance Count: 1
+  Instances:
+    - chip_core/soc/core/RAM256
+
+========================================
+End of Blackbox Report
+========================================

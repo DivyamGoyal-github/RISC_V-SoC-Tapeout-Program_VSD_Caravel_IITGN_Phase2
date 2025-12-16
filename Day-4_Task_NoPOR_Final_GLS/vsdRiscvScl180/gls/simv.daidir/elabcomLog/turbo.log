@@ -1,0 +1,3 @@
+Command Line: /home/Synopsys/tools/vcs/U-2023.03/linux64/bin/elabcom -logdir /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/elabcomLog -simvdaidir /home/dgoyal/vsdRiscvScl180/gls/simv.daidir -lib /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/work -saveLevel -elab /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/kdb -simflow -simdir /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/kdb_libs -topfile /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/.elabcomTopFile -ssv -ssy -Lf work +disable_message+C00380+C00381 +disable_message+C00388+C00389
+uname(Linux nanodc.iitgn.ac.in 3.10.0-1160.119.1.el7.x86_64 #1 SMP Tue Jun 4 14:43:51 UTC 2024 x86_64)
+au time 0.257970 0.063368 0.017838 delta 97034240 97034240 total 278597632 278597632

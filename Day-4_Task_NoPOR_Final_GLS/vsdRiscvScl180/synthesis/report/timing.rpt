@@ -1,0 +1,145 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : RAM128
+Version: T-2022.03-SP5
+Date   : Tue Dec 16 16:24:31 2025
+****************************************
+
+Operating Conditions: tsl18cio250_min   Library: tsl18cio250_min
+Wire Load Model Mode: enclosed
+
+  Startpoint: Do0[31] (internal pin)
+  Endpoint: Do0[31] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  Do0[31] (out)                            0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Do0[30] (internal pin)
+  Endpoint: Do0[30] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  Do0[30] (out)                            0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Do0[29] (internal pin)
+  Endpoint: Do0[29] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  Do0[29] (out)                            0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Do0[28] (internal pin)
+  Endpoint: Do0[28] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  Do0[28] (out)                            0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Do0[27] (internal pin)
+  Endpoint: Do0[27] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  Do0[27] (out)                            0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Do0[26] (internal pin)
+  Endpoint: Do0[26] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  Do0[26] (out)                            0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Do0[25] (internal pin)
+  Endpoint: Do0[25] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  Do0[25] (out)                            0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Do0[24] (internal pin)
+  Endpoint: Do0[24] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  Do0[24] (out)                            0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Do0[23] (internal pin)
+  Endpoint: Do0[23] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  Do0[23] (out)                            0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: Do0[22] (internal pin)
+  Endpoint: Do0[22] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  Do0[22] (out)                            0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

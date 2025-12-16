@@ -1,0 +1,59 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : RAM128
+Version: T-2022.03-SP5
+Date   : Tue Dec 16 16:24:31 2025
+****************************************
+
+
+Library(s) Used:
+
+    No libraries used.
+
+
+Operating Conditions: tsl18cio250_min   Library: tsl18cio250_min
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+RAM128                 ForQA             tsl18cio250_min
+
+
+Global Operating Voltage = 1.98 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =   0.0000 mW        
+  Net Switching Power  =   0.0000 mW        
+                         ---------
+Total Dynamic Power    =   0.0000 mW        
+
+Cell Leakage Power     =   0.0000 pW
+
+Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (     N/A)
+memory             0.0000            0.0000            0.0000            0.0000  (     N/A)
+black_box          0.0000            0.0000            0.0000            0.0000  (     N/A)
+clock_network      0.0000            0.0000            0.0000            0.0000  (     N/A)  i
+register           0.0000            0.0000            0.0000            0.0000  (     N/A)
+sequential         0.0000            0.0000            0.0000            0.0000  (     N/A)
+combinational      0.0000            0.0000            0.0000            0.0000  (     N/A)
+--------------------------------------------------------------------------------------------------
+Total              0.0000 mW         0.0000 mW         0.0000 pW         0.0000 mW
+1

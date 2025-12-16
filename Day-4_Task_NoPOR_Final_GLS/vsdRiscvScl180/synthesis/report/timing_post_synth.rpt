@@ -1,0 +1,196 @@
+Warning: Design 'vsdcaravel' has '119' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : vsdcaravel
+Version: T-2022.03-SP5
+Date   : Tue Dec 16 17:39:25 2025
+****************************************
+
+Operating Conditions: tsl18cio250_min   Library: tsl18cio250_min
+Wire Load Model Mode: enclosed
+
+  Startpoint: vddio_2 (input port)
+  Endpoint: vddio (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  vsdcaravel         1000000               tsl18cio250_min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 r
+  vddio_2 (inout)                          0.00       0.00 r
+  padframe/vddio_pad2 (chip_io)            0.00       0.00 r
+  padframe/vddio_pad (chip_io)             0.00       0.00 r
+  vddio (inout)                            0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: vddio (input port)
+  Endpoint: vddio_2 (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  vsdcaravel         1000000               tsl18cio250_min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 r
+  vddio (inout)                            0.00       0.00 r
+  padframe/vddio_pad (chip_io)             0.00       0.00 r
+  padframe/vddio_pad2 (chip_io)            0.00       0.00 r
+  vddio_2 (inout)                          0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: vssio_2 (internal pin)
+  Endpoint: vssio_2 (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  vsdcaravel         1000000               tsl18cio250_min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  vssio_2 (inout)                          0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: vdda (internal pin)
+  Endpoint: vdda (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  vsdcaravel         1000000               tsl18cio250_min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  vdda (inout)                             0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: vssa (internal pin)
+  Endpoint: vssa (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  vsdcaravel         1000000               tsl18cio250_min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  vssa (inout)                             0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: vdda1_2 (internal pin)
+  Endpoint: vdda1_2 (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  vsdcaravel         1000000               tsl18cio250_min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  vdda1_2 (inout)                          0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: vssa1 (internal pin)
+  Endpoint: vssa1 (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  vsdcaravel         1000000               tsl18cio250_min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  vssa1 (inout)                            0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: vssa1_2 (internal pin)
+  Endpoint: vssa1_2 (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  vsdcaravel         1000000               tsl18cio250_min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  vssa1_2 (inout)                          0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: vssd1 (internal pin)
+  Endpoint: vssd1 (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  vsdcaravel         1000000               tsl18cio250_min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  vssd1 (inout)                            0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: padframe/gpio_pad/PAD (internal pin)
+  Endpoint: gpio (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  vsdcaravel         1000000               tsl18cio250_min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  padframe/gpio_pad/PAD (pc3b03ed_wrapper)                0.00       0.00 r
+  padframe/gpio (chip_io)                                 0.00       0.00 r
+  gpio (inout)                                            0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

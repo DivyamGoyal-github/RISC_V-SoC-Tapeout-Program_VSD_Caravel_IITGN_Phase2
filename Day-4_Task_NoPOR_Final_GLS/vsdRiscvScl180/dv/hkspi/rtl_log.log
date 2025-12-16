@@ -1,0 +1,94 @@
+vcs -sverilog +v2k -full64 -debug_all -lca -timescale=1ns/1ps +define+FUNCTIONAL +define+SIM +incdir+../  +incdir+../../rtl +incdir+../../rtl/scl180_wrapper +incdir+"/home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/iopad/cio250/4MIL/verilog/tsl18cio250/zero" \
+hkspi_tb.v \
+-l compile.log \
+-o simv
+
+Warning-[DEBUG_DEP] Option will be deprecated
+  The option '-debug_all' will be deprecated in a future release.  Please use 
+  '-debug_acc+all+dmptf -debug_region+cell+encrypt' instead.
+
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid this.
+                         Chronologic VCS (TM)
+         Version U-2023.03_Full64 -- Tue Dec 16 17:26:59 2025
+
+                    Copyright (c) 1991 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+
+Warning-[LCA_FEATURES_ENABLED] Usage warning
+  LCA features enabled by '-lca' argument on the command line.  For more 
+  information regarding list of LCA features please refer to Chapter "LCA 
+  features" in the VCS Release Notes
+
+
+Warning-[DEBUG_DEP] Option will be deprecated
+  The option '-debug_all' will be deprecated in a future release.  Please use 
+  '-debug_acc+all -debug_region+cell+encrypt' instead.
+
+[SCL] 12/16/2025 17:27:00 Checking status for feature VCS-BASE-COMPILE
+[SCL] 12/16/2025 17:27:00 PID:29096 Client:nanodc.iitgn.ac.in Server:27020@c2s.cdacb.in Checkout succeeded VCS-BASE-COMPILE 2023.03 from VCS-Base-Compile-Pkg
+The design hasn't changed and need not be recompiled. 
+If you really want to, delete file /home/dgoyal/vsdRiscvScl180/dv/hkspi/simv.daidir/.vcs.timestamp and
+run VCS again.
+
+[SCL] 12/16/2025 17:27:00 PID:29096 Client:nanodc.iitgn.ac.in checkin (null) 
+./simv -l simulation.log +vcs+initreg+random
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid this.
+
+Warning-[VICIU] VCS initreg not enabled at compile time
+  +vcs+initreg+ features will not work at runtime without +vcs+initreg+random 
+  or +vcs+initreg+config option at compile time.
+  Please recompile the design from scratch with one of the two switches to 
+  avail the feature.
+
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version U-2023.03_Full64; Runtime version U-2023.03_Full64;  Dec 16 17:27 2025
+[SCL] 12/16/2025 17:27:02 Checking status for feature VCS-BASE-RUNTIME
+[SCL] 12/16/2025 17:27:02 PID:29110 Client:nanodc.iitgn.ac.in Server:27020@c2s.cdacb.in Checkout succeeded VCS-BASE-RUNTIME 2023.03 from VCS-Base-Runtime-Pkg
+Reading hkspi.hex
+hkspi.hex loaded into memory
+Memory 5 bytes = 0x93 0x00 0x00 0x00 0x93
+Read data = 0x11 (should be 0x11)
+Read register 0 = 0x00 (should be 0x00)
+Read register 1 = 0x04 (should be 0x04)
+Read register 2 = 0x56 (should be 0x56)
+Read register 3 = 0x11 (should be 0x11)
+Read register 4 = 0x00 (should be 0x00)
+Read register 5 = 0x00 (should be 0x00)
+Read register 6 = 0x00 (should be 0x00)
+Read register 7 = 0x00 (should be 0x00)
+Read register 8 = 0x02 (should be 0x02)
+Read register 9 = 0x01 (should be 0x01)
+Read register 10 = 0x00 (should be 0x00)
+Read register 11 = 0x00 (should be 0x00)
+Read register 12 = 0x00 (should be 0x00)
+Read register 13 = 0xff (should be 0xff)
+Read register 14 = 0xef (should be 0xef)
+Read register 15 = 0xff (should be 0xff)
+Read register 16 = 0x03 (should be 0x03)
+Read register 17 = 0x12 (should be 0x12)
+Read register 18 = 0x04 (should be 0x04)
+Monitor: Test HK SPI (RTL) Passed
+$finish called from file "hkspi_tb.v", line 363.
+$finish at simulation time            349410000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 349410000 ps
+CPU Time:      0.280 seconds;       Data structure size:   1.0Mb
+Tue Dec 16 17:27:02 2025
+[SCL] 12/16/2025 17:27:02 PID:29110 Client:nanodc.iitgn.ac.in checkin (null) 

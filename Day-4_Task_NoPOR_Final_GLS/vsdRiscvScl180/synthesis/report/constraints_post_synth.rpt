@@ -1,0 +1,23 @@
+Warning: Design 'vsdcaravel' has '119' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : vsdcaravel
+Version: T-2022.03-SP5
+Date   : Tue Dec 16 17:39:25 2025
+****************************************
+
+
+   max_capacitance
+
+                             Required        Actual
+   Net                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   chip_core/soc/core/VexRiscv/n314
+                                0.15           0.15           0.00  (VIOLATED: increase significant digits)
+
+   -----------------------------------------------------------------
+   Total                      1                  -0.00  
+
+1
