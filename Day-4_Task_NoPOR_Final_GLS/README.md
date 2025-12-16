@@ -300,6 +300,8 @@ assets/
   <img src="./assets/reset_n_vsdcaravel_gui.png" alt="reset_n_vsdcaravel_gui" width="80%">
 </div>
 
+Only reset_n pin is their in the vsdcaravel.
+
 <div align="center" >
   <img src="./assets/reset_n_padframe.png" alt="reset_n_padframe" width="80%">
 </div>
