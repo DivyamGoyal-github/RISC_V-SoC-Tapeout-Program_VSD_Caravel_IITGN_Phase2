@@ -1,4 +1,3 @@
-
 # Task-3: Complete Removal of On-Chip POR and Final GLS Validation  
 ### VSD Caravel-Based RISC-V SoC | SCL-180 Technology
 
@@ -96,11 +95,10 @@ There is **no implicit power-up behavior** assumed anywhere in the design.
 - A **single top-level reset pin**:
   ```verilog
   input reset_n;
-````
+  ```
 
 * Explicit reset usage in **all sequential logic**
 
----
 
 ## 5. RTL Refactoring Details
 
@@ -120,10 +118,18 @@ The following **categories of modules** were modified:
 
 ### 5.2 Files Modified for Reset Migration
 
-> **Placeholder – to be filled explicitly if required**
 
 ```text
-[ ADD LIST OF MODIFIED RTL FILES HERE ]
+./caravel_openframe.v
+./clock_div.v
+./__openframe_project_wrapper.v
+./caravel_core.v
+./caravel_clocking.v
+./caravel.v
+./chip_io.v
+./digital_pll.v
+./vsdcaravel.v
+
 ```
 
 All replacements were verified through:
@@ -133,6 +139,13 @@ All replacements were verified through:
 * Synthesis validation
 * GLS behavior
 
+<div align="center" >
+  <img src="./assets/rtl_passed_wo_dummy_por.png" alt="rtl_passed_wo_dummy_por" width="80%">
+</div>
+
+<div align="center" >
+  <img src="./assets/rtl_gtkwave_wo_dummy_por.png" alt="rtl_gtkwave_wo_dummy_por" width="80%">
+</div>
 ---
 
 ## 6. Synthesis Flow (DC_TOPO – SCL-180)
@@ -179,9 +192,19 @@ synthesis/
 │
 ├── synthesis_after_rst_fix.log
 └── synthesis_complete_errors_warnings.md
+
 ```
 
 The synthesized netlist contains **no POR logic** and uses **only `reset_n`**.
+
+
+<div align="center" >
+  <img src="./assets/synthesis_complete.png" alt="synthesis_complete" width="80%">
+</div>
+
+<div align="center" >
+  <img src="./assets/synthesis_file_wo_dummy_por.png" alt="synthesis_file_wo_dummy_por" width="80%">
+</div>
 
 ---
 
@@ -218,6 +241,16 @@ gls/
 ├── hkspi_tb_gl.v
 └── hkspi.vcd
 ```
+
+<div align="center" >
+  <img src="./assets/gls_passed_wo_dummy_por.png" alt="gls_passed_wo_dummy_por" width="80%">
+</div>
+
+
+<div align="center" >
+  <img src="./assets/gls_gtkwave_wo_dummy_por.png" alt="gls_gtkwave_wo_dummy_por" width="80%">
+</div>
+
 
 Waveforms confirm:
 
@@ -259,7 +292,17 @@ assets/
 └── synthesis_file_wo_dummy_por.png
 ```
 
-> Additional screenshots of `vsdcaravel_synthesis.v` (POR-free) are placed in the `output/` folder.
+<div align="center" >
+  <img src="./assets/full_gui.png" alt="full_gui" width="80%">
+</div>
+
+<div align="center" >
+  <img src="./assets/reset_n_vsdcaravel_gui.png" alt="reset_n_vsdcaravel_gui" width="80%">
+</div>
+
+<div align="center" >
+  <img src="./assets/reset_n_padframe.png" alt="reset_n_padframe" width="80%">
+</div>
 
 ---
 
