@@ -50,6 +50,12 @@ The first part of this project focuses on **logical correctness and synthesis eq
   * Module-level interfaces
 * Removed non-synthesizable / dummy constructs (e.g., dummy POR) and replaced them with a **single clean active-low reset (`reset_n`)**
 
+
+<div align="center" >
+  <img src="./Task-4_Caravel_Without_dummy_POR_Final_GLS/assets/reset_n_vsdcaravel_gui.png" alt="reset_n_vsdcaravel_gui" width="80%">
+</div>
+
+
 ### Why This Matters
 
 GLS verification ensures that:
