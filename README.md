@@ -30,10 +30,55 @@ The objective of this repository is to demonstrate **tapeout-oriented thinking**
 | **Focus Areas**     | PDK migration, physical correctness, timing awareness           |
 
 ---
+Got it 👍
+Below is a **clean replacement** for that entire section, with **all day-wise references removed**, while keeping it **technical, professional, and tapeout-program ready**.
+
+You can **directly replace** your existing section with this.
+
+---
+
+## 📊 Technical Journey Overview
 
 ## 🔹 Part 1: RTL & GLS Verification of HKSPI in VSDCaravel SoC
 
-The first part of this project focuses on **logical correctness and synthesis equivalence** of the **HKSPI module** integrated within the **VSDCaravel SoC**.
+This part of the project focuses on ensuring **logical correctness, synthesis equivalence, and tool-flow robustness** for the **HKSPI module** integrated within the **VSDCaravel SoC**.
+
+The emphasis was on building **reliable RTL and Gate-Level Simulation (GLS) flows** across multiple PDKs and toolchains, ensuring that functional behavior is preserved after synthesis.
+
+### Objectives
+
+* Validate RTL functionality through simulation
+* Establish RTL ↔ GLS equivalence
+* Adapt and verify flows using **SCL180 PDK**
+* Transition from open-source to industry-grade tools
+
+### Verification Scope
+
+| Focus Area                              | Tools Used            | Key Outcome                                                                   |
+| --------------------------------------- | --------------------- | ----------------------------------------------------------------------------- |
+| HKSPI Interface Functional Verification | Icarus Verilog, Yosys | RTL and GLS waveforms matched, signal flow fully validated                    |
+| SCL180 PDK-Based Synthesis & GLS        | Synopsys DC Shell     | Clean synthesis with no functional mismatches                                 |
+| Industry Tool Migration                 | Synopsys VCS, DC_TOPO | Faster compilation, improved debug visibility, professional verification flow |
+
+---
+
+## 🔹 Part 2: RTL Architecture Analysis & Debug
+
+This phase involved **deep RTL-level investigation and corrective design actions** to improve synthesis compatibility and backend readiness.
+
+### Objectives
+
+* Remove non-synthesizable or fragile constructs
+* Improve reset determinism
+* Identify root causes of functional failures
+
+### Key Debug & Design Improvements
+
+| Focus Area                   | Key Finding                                              | Resolution / Outcome                                                           |
+| ---------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| Reset Architecture           | Behavioral POR delays incompatible with synthesis        | Replaced `dummy_por` with a single deterministic active-low `reset_n`          |
+| GPIO Subsystem Investigation | Register-mapping mismatch and pad control disconnections | Root cause documented: CSR vs MMIO incompatibility and missing control signals |
+
 
 ### Key Activities
 
@@ -43,11 +88,14 @@ The first part of this project focuses on **logical correctness and synthesis eq
 
   * SKY130 PDK
   * SCL180 PDK
+
+
 * Tested behavior across:
 
   * Reset conditions
   * Clock transitions
   * Module-level interfaces
+  
 * Removed non-synthesizable / dummy constructs (e.g., dummy POR) and replaced them with a **single clean active-low reset (`reset_n`)**
 
 
@@ -63,6 +111,32 @@ GLS verification ensures that:
 * The synthesized netlist truly represents the RTL intent
 * No functional regressions are introduced by synthesis
 * The design is safe to move into **physical implementation**
+
+---
+
+This phase ensured the design was **logically stable and backend-friendly** before moving into physical design. There were numerour issues in the GPIO and MPRJ Block files which are documented and needed to verify before going on to the backend physical design part. So, we shifted to Raven SOC to create a PD Flow using Synopsys so that after fixing the GPIO and MPRJ Blocks we can implement the PD flow adopted in Raven SOC to VSDCaravel saving time and exploring both the Frontend and Backend systems
+
+---
+
+## 🔹 Part 3: Physical Design Preparation of Raven SoC
+
+This phase marks the transition from **logical correctness to physical feasibility**, focusing on preparing the **Raven SoC** for backend implementation.
+
+### Objectives
+
+* Establish a clean physical design entry point
+* Prepare the design for placement and routing
+* Validate physical constraints and reports
+
+### Physical Design Scope
+
+| Physical Design Task        | Tool / Flow               | Key Deliverables                                       |
+| --------------------------- | ------------------------- | ------------------------------------------------------ |
+| Floorplanning               | Physical Design Tool Flow | Die sizing, core utilization planning, pin placement   |
+| Power Planning & Automation | TCL-based scripting       | Power grid planning, design-rule awareness             |
+| Physical Analysis           | Tool-generated Reports    | Area, congestion, timing, and power integrity insights |
+
+This stage ensured the Raven SoC was **physically well-structured** and suitable for downstream placement and routing without major architectural rework.
 
 ---
 
