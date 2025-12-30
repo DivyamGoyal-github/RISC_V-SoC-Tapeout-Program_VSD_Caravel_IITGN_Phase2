@@ -4,13 +4,14 @@ Report : power
         -analysis_effort low
 Design : vsdcaravel
 Version: T-2022.03-SP5
-Date   : Tue Dec 16 17:39:25 2025
+Date   : Tue Dec 23 16:42:22 2025
 ****************************************
 
 
 Library(s) Used:
 
     tsl18fs120_scl_ff (File: /home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/stdcell/fs120/4M1IL/liberty/lib_flow_ff/tsl18fs120_scl_ff.db)
+    gtech (File: /home/Synopsys/tools/syn/T-2022.03-SP5/libraries/syn/gtech.db)
     tsl18cio250_min (File: /home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/iopad/cio250/4M1L/liberty/tsl18cio250_min.db)
 
 
@@ -19,108 +20,33 @@ Wire Load Model Mode: enclosed
 
 Design        Wire Load Model            Library
 ------------------------------------------------
-vsdcaravel             1000000           tsl18cio250_min
+vsdcaravel             ForQA             tsl18cio250_min
 chip_io                4000              tsl18cio250_min
-caravel_core           1000000           tsl18cio250_min
+caravel_core           ForQA             tsl18cio250_min
 mprj_io                ForQA             tsl18cio250_min
-mgmt_core_wrapper      540000            tsl18cio250_min
+mgmt_core_wrapper      ForQA             tsl18cio250_min
 mgmt_protect           4000              tsl18cio250_min
 user_project_wrapper   16000             tsl18cio250_min
-caravel_clocking       4000              tsl18cio250_min
+caravel_clocking       8000              tsl18cio250_min
 digital_pll            8000              tsl18cio250_min
 housekeeping           140000            tsl18cio250_min
 mprj_io_buffer         4000              tsl18cio250_min
-gpio_defaults_block_1803_0
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_0
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0801
-                       ForQA             tsl18cio250_min
-gpio_control_block_37  4000              tsl18cio250_min
-user_id_programming_00000000
-                       ForQA             tsl18cio250_min
+gpio_control_block_0   4000              tsl18cio250_min
 xres_buf               ForQA             tsl18cio250_min
-spare_logic_block_3    ForQA             tsl18cio250_min
-mgmt_core              540000            tsl18cio250_min
-mprj_logic_high        ForQA             tsl18cio250_min
-mprj2_logic_high       ForQA             tsl18cio250_min
-mgmt_protect_hv        ForQA             tsl18cio250_min
+spare_logic_block_0    ForQA             tsl18cio250_min
+mgmt_core              ForQA             tsl18cio250_min
 debug_regs             16000             tsl18cio250_min
+clock_div_SIZE3_0      4000              tsl18cio250_min
+ring_osc2x13           4000              tsl18cio250_min
 digital_pll_controller 4000              tsl18cio250_min
 housekeeping_spi       8000              tsl18cio250_min
-gpio_logic_high_37     ForQA             tsl18cio250_min
+RAM256                 ForQA             tsl18cio250_min
 VexRiscv               540000            tsl18cio250_min
+even_0                 4000              tsl18cio250_min
+odd_0                  4000              tsl18cio250_min
+delay_stage_0          4000              tsl18cio250_min
+start_stage            4000              tsl18cio250_min
 InstructionCache       140000            tsl18cio250_min
-gpio_defaults_block_1803_1
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_1
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_2
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_3
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_4
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_5
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_6
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_7
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_8
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_9
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_10
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_11
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_12
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_13
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_14
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_15
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_16
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_17
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_18
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_19
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_20
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_21
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_22
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_23
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_24
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_25
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_26
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_27
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_28
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_29
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_30
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_31
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_32
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_33
-                       ForQA             tsl18cio250_min
-gpio_defaults_block_0403_34
-                       ForQA             tsl18cio250_min
 gpio_control_block_1   4000              tsl18cio250_min
 gpio_control_block_2   4000              tsl18cio250_min
 gpio_control_block_3   4000              tsl18cio250_min
@@ -157,77 +83,54 @@ gpio_control_block_33  4000              tsl18cio250_min
 gpio_control_block_34  4000              tsl18cio250_min
 gpio_control_block_35  4000              tsl18cio250_min
 gpio_control_block_36  4000              tsl18cio250_min
-gpio_control_block_0   4000              tsl18cio250_min
-spare_logic_block_0    ForQA             tsl18cio250_min
+gpio_control_block_37  4000              tsl18cio250_min
 spare_logic_block_1    ForQA             tsl18cio250_min
 spare_logic_block_2    ForQA             tsl18cio250_min
-gpio_logic_high_1      ForQA             tsl18cio250_min
-gpio_logic_high_2      ForQA             tsl18cio250_min
-gpio_logic_high_3      ForQA             tsl18cio250_min
-gpio_logic_high_4      ForQA             tsl18cio250_min
-gpio_logic_high_5      ForQA             tsl18cio250_min
-gpio_logic_high_6      ForQA             tsl18cio250_min
-gpio_logic_high_7      ForQA             tsl18cio250_min
-gpio_logic_high_8      ForQA             tsl18cio250_min
-gpio_logic_high_9      ForQA             tsl18cio250_min
-gpio_logic_high_10     ForQA             tsl18cio250_min
-gpio_logic_high_11     ForQA             tsl18cio250_min
-gpio_logic_high_12     ForQA             tsl18cio250_min
-gpio_logic_high_13     ForQA             tsl18cio250_min
-gpio_logic_high_14     ForQA             tsl18cio250_min
-gpio_logic_high_15     ForQA             tsl18cio250_min
-gpio_logic_high_16     ForQA             tsl18cio250_min
-gpio_logic_high_17     ForQA             tsl18cio250_min
-gpio_logic_high_18     ForQA             tsl18cio250_min
-gpio_logic_high_19     ForQA             tsl18cio250_min
-gpio_logic_high_20     ForQA             tsl18cio250_min
-gpio_logic_high_21     ForQA             tsl18cio250_min
-gpio_logic_high_22     ForQA             tsl18cio250_min
-gpio_logic_high_23     ForQA             tsl18cio250_min
-gpio_logic_high_24     ForQA             tsl18cio250_min
-gpio_logic_high_25     ForQA             tsl18cio250_min
-gpio_logic_high_26     ForQA             tsl18cio250_min
-gpio_logic_high_27     ForQA             tsl18cio250_min
-gpio_logic_high_28     ForQA             tsl18cio250_min
-gpio_logic_high_29     ForQA             tsl18cio250_min
-gpio_logic_high_30     ForQA             tsl18cio250_min
-gpio_logic_high_31     ForQA             tsl18cio250_min
-gpio_logic_high_32     ForQA             tsl18cio250_min
-gpio_logic_high_33     ForQA             tsl18cio250_min
-gpio_logic_high_34     ForQA             tsl18cio250_min
-gpio_logic_high_35     ForQA             tsl18cio250_min
-gpio_logic_high_36     ForQA             tsl18cio250_min
-gpio_logic_high_0      ForQA             tsl18cio250_min
-housekeeping_DW_decode_en_3
+spare_logic_block_3    ForQA             tsl18cio250_min
+clock_div_SIZE3_1      4000              tsl18cio250_min
+even_1                 4000              tsl18cio250_min
+odd_1                  4000              tsl18cio250_min
+delay_stage_1          ForQA             tsl18cio250_min
+delay_stage_2          ForQA             tsl18cio250_min
+delay_stage_3          ForQA             tsl18cio250_min
+delay_stage_4          ForQA             tsl18cio250_min
+delay_stage_5          ForQA             tsl18cio250_min
+delay_stage_6          4000              tsl18cio250_min
+delay_stage_7          ForQA             tsl18cio250_min
+delay_stage_8          ForQA             tsl18cio250_min
+delay_stage_9          ForQA             tsl18cio250_min
+delay_stage_10         ForQA             tsl18cio250_min
+delay_stage_11         ForQA             tsl18cio250_min
+housekeeping_DW_decode_en_0
                        4000              tsl18cio250_min
-mgmt_core_DW01_inc_7   4000              tsl18cio250_min
-mgmt_core_DW01_inc_8   4000              tsl18cio250_min
-mgmt_core_DW01_add_5   4000              tsl18cio250_min
-mgmt_core_DW01_inc_9   4000              tsl18cio250_min
-mgmt_core_DW01_dec_6   4000              tsl18cio250_min
-mgmt_core_DW01_inc_10  4000              tsl18cio250_min
-mgmt_core_DW01_inc_11  4000              tsl18cio250_min
-mgmt_core_DW01_add_6   4000              tsl18cio250_min
-mgmt_core_DW01_add_7   4000              tsl18cio250_min
-mgmt_core_DW01_add_8   4000              tsl18cio250_min
-mgmt_core_DW01_add_9   4000              tsl18cio250_min
-mgmt_core_DW01_dec_7   4000              tsl18cio250_min
-mgmt_core_DW01_dec_8   4000              tsl18cio250_min
-mgmt_core_DP_OP_1014_124_2453_1
+housekeeping_spi_DW01_inc_0
                        4000              tsl18cio250_min
-mgmt_core_DP_OP_1015_125_4494_1
+digital_pll_controller_DP_OP_20_122_7403_0
                        4000              tsl18cio250_min
-mgmt_core_DP_OP_1017_127_5950_1
+mgmt_core_DP_OP_1017_127_5950_0
                        4000              tsl18cio250_min
-digital_pll_controller_DP_OP_19_128_3538_1
+mgmt_core_DP_OP_1015_125_4494_0
                        4000              tsl18cio250_min
-digital_pll_controller_DP_OP_20_122_7403_1
+mgmt_core_DP_OP_1014_124_2453_0
                        4000              tsl18cio250_min
-housekeeping_spi_DW01_inc_1
+mgmt_core_DW01_dec_0   4000              tsl18cio250_min
+mgmt_core_DW01_dec_1   4000              tsl18cio250_min
+mgmt_core_DW01_add_0   4000              tsl18cio250_min
+mgmt_core_DW01_add_1   4000              tsl18cio250_min
+mgmt_core_DW01_add_2   4000              tsl18cio250_min
+mgmt_core_DW01_add_3   4000              tsl18cio250_min
+mgmt_core_DW01_inc_2   4000              tsl18cio250_min
+mgmt_core_DW01_inc_3   4000              tsl18cio250_min
+mgmt_core_DW01_dec_5   4000              tsl18cio250_min
+mgmt_core_DW01_inc_4   4000              tsl18cio250_min
+mgmt_core_DW01_add_4   4000              tsl18cio250_min
+mgmt_core_DW01_inc_5   4000              tsl18cio250_min
+mgmt_core_DW01_inc_6   4000              tsl18cio250_min
+VexRiscv_DP_OP_472_123_8766_0
                        4000              tsl18cio250_min
-VexRiscv_DW01_add_2    4000              tsl18cio250_min
-VexRiscv_DW01_add_3    4000              tsl18cio250_min
-VexRiscv_DP_OP_472_123_8766_1
+VexRiscv_DW01_add_0    4000              tsl18cio250_min
+VexRiscv_DW01_add_1    4000              tsl18cio250_min
+digital_pll_controller_DP_OP_19_128_3538_0
                        4000              tsl18cio250_min
 
 
@@ -245,25 +148,24 @@ Attributes
 i - Including register clock pin internal power
 
 
-  Cell Internal Power  =  38.5592 mW   (52%)
-  Net Switching Power  =  35.2668 mW   (48%)
+  Cell Internal Power  =   2.0141 mW   (35%)
+  Net Switching Power  =   3.7331 mW   (65%)
                          ---------
-Total Dynamic Power    =  73.8260 mW  (100%)
+Total Dynamic Power    =   5.7472 mW  (100%)
 
-Cell Leakage Power     =   1.0032 uW
+Cell Leakage Power     =   1.0210 uW
 
-Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
 
                  Internal         Switching           Leakage            Total
 Power Group      Power            Power               Power              Power   (   %    )  Attrs
 --------------------------------------------------------------------------------------------------
-io_pad             1.6878        2.0763e-02        5.7237e+03            1.7086  (   2.32%)
+io_pad         6.9391e-02        1.5620e-03        2.7076e+04        7.0980e-02  (   1.54%)
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
-black_box          0.0000            0.1200           62.7200            0.1200  (   0.16%)
-clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)  i
-register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
-sequential        33.8162            0.4240        6.4545e+05           34.2409  (  46.40%)
-combinational      3.0553           34.6737        3.5193e+05           37.7292  (  51.12%)
+black_box          0.0000        4.2428e-03           62.7200        4.2429e-03  (   0.09%)
+clock_network      1.8422            1.8338        4.8520e+04            3.6760  (  80.01%)  i
+register       7.9167e-02        9.4427e-03        6.4279e+05        8.9251e-02  (   1.94%)
+sequential     2.0632e-03            0.0000        8.0768e+03        2.0713e-03  (   0.05%)
+combinational  2.1270e-02            0.7304        2.9445e+05            0.7520  (  16.37%)
 --------------------------------------------------------------------------------------------------
-Total             38.5593 mW        35.2384 mW     1.0032e+06 pW        73.7986 mW
+Total              2.0141 mW         2.5795 mW     1.0210e+06 pW         4.5946 mW
 1

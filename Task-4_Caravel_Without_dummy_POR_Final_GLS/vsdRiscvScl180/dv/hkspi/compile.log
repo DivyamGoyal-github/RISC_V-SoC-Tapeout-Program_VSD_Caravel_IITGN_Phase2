@@ -7,7 +7,7 @@ Command: vcs -sverilog +v2k -full64 -debug_all -lca -timescale=1ns/1ps +define+F
 +define+SIM +incdir+../ +incdir+../../rtl +incdir+../../rtl/scl180_wrapper +incdir+/home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/iopad/cio250/4MIL/verilog/tsl18cio250/zero \
 hkspi_tb.v -l compile.log -o simv
                          Chronologic VCS (TM)
-         Version U-2023.03_Full64 -- Tue Dec 16 17:26:59 2025
+         Version U-2023.03_Full64 -- Sun Dec 21 19:29:36 2025
 
                     Copyright (c) 1991 - 2023 Synopsys, Inc.
    This software and the associated documentation are proprietary to Synopsys,

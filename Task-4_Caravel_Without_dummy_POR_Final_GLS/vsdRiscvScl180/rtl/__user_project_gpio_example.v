@@ -44,9 +44,9 @@ module user_project_gpio_example (
 
 );
     reg [31:0] io_l;
-    reg [5:0] io_h;
+    reg [7:0] io_h;
     reg [31:0] oeb_l;
-    reg [5:0] oeb_h;
+    reg [7:0] oeb_h;
 
      always @(posedge wb_clk_i or posedge wb_rst_i) begin
         if (wb_rst_i) begin

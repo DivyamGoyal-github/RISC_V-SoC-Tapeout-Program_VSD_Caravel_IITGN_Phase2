@@ -15,7 +15,6 @@
 // SPDX-License-Identifier: Apache-2.0
 
 `default_nettype wire
-//`include "/home/sshekhar/vsdRiscvScl180/rtl/scl180_wrapper/pt3b02_wrapper.v"
 module chip_io(
 	// Package Pins
 	inout  vddio_pad,		// Common padframe/ESD supply
@@ -61,7 +60,9 @@ module chip_io(
 	inout  flash_io0,
 	inout  flash_io1,
 	// Chip Core Interface
-        input rstb_h,
+	//input  porb_h,
+        input  rstn_h,
+	input  por,
 	output reset_n_core_h,
 	output clock_core,
 	input  gpio_out_core,
@@ -103,17 +104,20 @@ module chip_io(
 	// (all but the lowest-numbered 7 pads)
 	inout [`MPRJ_IO_PADS-10:0] mprj_analog_io
 );
-    //define the reset low, by Shwetank Shekhar
-    wire rstb_l = !rstb_h;
+
     wire [`MPRJ_IO_PADS-1:0] dummy_mprj_io_in;
     // To be considered:  Master hold signal on all user pads (?)
     // For now, set holdh_n to 1 internally (NOTE:  This is in the
     // VDDIO 3.3V domain)
-    // and setting enh to rstb_h.
+    // and setting enh to rstn_h.
+
+    //define the reset low
+    //wire rstb_l = !rstb_h;
+    wire rstn_l = !rstn_h;
 
     wire [`MPRJ_IO_PADS-1:0] mprj_io_enh;
 
-    assign mprj_io_enh = {`MPRJ_IO_PADS{rstb_h}};
+    assign mprj_io_enh = {`MPRJ_IO_PADS{rstn_h}};
 	
 	wire analog_a, analog_b;
 	wire vddio_q, vssio_q;
@@ -121,13 +125,13 @@ module chip_io(
 	wire \dm_all[0] ;
         wire \dm_all[1] ;
         wire \dm_all[2] ;        
-          wire \flash_io0_mode[0] ;
+        wire \flash_io0_mode[0] ;
   wire \flash_io0_mode[1] ;
   wire \flash_io0_mode[2] ;
   wire \flash_io1_mode[0] ;
   wire \flash_io1_mode[1] ;
   wire \flash_io1_mode[2] ;
-wire \mprj_pads.analog_a ;
+  wire \mprj_pads.analog_a ;
   wire \mprj_pads.analog_b ;
   wire \mprj_pads.analog_en[0] ;
   wire \mprj_pads.analog_en[10] ;
@@ -775,7 +779,8 @@ wire \mprj_pads.analog_a ;
   wire \mprj_pads.oeb[7] ;
   wire \mprj_pads.oeb[8] ;
   wire \mprj_pads.oeb[9] ;
-  wire \mprj_pads.rstb_h ;
+  //wire \mprj_pads.porb_h ;
+  wire \mprj_pads.rstn_h ; //modified 
   wire \mprj_pads.slow_sel[0] ;
   wire \mprj_pads.slow_sel[10] ;
   wire \mprj_pads.slow_sel[11] ;
@@ -869,9 +874,6 @@ wire \mprj_pads.analog_a ;
   wire \mprj_pads.vtrip_sel[8] ;
   wire \mprj_pads.vtrip_sel[9] ;
 
-
-
-
 	// Instantiate power and ground pads for management domain
 	// 12 pads:  vddio, vssio, vdda, vssa, vccd, vssd
 	// One each HV and LV clamp.
@@ -880,174 +882,46 @@ wire \mprj_pads.analog_a ;
 	// LV clamps have two clamps connecting between any two LV power
 	// rails and grounds, and one back-to-back diode which connects
 	// between the first LV clamp ground and any other ground.
-	assign vddio = vddio_pad;
-	assign vddio = vddio_pad2;
-	assign vdda = vdda_pad;
-	assign vccd = vccd_pad;
-	assign vssio = vssio_pad;
-	assign vssa = vssa_pad;
-	assign vssd = vssd_pad;
+	// ==============================================================================
+	// POWER AND GROUND PAD CONNECTIONS - SCL180
+	// ==============================================================================
+	// SCL180 power pads (pvda, pv0a, pvdc, pv0c) are instantiated in the pad ring
+	// during physical design (place & route). Direct wire connections are sufficient
+	// for RTL simulation and synthesis.
+	//
+	// Power pad types in SCL180:
+	//   - pvda: 3.3V analog supply (VDDA, VDDIO)
+	//   - pv0a: Analog ground (VSSA, VSSIO)
+	//   - pvdc: 1.8V digital supply (VCCD)
+	//   - pv0c: Digital ground (VSSD)
+	//
+	// ESD protection and clamping are built into the SCL180 pad cells.
+	// No separate clamp pads are needed (unlike Sky130).
+	// ==============================================================================
+
+	// Management domain power connections
+	assign vddio = vddio_pad;    // 3.3V I/O supply
+	assign vddio = vddio_pad2;   // Redundant I/O supply
+	assign vdda = vdda_pad;      // 3.3V analog supply
+	assign vccd = vccd_pad;      // 1.8V digital supply
+	assign vssio = vssio_pad;    // I/O ground
+
+	assign vssa = vssa_pad;      // Analog ground
+	assign vssd = vssd_pad;      // Digital ground
+
+	// User area 1 power connections
 	assign vdda1 = vdda1_pad;
 	assign vccd1 = vccd1_pad;
+	assign vssa1 = vssa1_pad;
+	assign vssd1 = vssd1_pad;
+
+	// User area 2 power connections
 	assign vdda2 = vdda2_pad;
 	assign vccd2 = vccd2_pad;
 	assign vssa2 = vssa2_pad;
-	assign vssd2 = vssd2_pad; 
-/*	
-    	sky130_ef_io__vddio_hvc_clamped_pad \mgmt_vddio_hvclamp_pad[0]  (
-		`MGMT_ABUTMENT_PINS
-`ifndef TOP_ROUTING
-		.VDDIO_PAD(vddio_pad)
-`endif
-    	);
-
-	// lies in user area 2
-    	sky130_ef_io__vddio_hvc_clamped_pad \mgmt_vddio_hvclamp_pad[1]  (
-		`USER2_ABUTMENT_PINS
-`ifndef TOP_ROUTING
-		.VDDIO_PAD(vddio_pad2)
-`endif
-    	);
-
-    	sky130_ef_io__vdda_hvc_clamped_pad mgmt_vdda_hvclamp_pad (
-		`MGMT_ABUTMENT_PINS
-`ifndef TOP_ROUTING
-		.VDDA_PAD(vdda_pad)
-`endif
-    	);
-*/
-    /*	pvdi mgmt_vccd_lvclamp_pad (
-		.VDD(vccd_pad)
-    	);*/
+	assign vssd2 = vssd2_pad;
  
-  /*     sky130_ef_io__vccd_lvc_clamped_pad mgmt_vccd_lvclamp_pad (
-		`MGMT_ABUTMENT_PINS
-`ifndef TOP_ROUTING
-		.VCCD_PAD(vccd_pad)
-`endif
-    	);
 
-    	sky130_ef_io__vssio_hvc_clamped_pad \mgmt_vssio_hvclamp_pad[0]  (
-		`MGMT_ABUTMENT_PINS
-`ifndef TOP_ROUTING
-		.VSSIO_PAD(vssio_pad)
-`endif
-    	);
-
-    	sky130_ef_io__vssio_hvc_clamped_pad \mgmt_vssio_hvclamp_pad[1]  (
-		`USER2_ABUTMENT_PINS
-`ifndef TOP_ROUTING
-		.VSSIO_PAD(vssio_pad2)
-`endif
-    	);
-
-    	sky130_ef_io__vssa_hvc_clamped_pad mgmt_vssa_hvclamp_pad (
-		`MGMT_ABUTMENT_PINS
-`ifndef TOP_ROUTING
-		.VSSA_PAD(vssa_pad)
-`endif
-    	);
-
-    	sky130_ef_io__vssd_lvc_clamped_pad mgmt_vssd_lvclamp_pad (
-		`MGMT_ABUTMENT_PINS
-`ifndef TOP_ROUTING
-		.VSSD_PAD(vssd_pad)
-`endif
-    	);
-
-	// Instantiate power and ground pads for user 1 domain
-	// 8 pads:  vdda, vssa, vccd, vssd;  One each HV and LV clamp.
-
-    	sky130_ef_io__vdda_hvc_clamped_pad \user1_vdda_hvclamp_pad[0] (
-		`USER1_ABUTMENT_PINS
-`ifndef TOP_ROUTING
-		.VDDA_PAD(vdda1_pad)
-`endif
-    	);
-
-		sky130_ef_io__vdda_hvc_clamped_pad \user1_vdda_hvclamp_pad[1] (
-		`USER1_ABUTMENT_PINS
-`ifndef TOP_ROUTING
-		.VDDA_PAD(vdda1_pad2)
-`endif 
-    	); 
-*/
-    	/*pvdi user1_vccd_lvclamp_pad (
-		.VDD(vccd1_pad)
-    	);*/
-  /*         	sky130_ef_io__vccd_lvc_clamped3_pad user1_vccd_lvclamp_pad (
-		`USER1_ABUTMENT_PINS
-		.VCCD1(vccd1),
-		.VSSD1(vssd1),
-`ifndef TOP_ROUTING
-		.VCCD_PAD(vccd1_pad)
-`endif
-    	);
-
-    	sky130_ef_io__vssa_hvc_clamped_pad \user1_vssa_hvclamp_pad[0] (
-		`USER1_ABUTMENT_PINS
-`ifndef TOP_ROUTING
-		.VSSA_PAD(vssa1_pad)
-`endif
-    	);
-
-
-    	sky130_ef_io__vssa_hvc_clamped_pad \user1_vssa_hvclamp_pad[1] (
-		`USER1_ABUTMENT_PINS
-`ifndef TOP_ROUTING
-		.VSSA_PAD(vssa1_pad2)
-`endif
-    	);
-
-    	sky130_ef_io__vssd_lvc_clamped3_pad user1_vssd_lvclamp_pad (
-		`USER1_ABUTMENT_PINS
-		.VCCD1(vccd1),
-		.VSSD1(vssd1),
-`ifndef TOP_ROUTING
-		.VSSD_PAD(vssd1_pad)
-`endif
-    	);
-
-	// Instantiate power and ground pads for user 2 domain
-	// 8 pads:  vdda, vssa, vccd, vssd;  One each HV and LV clamp.
-
-    	sky130_ef_io__vdda_hvc_clamped_pad user2_vdda_hvclamp_pad (
-		`USER2_ABUTMENT_PINS
-`ifndef TOP_ROUTING
-		.VDDA_PAD(vdda2_pad)
-`endif
-    	); 
-*/
-    	/* pvdi user2_vccd_lvclamp_pad (
-		.VDD(vccd2_pad)
-    	);*/
-  /*     
-    	sky130_ef_io__vccd_lvc_clamped3_pad user2_vccd_lvclamp_pad (
-		`USER2_ABUTMENT_PINS
-		.VCCD1(vccd2),
-		.VSSD1(vssd2),
-`ifndef TOP_ROUTING
-		.VCCD_PAD(vccd2_pad)
-`endif
-    	);
-
-
-    	sky130_ef_io__vssa_hvc_clamped_pad user2_vssa_hvclamp_pad (
-		`USER2_ABUTMENT_PINS
-`ifndef TOP_ROUTING
-		.VSSA_PAD(vssa2_pad)
-`endif
-    	);
-
-    	sky130_ef_io__vssd_lvc_clamped3_pad user2_vssd_lvclamp_pad (
-		`USER2_ABUTMENT_PINS
-		.VCCD1(vccd2),
-		.VSSD1(vssd2),
-`ifndef TOP_ROUTING
-		.VSSD_PAD(vssd2_pad)
-`endif
-    	);
-*/
 	wire [2:0] dm_all =
     		{gpio_mode1_core, gpio_mode1_core, gpio_mode0_core};
 	wire[2:0] flash_io0_mode =
@@ -1055,78 +929,148 @@ wire \mprj_pads.analog_a ;
 	wire[2:0] flash_io1_mode =
 		{flash_io1_ieb_core, flash_io1_ieb_core, flash_io1_oeb_core};
 
-    wire [6:0] vccd_const_one;	// Constant value for management pins
-    wire [6:0] vssd_const_zero;	// Constant value for management pins
+    // -------------------------------------------------------------------------
+    // Constant 1 / 0 generators in the 1.8 V domain
+    // -------------------------------------------------------------------------
+    wire [6:0] vccd_const_one;
+    wire [6:0] vssd_const_zero;
 
     constant_block constant_value_inst [6:0] (
-	.vccd(vccd),
-	.vssd(vssd),
-	.one(vccd_const_one),
-	.zero(vssd_const_zero)
+        .vccd (vccd),
+        .vssd (vssd),
+        .one  (vccd_const_one),
+        .zero (vssd_const_zero)
     );
 
-	// Management clock input pad
-	//`INPUT_PAD(clock, clock_core, vccd_const_one[0], vssd_const_zero[0]);
-	//`INPUT_PAD_SCL(clock, clock_core);
-        pc3d01_wrapper clock_pad(.IN(clock_core), .PAD(clock) );
+    // -------------------------------------------------------------------------
+    // Management clock input pad
+    //   Sky130: INPUT_PAD → gpiov2 in input mode
+    //   SCL180: INPUT_PAD → pc3d01_wrapper (CMOS input)
+    // -------------------------------------------------------------------------
+    //`INPUT_PAD(clock, clock_core, vccd_const_one[0], vssd_const_zero[0]);
+    pc3d01_wrapper clock_pad (
+        .PAD(clock),
+        .IN(clock_core)
+    );
+    // -------------------------------------------------------------------------
+    // Management GPIO pad (full bidirectional, like Sky130 gpiov2)
+    //   SCL180: INOUT_PAD → pc3b03ed_wrapper
+    // -------------------------------------------------------------------------
+    //`INOUT_PAD(gpio,
+    //           gpio_in_core,
+    //           vccd_const_one[1],
+    //           vssd_const_zero[1],
+    //           gpio_out_core,
+    //           gpio_inenb_core,
+    //           gpio_outenb_core,
+    //           dm_all);
+    pc3b03ed_wrapper gpio_pad (
+        .OUT(gpio_out_core),
+        .PAD(gpio),
+        .IN(gpio_in_core),
+        .INPUT_DIS(gpio_inenb_core),
+        .OUT_EN_N(gpio_outenb_core),
+        .dm(dm_all)
+    );
+   
+    // -------------------------------------------------------------------------
+    // Management Flash SPI IO pads (IO0, IO1: bidirectional)
+    // -------------------------------------------------------------------------
+    //`INOUT_PAD(flash_io0,
+    //           flash_io0_di_core,
+    //           vccd_const_one[2],
+    //           vssd_const_zero[2],
+    //           flash_io0_do_core,
+    //           flash_io0_ieb_core,
+    //           flash_io0_oeb_core,
+    //           flash_io0_mode);
 
-    // Management GPIO pad
-	//`INOUT_PAD(gpio, gpio_in_core, vccd_const_one[1], vssd_const_zero[1], gpio_out_core, gpio_inenb_core, gpio_outenb_core, dm_all);
-	//`INOUT_PAD_SCL(gpio, gpio_in_core, gpio_out_core, gpio_inenb_core, gpio_outenb_core);
-	//INOUT_PAD_SCL
-	//wire dummy;
-        //nand signal_gating (dummy, gpio_inenb_core, gpio_out_core)
-       
-         
-         pc3b03ed_wrapper gpio_pad( .IN(gpio_in_core), .OUT(gpio_out_core), .PAD(gpio), .INPUT_DIS(gpio_inenb_core), .OUT_EN_N(gpio_outenb_core), .dm(dm_all));
+    //`INOUT_PAD(flash_io1,
+    //           flash_io1_di_core,
+    //           vccd_const_one[3],
+    //           vssd_const_zero[3],
+    //           flash_io1_do_core,
+    //           flash_io1_ieb_core,
+    //           flash_io1_oeb_core,
+    //           flash_io1_mode);
+    // -------------------------------------------------------------------------
+    // Flash IO0 bidirectional pad
+    // -------------------------------------------------------------------------
+    pc3b03ed_wrapper flash_io0_pad (
+        .OUT(flash_io0_do_core),
+        .PAD(flash_io0),
+        .IN(flash_io0_di_core),
+        .INPUT_DIS(flash_io0_ieb_core),
+        .OUT_EN_N(flash_io0_oeb_core),
+        .dm(flash_io0_mode)
+    );
 
-	// Management Flash SPI pads
-	//`INOUT_PAD(flash_io0, flash_io0_di_core, vccd_const_one[2], vssd_const_zero[2], flash_io0_do_core, flash_io0_ieb_core, flash_io0_oeb_core, flash_io0_mode);
+    // -------------------------------------------------------------------------
+    // Flash IO1 bidirectional pad
+    // -------------------------------------------------------------------------
+    pc3b03ed_wrapper flash_io1_pad (
+        .OUT(flash_io1_do_core),
+        .PAD(flash_io1),
+        .IN(flash_io1_di_core),
+        .INPUT_DIS(flash_io1_ieb_core),
+        .OUT_EN_N(flash_io1_oeb_core),
+        .dm(flash_io1_mode)
+    );
+    // -------------------------------------------------------------------------
+    // Flash chip select and clock pads (output-only)
+    //   SCL180: OUTPUT_NO_INP_DIS_PAD → pt3b02_wrapper
+    // -------------------------------------------------------------------------
+    //`OUTPUT_NO_INP_DIS_PAD(flash_csb,
+    //                       flash_csb_core,
+    //                       vccd_const_one[4],
+    //                       vssd_const_zero[4],
+    //                       flash_csb_oeb_core);
 
-        pc3b03ed_wrapper flash_io0_pad( .OUT(flash_io0_do_core), .PAD(flash_io0), .IN(flash_io0_di_core), .INPUT_DIS(flash_io0_ieb_core), .OUT_EN_N(flash_io0_oeb_core),.dm(flash_io0_mode));
-		
-	//`INOUT_PAD(flash_io1, flash_io1_di_core, vccd_const_one[3], vssd_const_zero[3], flash_io1_do_core, flash_io1_ieb_core, flash_io1_oeb_core, flash_io1_mode);
+    //`OUTPUT_NO_INP_DIS_PAD(flash_clk,
+    //                       flash_clk_core,
+    //                       vccd_const_one[5],
+    //                       vssd_const_zero[5],
+    //                       flash_clk_oeb_core);
+    // -------------------------------------------------------------------------
+    // Flash CSB output pad
+    // -------------------------------------------------------------------------
+    pt3b02_wrapper flash_csb_pad (
+        .PAD(flash_csb),
+        .OUT(flash_csb_core),
+        .OE_N(flash_csb_oeb_core),
+        .IN()
+    );
 
-        pc3b03ed_wrapper flash_io1_pad( .OUT(flash_io1_do_core), .PAD(flash_io1), .IN(flash_io1_di_core), .INPUT_DIS(flash_io1_ieb_core), .OUT_EN_N(flash_io1_oeb_core),.dm(flash_io1_mode));
+    // -------------------------------------------------------------------------
+    // Flash CLK output pad
+    // -------------------------------------------------------------------------
+    pt3b02_wrapper flash_clk_pad (
+        .PAD(flash_clk),
+        .OUT(flash_clk_core),
+        .OE_N(flash_clk_oeb_core),
+        .IN()
+    );
+        
+// RESET PAD - SCL180 pc3d21 (Schmitt Trigger Input)
+// ==============================================================================
+// Replaces Sky130 top_xres4v2 which had complex POR logic and external pullup.
+// SCL180 pc3d21 provides:
+//   - Schmitt trigger for noise immunity
+//   - Built-in 3.3V to 1.8V level shifting
+//   - No external pullup/POR circuitry needed
+// ==============================================================================
+    // -------------------------------------------------------------------------
+    // Reset pad
+    //   Sky130: top_xres4v2 with POR and glitch filter.
+    //   SCL180: pc3d21 (Schmitt input, 3.3 V → 1.8 V)
+    //   External reset_n is active-low; core sees rstn_h / reset_n_core_h.
+    // -------------------------------------------------------------------------
+    //`INPUT_PAD_SCHMITT(reset_n, rstn_h);  // 3.3 V → 1.8 V Schmitt pad
+    //assign reset_n_core_h = rstn_h;       // single, consistent core reset
+    // -------------------------------------------------------------------------
+    // Reset input pad (Schmitt trigger)
+    // -------------------------------------------------------------------------
 
-        /*`INOUT_PAD_SCL(flash_io0_do_core, flash_io0, flash_io0_di_core, flash_io0_ieb_core, flash_io0_oeb_core, flash_io0_mode);
-        `INOUT_PAD_SCL(flash_io1_do_core ,flash_io1, flash_io1_di_core, flash_io1_ieb_core, flash_io1_oeb_core, flash_io1_mode);
-        `INOUT_PAD_SCL(gpio_out_core, gpio, gpio_in_core, gpio_inenb_core, gpio_outenb_core, dm_all); */
- 
-	//`OUTPUT_NO_INP_DIS_PAD(flash_csb, flash_csb_core, vccd_const_one[4], vssd_const_zero[4], flash_csb_oeb_core);
-	//`OUTPUT_NO_INP_DIS_PAD(flash_clk, flash_clk_core, vccd_const_one[5], vssd_const_zero[5], flash_clk_oeb_core);
-
-	//`OUTPUT_NO_INP_DIS_SCL(flash_csb, flash_csb_core, flash_csb_oeb_core);
-         pt3b02_wrapper flash_csb_pad(.PAD(flash_csb), .IN(flash_csb_core), .OE_N(flash_csb_oeb_core));	
-         pt3b02_wrapper flash_clk_pad(.PAD(flash_clk), .IN(flash_clk_core), .OE_N(flash_clk_oeb_core));	
-        //`OUTPUT_NO_INP_DIS_SCL(flash_clk, flash_clk_core, flash_clk_oeb_core);
-
-	// NOTE:  The analog_out pad from the raven chip has been replaced by
-    	// the digital reset input reset_n on caravel due to the lack of an on-board
-    	// power-on-reset circuit.  The XRES pad is used for providing a glitch-
-    	// free reset.
-
-	/*wire xresloop;
-	wire xres_vss_loop;
-	sky130_fd_io__top_xres4v2 reset_n_pad (
-		`MGMT_ABUTMENT_PINS
-		`ifndef	TOP_ROUTING
-		    .PAD(reset_n),
-		`endif
-		.TIE_WEAK_HI_H(xresloop),   // Loop-back connection to pad through pad_a_esd_h
-		.TIE_HI_ESD(),
-		.TIE_LO_ESD(xres_vss_loop),
-		.PAD_A_ESD_H(xresloop),
-		.XRES_H_N(reset_n_core_h),
-		.DISABLE_PULLUP_H(xres_vss_loop), // 0 = enable pull-up on reset pad
-		.ENABLE_H(rstb_h),	 	  // Power-on-reset
-   		.EN_VDDIO_SIG_H(xres_vss_loop),	  // No idea.
-   		.INP_SEL_H(xres_vss_loop),	  // 1 = use filt_in_h else filter the pad input
-   		.FILT_IN_H(xres_vss_loop),	  // Alternate input for glitch filter
-   		.PULLUP_H(xres_vss_loop),	  // Pullup connection for alternate filter input
-		.ENABLE_VDDIO(vccd_const_one[6])
-    	);
-	*/
 	pc3d21 reset_n_pad (
 	       .PAD(reset_n),
 	       .CIN(reset_n_core_h)
@@ -1134,55 +1078,6 @@ wire \mprj_pads.analog_a ;
 	// Corner cells (These are overlay cells;  it is not clear what is normally
     	// supposed to go under them.)
 
-	/*    sky130_ef_io__corner_pad mgmt_corner [1:0] (
-`ifndef TOP_ROUTING
-		.VSSIO(vssio),
-		.VDDIO(vddio),
-		.VDDIO_Q(vddio_q),
-		.VSSIO_Q(vssio_q),
-		.AMUXBUS_A(analog_a),
-		.AMUXBUS_B(analog_b),
-		.VSSD(vssd),
-		.VSSA(vssa),
-		.VSWITCH(vddio),
-		.VDDA(vdda),
-		.VCCD(vccd),
-		.VCCHIB(vccd)
-`endif
-    	    );
-	    sky130_ef_io__corner_pad user1_corner (
-`ifndef TOP_ROUTING
-		.VSSIO(vssio),
-		.VDDIO(vddio),
-		.VDDIO_Q(vddio_q),
-		.VSSIO_Q(vssio_q),
-		.AMUXBUS_A(analog_a),
-		.AMUXBUS_B(analog_b),
-		.VSSD(vssd),
-		.VSSA(vssa1),
-		.VSWITCH(vddio),
-		.VDDA(vdda1),
-		.VCCD(vccd),
-		.VCCHIB(vccd)
-`endif
-    	    );
-	    sky130_ef_io__corner_pad user2_corner (
-`ifndef TOP_ROUTING
-		.VSSIO(vssio),
-		.VDDIO(vddio),
-		.VDDIO_Q(vddio_q),
-		.VSSIO_Q(vssio_q),
-		.AMUXBUS_A(analog_a),
-		.AMUXBUS_B(analog_b),
-		.VSSD(vssd),
-		.VSSA(vssa2),
-		.VSWITCH(vddio),
-		.VDDA(vdda2),
-		.VCCD(vccd),
-		.VCCHIB(vccd)
-`endif
-    	    );
-*/
 	mprj_io mprj_pads(
 		.vddio(vddio),
 		.vssio(vssio),
@@ -1196,7 +1091,9 @@ wire \mprj_pads.analog_a ;
 		.vssio_q(vssio_q),
 		.analog_a(analog_a),
 		.analog_b(analog_b),
-		.rstb_h(rstb_h),
+		//.porb_h(porb_h),
+		.rstn_h(rstn_h),
+                .reset_n_core_h(reset_n_core_h),
 		.vccd_conb(mprj_io_one),
 		.io(mprj_io),
 		.io_out(mprj_io_out),
@@ -1212,7 +1109,9 @@ wire \mprj_pads.analog_a ;
 		.analog_pol(mprj_io_analog_pol),
 		.dm(mprj_io_dm),
 		.io_in(mprj_io_in),
+                //.io_in_3v3(),
 		.analog_io(mprj_analog_io)
+                //.analog_noesd_io()  
 	);
 
 endmodule

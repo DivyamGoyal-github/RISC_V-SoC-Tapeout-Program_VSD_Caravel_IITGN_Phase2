@@ -40,24 +40,13 @@
 	`include "mprj_logic_high.v"
 	`include "mprj2_logic_high.v"
 	`include "mgmt_protect.v"
-	//`include "gl/mgmt_protect_hv.v"
 	`include "constant_block.v"
 	`include "gpio_control_block.v"
 	`include "gpio_defaults_block.v"
-	//`include "gl/gpio_defaults_block_0403.v"
-	//`include "gl/gpio_defaults_block_1803.v"
-	//`include "gl/gpio_defaults_block_0801.v"
-	//`include "gl/gpio_signal_buffering.v"
 	`include "gpio_logic_high.v"
 	`include "xres_buf.v"
 	`include "spare_logic_block.v"
-	//`include "gl/mgmt_defines.v"
 	`include "mgmt_core_wrapper.v"
-	//`include "gl/caravel.v"
-        //`include "pc3b03ed_wrapper.v"
-        //`include "pc3d21.v"
-       // `include "pc3d01.v"
-        //`include "pt3b02.v"
         //added for streamlining the file references and completely remove the need for a separate gl directory for a GLS
         `include "__user_project_wrapper.v"
     `else
@@ -88,7 +77,6 @@
 	`include "spare_logic_block.v"
 	`include "mgmt_core_wrapper.v"
 	`include "vsdcaravel.v"
-                //`include ""
     `endif
 
 `endif

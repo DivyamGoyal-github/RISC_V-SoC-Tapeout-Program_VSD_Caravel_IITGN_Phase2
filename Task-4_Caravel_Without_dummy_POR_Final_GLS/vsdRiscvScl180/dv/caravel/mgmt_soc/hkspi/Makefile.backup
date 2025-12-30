@@ -1,0 +1,123 @@
+# SPDX-FileCopyrightText: 2020 Efabless Corporation
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# removing pdk path as everything has been included in one whole directory for this example.
+# PDK_PATH = $(PDK_ROOT)/$(PDK)
+# SPDX-FileCopyrightText: 2020 Efabless Corporation
+# SPDX-License-Identifier: Apache-2.0
+
+# ==================== PATH CONFIGURATION ====================
+ROOT_DIR = /home/sshekhar/vsdRiscvScl180
+VERILOG_PATH = $(ROOT_DIR)
+RTL_PATH = $(VERILOG_PATH)/rtl
+COMMON_PATH = ../../common
+scl_io_PATH = /home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/iopad/cio250/4MIL/verilog/tsl18cio250/zero
+scl_io_wrapper_PATH = $(RTL_PATH)/scl180_wrapper
+
+# ==================== TOOLCHAIN ====================
+#RISCV_TYPE ?= rv32imc
+#GCC_PATH?=/home/sshekhar/riscv32-unknown-elf/bin
+#GCC_PREFIX?=riscv32-unknown-elf
+
+RISCV_TYPE ?= rv32imc
+GCC_PREFIX = riscv32-unknown-elf
+
+# Try to auto-detect GCC path
+GCC_WHICH := $(shell which $(GCC_PREFIX)-gcc 2>/dev/null)
+ifneq ($(GCC_WHICH),)
+    # Found in PATH
+    GCC_PATH = $(dir $(GCC_WHICH))
+else
+    # Try common locations
+    ifeq ($(wildcard /home/sshekhar/riscv-tools/riscv32-unknown-elf/bin/$(GCC_PREFIX)-gcc),)
+        ifeq ($(wildcard /home/sshekhar/riscv32-unknown-elf/bin/$(GCC_PREFIX)-gcc),)
+            $(error Cannot find RISC-V toolchain! Please set GCC_PATH manually or install toolchain)
+        else
+            GCC_PATH = /home/sshekhar/riscv-tools/bin/riscv32-unknown-elf-gcc
+        endif
+    else
+        GCC_PATH = /home/sshekhar/riscv-tools/bin/riscv32-unknown-elf-gcc
+
+    endif
+endif
+
+$(info *** Using RISC-V toolchain at: $(GCC_PATH))
+# ==================== TEST CONFIGURATION ====================
+PATTERN = hkspi
+SIM_DEFINES = +define+FUNCTIONAL +define+SIM +define+SCL180
+
+# ==================== VCS OPTIONS ====================
+VCS_FLAGS = -sverilog +v2k -full64 -debug_access+all -lca -timescale=1ns/1ps
+VCS_INCDIR = +incdir+$(COMMON_PATH) \
+             +incdir+$(RTL_PATH) \
+             +incdir+$(scl_io_wrapper_PATH) \
+             +incdir+$(scl_io_PATH)
+
+# ==================== OUTPUT FILES ====================
+SIMV = simv
+COMPILE_LOG = compile.log
+SIM_LOG = simulation.log
+
+.SUFFIXES:
+
+# ==================== TARGETS ====================
+all: sim
+
+# Firmware compilation
+%.elf: %.c $(COMMON_PATH)/sections.lds $(COMMON_PATH)/start.s
+	$(GCC_PATH)/$(GCC_PREFIX)-gcc -march=$(RISCV_TYPE) -mabi=ilp32 \
+		-Wl,-Bstatic,-T,$(COMMON_PATH)/sections.lds,--strip-debug \
+		-ffreestanding -nostdlib -I$(COMMON_PATH) -o $@ $(COMMON_PATH)/start.s $<
+
+%.hex: %.elf
+	$(GCC_PATH)/$(GCC_PREFIX)-objcopy -O verilog $< $@
+	sed -i 's/@10000000/@00000000/g' $@
+
+hex: $(PATTERN).hex
+
+# VCS Compilation
+compile: $(PATTERN)_tb.v $(PATTERN).hex
+	vcs $(VCS_FLAGS) $(SIM_DEFINES) $(VCS_INCDIR) \
+		$(PATTERN)_tb.v \
+		-l $(COMPILE_LOG) \
+		-o $(SIMV)
+
+# Run simulation
+sim: compile
+	./$(SIMV) -l $(SIM_LOG) +vcs+dumpvars+$(PATTERN).vcd
+
+# GUI simulation
+gui: compile
+	./$(SIMV) -gui -l $(SIM_LOG) &
+
+# Waveform viewing
+wave:
+	verdi -ssf $(PATTERN).vcd &
+
+# Test toolchain
+test-toolchain:
+	@echo "Testing RISC-V toolchain..."
+	@echo "GCC_PATH: $(GCC_PATH)"
+	@$(GCC_PATH)/$(GCC_PREFIX)-gcc --version || echo "ERROR: GCC not found!"
+	@$(GCC_PATH)/$(GCC_PREFIX)-objcopy --version || echo "ERROR: objcopy not found!"
+
+# Clean
+clean:
+	rm -f $(SIMV) *.elf *.hex *.bin *.log *.vcd *.vpd *.fsdb *.key
+	rm -rf simv.daidir csrc DVEfiles verdiLog novas.* *.fsdb+ AN.DB ucli.key
+
+.PHONY: all compile sim hex gui wave clean
+

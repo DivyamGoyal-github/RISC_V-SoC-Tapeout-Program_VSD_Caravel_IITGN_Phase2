@@ -36,9 +36,9 @@
 `include "mprj_io_buffer.v"
 `include "manual_power_connections.v"
 `include "empty_macro.v"
-//added by Shwetank Shekhar for completing GLS on Synopsys VCS
+`include "user_defines.v"
+//added for completing GLS on Synopsys VCS
 //modificaion: removed from this reference from here and added to the caravel_netlists.v
-//`include "__user_project_wrapper.v"
 
 module caravel_core (
     // All top-level I/O are package-facing pins
@@ -60,8 +60,10 @@ module caravel_core (
 `endif
 
     // SoC Core Interface
-    //inout  rstb_h,
-// External reset pad (now input-only)
+    //output porb_h,
+    //output por_l,
+    output rstn_h,
+    output rst_l,
     input  rstb_h,
     input  clock_core,
     output gpio_out_core,
@@ -196,7 +198,7 @@ module caravel_core (
     // reset at 3.3V.  The 1.8V signal and the inverted 1.8V signal are
     // derived.
     wire rstb_l;
-    //define the reset low by shwetank shekhar, important
+    //define the reset low 
     //wire rstb_l = !rstb_h;
 
     // Flash SPI communication (management SoC to housekeeping)
@@ -529,7 +531,9 @@ module caravel_core (
 		.VPWR(vccd),
 		.VGND(vssd),
     `endif*/
-        .rstb_h(rstb_h), // changed by Shwetank Shekhar
+        //.porb(porb_l),
+        //.rstn_h(rstn_h), 
+        .rstn(rstn_l),
         .ext_clk_sel(ext_clk_sel),
         .ext_clk(clock_core),
         .pll_clk(pll_clk),
@@ -592,7 +596,9 @@ module caravel_core (
         .wb_ack_o(hk_ack_i),
         .wb_dat_o(hk_dat_i),
 
-        .rstb_h(rstb_h), //modified by Shwetank Shekhar
+        //.porb(porb_l),
+        //.rstn_h(rstn_h), //modified
+        .rstn(rstn_l),
 
         .pll_ena(spi_pll_ena),
         .pll_dco_ena(spi_pll_dco_ena),
@@ -1381,6 +1387,15 @@ module caravel_core (
 	`endif
 	.mask_rev(mask_rev)
     );
+
+    // used to have instance of dummy_por here, removed in favour of external reset, left the logic for reference
+		//.porb_h(porb_h), where porb_h becomes rstn_h
+		//.porb_l(porb_l), porb_l becomes rstn_l
+		//.por_l(por_l) por_l becomes rst_l
+    
+    //assign rstn_h = reset_n;
+    assign rstn_l = rstn_h;
+    assign rst_l = ~rstn_l;
 
     // XRES (chip input pin reset) reset level converter
     xres_buf rstb_level (

@@ -1,0 +1,5 @@
+{"vcs1":{"timestamp_begin":1766059715.617177138, "rt":1.54, "ut":0.05, "st":0.03}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1766059715.051802700}
+{"VCS_COMP_START_TIME": 1766059715.051802700}
+{"VCS_COMP_END_TIME": 1766059717.178730032}
+{"VCS_USER_OPTIONS": "-sverilog +v2k -full64 -debug_access+all -lca -timescale=1ns/1ps +define+FUNCTIONAL +define+SIM +define+SCL180 +incdir+../../common +incdir+../../common/generated +incdir+../../common/hw +incdir+/home/sshekhar/vsdRiscvScl180/rtl +incdir+/home/sshekhar/vsdRiscvScl180/rtl/scl180_wrapper +incdir+/home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/iopad/cio250/4MIL/verilog/tsl18cio250/zero gpio_tb.v -l compile.log -o simv"}

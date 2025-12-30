@@ -1,7 +1,7 @@
 rc file Version 1.0
 
 [Design]
-COMPILE_PATH=/home/dgoyal/vsdRiscvScl180/gls
+COMPILE_PATH=/home/sshekhar/vsdRiscvScl180/gls
 VCS_HOME=/home/Synopsys/tools/vcs/U-2023.03
 VERDI_HOME=
 SystemC=FALSE
@@ -15,7 +15,7 @@ ELAB_OPTION=-ssv -ssy
 ELAB=TRUE
 SIMV_WRAPPER=FALSE
 [vcs]
-RUN_ELABCOM=unset TURBO_LOG_DIR ;\rm -rf /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/elabcomLog ;/home/Synopsys/tools/vcs/U-2023.03/linux64/bin/elabcom -logdir /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/elabcomLog  -simvdaidir /home/dgoyal/vsdRiscvScl180/gls/simv.daidir  -lib /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/work  -saveLevel  -elab /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/kdb -simflow -simdir /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/kdb_libs -topfile /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/.elabcomTopFile -ssv -ssy  -Lf work +disable_message+C00380+C00381 +disable_message+C00388+C00389  >& /dev/null  && echo Success >& /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/.elabcomReport || echo Fail >& /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/.elabcomReport; \rm -rf /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/work.lib++ /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/kdb_libs/ 
+RUN_ELABCOM=unset TURBO_LOG_DIR ;\rm -rf /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/elabcomLog ;/home/Synopsys/tools/vcs/U-2023.03/linux64/bin/elabcom -logdir /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/elabcomLog  -simvdaidir /home/sshekhar/vsdRiscvScl180/gls/simv.daidir  -lib /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/work  -saveLevel  -elab /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/kdb -simflow -simdir /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/kdb_libs -topfile /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/.elabcomTopFile -ssv -ssy  -Lf work +disable_message+C00380+C00381 +disable_message+C00388+C00389  >& /dev/null  && echo Success >& /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/.elabcomReport || echo Fail >& /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/.elabcomReport; \rm -rf /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/work.lib++ /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/kdb_libs/ 
 
 [Value]
 WREALX=ffff534e50535f58

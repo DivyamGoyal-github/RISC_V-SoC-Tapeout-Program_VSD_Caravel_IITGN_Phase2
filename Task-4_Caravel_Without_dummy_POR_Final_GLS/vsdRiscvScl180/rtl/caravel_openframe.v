@@ -127,12 +127,19 @@ module caravel_openframe (
     // three signals, uses them to enable the GPIO, and exports the
     // signals to the core.
 
+    //wire porb_h;
+    //wire porb_l;
+    //wire por_l;
+
+    wire rstn_h;
+    wire rstn_l;
+    wire rst_l;
+
     // Master reset signal.  The reset pad generates the sense-inverted
     // reset at 3.3V.  The 1.8V signal is derived.
 
-    wire rstb_h;
-    wire rstb_l;
-    wire rst_l;
+    wire rstb_h; //originally there
+    wire rstb_l; //originally there
 
     // Mask revision:  Output from the padframe, exporting the 32-bit
     // user ID value.
@@ -187,9 +194,15 @@ module caravel_openframe (
 	.vssd2	(vssd2_core),
 
 	// Core side signals
-	.rstb_h(rstb_h),
-	.rstb_l(!rstb_h),
-	.rst_l(!rstb_h),
+	//.porb_h(porb_h),
+	//.porb_l(porb_l),
+	//.por_l(por_l),
+	//.resetb_h(rstb_h),
+	//.resetb_l(rstb_l),
+
+	.rstn_h(rstn_h),
+	.rstn_l(rstn_l),
+	.rst_l(rst_l),
 	.reset_n_h(rstb_h),
 	.reset_n_l(rstb_l),
 	.mask_rev(mask_rev),
@@ -235,9 +248,15 @@ module caravel_openframe (
 	    .vssd2(vssd2_core),		// User area 2 digital ground
     	`endif
 
-	.rstb_h(rstb_h),
-	.rstb_l(!rstb_h),
-	.rst_l(!rstb_h),
+	//.porb_h(porb_h),
+	//.porb_l(porb_l),
+	//.por_l(por_l),
+	//.resetb_h(rstb_h),
+	//.resetb_l(rstb_l),
+
+	.rstn_h(rstn_h),
+	.rstn_l(rstn_l),
+	.rst_l(rst_l),
 	.reset_n_h(rstb_h),
 	.reset_n_l(rstb_l),
 	.mask_rev(mask_rev),

@@ -172,10 +172,16 @@ module vsdcaravel (
   // reset at 3.3V.  The 1.8V signal and the inverted 1.8V signal are
   // derived.
 
-  //Modified by shwetank shekhar
-
-  wire rstb_h;
-  wire rstb_l = !rstb_h;  // Generate active-low 1.8V reset
+  //Modified 
+  //wire porb_h;
+  //wire porb_l;
+  //wire por_l;
+  
+  wire rstb_h;  //original
+  assign rstb_h = reset_n;
+  wire rstn_h = rstb_h;
+  wire rstn_l = !rstb_h;  // Generate active-low 1.8V reset
+  wire rst_l;
 
   // Flash SPI communication (
   wire flash_clk_frame;
@@ -250,7 +256,10 @@ module vsdcaravel (
 `endif
 
       // SoC Core Interface
-      .rstb_h(rstb_h),  // 3.3V domain reset
+      //.porb_h(porb_h),
+      //.por(por_l),
+      .rstn_h(rstn_h),  // 3.3V domain reset
+      //.rst(rst_l),                 // Active-high reset for chip_io
       .reset_n_core_h(rstb_h),
       .clock_core(clock_core),
       .gpio_out_core(gpio_out_core),
@@ -307,7 +316,11 @@ module vsdcaravel (
 `endif
 
       // SoC Core Interface
-      .rstb_h(rstb_h),  // Use external reset
+      //.porb_h(porb_h),
+      //.por_l(por_l),
+      .rstn_h(rstn_h),  // Use external reset
+      .rst_l(rst_l),                 // 1.8V domain reset
+      .rstb_h(rstb_h), //original
       .clock_core(clock_core),
       .gpio_out_core(gpio_out_core),
       .gpio_in_core(gpio_in_core),

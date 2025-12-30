@@ -24,7 +24,7 @@ BEHAVIOURAL_MODELS = ../gls
 RISCV_TYPE ?= rv32imc
 PDK_PATH = /home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/stdcell/fs120/4M1IL/verilog/vcs_sim_model 
 FIRMWARE_PATH = ../gls
-GCC_PATH?=/usr/bin/gcc
+GCC_PATH?=/home/dgoyal/riscv32-unknown-elf/bin
 GCC_PREFIX?=riscv32-unknown-elf
 
 SIM_DEFINES = +define+FUNCTIONAL +define+SIM

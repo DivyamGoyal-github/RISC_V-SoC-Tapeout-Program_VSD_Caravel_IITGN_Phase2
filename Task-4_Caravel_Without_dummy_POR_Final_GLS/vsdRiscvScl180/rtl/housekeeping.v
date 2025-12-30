@@ -79,8 +79,10 @@ module housekeeping #(
     output reg [31:0] wb_dat_o,
 
     // Primary reset
+    //input porb,
     // External reset
-    input rstb_h,
+    //input rstb_h,
+    input rstn,
 
     // Clocking control parameters
     output reg pll_ena,
@@ -225,7 +227,7 @@ module housekeeping #(
     wire [7:0] idata;
     wire [7:0] iaddr;
     
-    wire rstb_l = !rstb_h;
+    //wire rstb_l = !rstb_h;
     wire rdstb;
     wire wrstb;
     wire pass_thru_mgmt;		// Mode detected by housekeeping_spi
@@ -264,9 +266,13 @@ wire mgmt_gpio_out_9_prebuff, mgmt_gpio_out_14_prebuff, mgmt_gpio_out_15_prebuff
     // between the management SoC and the flash SPI I/O.
 
     assign pad_flash_csb = (pass_thru_mgmt_delay) ? mgmt_gpio_in[3] : spimemio_flash_csb;
-    assign pad_flash_csb_oeb = (pass_thru_mgmt_delay) ? 1'b0 : (~rstb_h ? 1'b1 : 1'b0);
+    //assign pad_flash_csb_oeb = (pass_thru_mgmt_delay) ? 1'b0 : (~rstb_h ? 1'b1 : 1'b0); original
+    //assign pad_flash_csb_oeb = (pass_thru_mgmt_delay) ? 1'b0 : (~rstb_h ? 1'b1 : 1'b0);
+    assign pad_flash_csb_oeb = (pass_thru_mgmt_delay) ? 1'b0 : (~rstn ? 1'b1 : 1'b0);
     assign pad_flash_clk_prebuff = (pass_thru_mgmt) ? mgmt_gpio_in[4] : spimemio_flash_clk;
-    assign pad_flash_clk_oeb = (pass_thru_mgmt) ? 1'b0 : (~rstb_h ? 1'b1 : 1'b0);
+    //assign pad_flash_clk_oeb = (pass_thru_mgmt) ? 1'b0 : (~rstb_h ? 1'b1 : 1'b0);
+    //assign pad_flash_clk_oeb = (pass_thru_mgmt) ? 1'b0 : (~porb ? 1'b1 : 1'b0); original
+    assign pad_flash_clk_oeb = (pass_thru_mgmt) ? 1'b0 : (~rstn ? 1'b1 : 1'b0);
     assign pad_flash_io0_oeb = (pass_thru_mgmt_delay) ? 1'b0 : spimemio_flash_io0_oeb;
     assign pad_flash_io1_oeb = (pass_thru_mgmt) ? 1'b1 : spimemio_flash_io1_oeb;
     assign pad_flash_io0_ieb = (pass_thru_mgmt_delay) ? 1'b1 : ~spimemio_flash_io0_oeb;
@@ -755,7 +761,9 @@ wire mgmt_gpio_out_9_prebuff, mgmt_gpio_out_14_prebuff, mgmt_gpio_out_15_prebuff
     // Instantiate the SPI interface protocol module
 
     housekeeping_spi hkspi (
-	.reset(~rstb_h),
+	//.reset(~porb),
+	//.reset(~rstb_h),
+	.reset(~rstn),
     	.SCK(mgmt_gpio_in[4]),
     	.SDI(mgmt_gpio_in[2]),
     	.CSB((spi_is_enabled) ? mgmt_gpio_in[3] : 1'b1),
@@ -920,8 +928,11 @@ wire mgmt_gpio_out_9_prebuff, mgmt_gpio_out_14_prebuff, mgmt_gpio_out_15_prebuff
     assign serial_data_2 = (serial_bb_enable == 1'b1) ?
 			serial_bb_data_2 : serial_data_staging_2[IO_CTRL_BITS-1];
 
-    always @(posedge wb_clk_i or negedge rstb_h) begin
-	if (rstb_h == 1'b0) begin
+    //always @(posedge wb_clk_i or negedge porb) begin
+    //always @(posedge wb_clk_i or negedge rstb_h) begin
+    always @(posedge wb_clk_i or negedge rstn) begin
+	//if (rstb_h == 1'b0) begin
+	if (rstn == 1'b0) begin
 	    xfer_state <= `GPIO_IDLE;
 	    xfer_count <= 4'd0;
             /* NOTE:  This assumes that MPRJ_IO_PADS_1 and MPRJ_IO_PADS_2 are
@@ -1031,8 +1042,11 @@ wire mgmt_gpio_out_9_prebuff, mgmt_gpio_out_14_prebuff, mgmt_gpio_out_15_prebuff
 
     integer j;
 
-    always @(posedge csclk or negedge rstb_h) begin
-	if (rstb_h == 1'b0) begin
+    //always @(posedge csclk or negedge rstb_h) begin
+    //always @(posedge csclk or negedge porb) begin
+    always @(posedge csclk or negedge rstn) begin
+	//if (rstb_h == 1'b0) begin
+	if (rstn == 1'b0) begin
             // Set trim for PLL at (almost) slowest rate (~90MHz).  However,
             // pll_trim[12] must be set to zero for proper startup.
             pll_trim <= 26'b11111111111110111111111111;

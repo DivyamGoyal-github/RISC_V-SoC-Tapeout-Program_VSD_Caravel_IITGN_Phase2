@@ -14,6 +14,9 @@
 // SPDX-License-Identifier: Apache-2.0
 
 /* Integer-N clock divider */
+
+`include "defines.v"
+
 `default_nettype wire
  
 module clock_div #(

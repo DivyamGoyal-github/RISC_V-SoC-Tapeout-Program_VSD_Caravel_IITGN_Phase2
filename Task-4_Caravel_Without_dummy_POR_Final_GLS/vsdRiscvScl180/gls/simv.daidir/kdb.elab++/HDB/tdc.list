@@ -38,7 +38,6 @@
 ../rtl/scl180_wrapper/pc3d01.v
 ../rtl/scl180_wrapper/pc3d01_wrapper.v
 ../rtl/scl180_wrapper/pt3b02.v
-../rtl/scl180_wrapper/pt3b02_wrapper.v
 ../rtl/spare_logic_block.v
 ../rtl/user_id_programming.v
 ../rtl/user_id_textblock.v

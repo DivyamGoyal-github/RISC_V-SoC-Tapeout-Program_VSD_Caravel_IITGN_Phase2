@@ -71,7 +71,7 @@
 
 grep -r -i -n "por\|dummy_por" --include="*.v" --include="*.sv" .
 
-[sshekhar@nanodc rtl]$ grep "por*" vsdcaravel.v 
+[sdgoyal@nanodc rtl]$ grep "por*" vsdcaravel.v 
 // SPDX-FileCopyrightText: 2025 Efabless Corporation/VSD
     inout                     vddio,    // Common 3.3V padframe/ESD power
     inout                     vddio_2,  // Common 3.3V padframe/ESD power
@@ -102,8 +102,8 @@ grep -r -i -n "por\|dummy_por" --include="*.v" --include="*.sv" .
       .porb_h(porb_h),
       .por_l(por_l),
       .mprj_io_analog_pol(mprj_io_analog_pol),
-[sshekhar@nanodc rtl]$ grep "dummy*" vsdcaravel.v 
-[sshekhar@nanodc rtl]$ grep "por*" chip_io.v 
+[sdgoyal@nanodc rtl]$ grep "dummy*" vsdcaravel.v 
+[sdgoyal@nanodc rtl]$ grep "por*" chip_io.v 
 // SPDX-FileCopyrightText: 2025 Efabless Corporation/VSD
 	input  porb_h,
 	input  por,
@@ -159,7 +159,7 @@ grep -r -i -n "por\|dummy_por" --include="*.v" --include="*.sv" .
     	// supposed to go under them.)
 		.porb_h(porb_h),
 		.analog_pol(mprj_io_analog_pol),
-[sshekhar@nanodc rtl]$ grep "por*" caravel_core.v 
+[sdgoyal@nanodc rtl]$ grep "por*" caravel_core.v 
 // SPDX-FileCopyrightText: 2025 Efabless Corporation/VSD
 `include "manual_power_connections.v"
     inout vddio,  // Common 3.3V padframe/ESD power
@@ -198,20 +198,20 @@ grep -r -i -n "por\|dummy_por" --include="*.v" --include="*.sv" .
 		.porb_l(porb_l),
 		.por_l(por_l)
 (* keep *) manual_power_connections manual_power_connections ();
-[sshekhar@nanodc rtl]$ grep "dummy*" caravel_core.v 
+[sdgoyal@nanodc rtl]$ grep "dummy*" caravel_core.v 
     dummy_por por (
-[sshekhar@nanodc rtl]$ grep "dummy*" chip_io.v 
+[sdgoyal@nanodc rtl]$ grep "dummy*" chip_io.v 
     wire [`MPRJ_IO_PADS-1:0] dummy_mprj_io_in;
 	//wire dummy;
         //nand signal_gating (dummy, gpio_inenb_core, gpio_out_core)
-[sshekhar@nanodc rtl]$ grep "dummy*" caravel_clocking.v 
-[sshekhar@nanodc rtl]$ grep "por*" caravel_clocking.v 
+[sdgoyal@nanodc rtl]$ grep "dummy*" caravel_clocking.v 
+[sdgoyal@nanodc rtl]$ grep "por*" caravel_clocking.v 
 // SPDX-FileCopyrightText: 2025 Efabless Corporation/VSD
     input porb,		// Master (negative sense) reset from power-on-reset
     assign resetb_async = porb & resetb & (!ext_reset);
     always @(posedge pll_clk or negedge resetb_async) begin
-[sshekhar@nanodc rtl]$ grep "dummy*" housekeeping.v 
-[sshekhar@nanodc rtl]$ grep "por*" housekeeping.v 
+[sdgoyal@nanodc rtl]$ grep "dummy*" housekeeping.v 
+[sdgoyal@nanodc rtl]$ grep "por*" housekeeping.v 
 // SPDX-FileCopyrightText: 2025 Efabless Corporation/VSD
 // of all IP blocks except the power-on-reset.  This SPI has
     input porb,
@@ -226,18 +226,18 @@ grep -r -i -n "por\|dummy_por" --include="*.v" --include="*.sv" .
 	if (porb == 1'b0) begin
 			// j == 3 corresponds to CSB, which is a weak pull-up
 		    /* Register 1a (power monitor) is read-only */
-[sshekhar@nanodc rtl]$ grep "dummy*" caravel_netlists.v 
+[sdgoyal@nanodc rtl]$ grep "dummy*" caravel_netlists.v 
     //`include "dummy_por.v"
     `include "dummy_por.v"
-[sshekhar@nanodc rtl]$ grep "por*" caravel_netlists.v 
+[sdgoyal@nanodc rtl]$ grep "por*" caravel_netlists.v 
 // SPDX-FileCopyrightText: 2025 Efabless Corporation/VSD
     //`include "dummy_por.v"
     `include "dummy_por.v"
-[sshekhar@nanodc rtl]$ 
+[sdgoyal@nanodc rtl]$ 
 
 # Recursive search in the vsdRiscvScl180/
 
-[sshekhar@nanodc vsdRiscvScl180]$ grep -r -i -n "por\|dummy_por" --include="*.v" --include="*.sv" .
+[sdgoyal@nanodc vsdRiscvScl180]$ grep -r -i -n "por\|dummy_por" --include="*.v" --include="*.sv" .
 ./synthesis/output/vsdcaravel_synthesis.v:8:module dummy_por ( vdd3v3, vdd1v8, vss3v3, vss1v8, porb_h, porb_l, por_l );
 ./synthesis/output/vsdcaravel_synthesis.v:9:  output porb_h, porb_l, por_l;
 ./synthesis/output/vsdcaravel_synthesis.v:40:        vssa2, vddio_q, vssio_q, analog_a, analog_b, porb_h, vccd_conb, io, 
@@ -1300,21 +1300,21 @@ grep -r -i -n "por\|dummy_por" --include="*.v" --include="*.sv" .
 ./dv/hkspi/hkspi_tb_gl.v:1:// SPDX-FileCopyrightText: 2025 Efabless Corporation/VSD
 ./dv/hkspi/hkspi_tb.v:1:// SPDX-FileCopyrightText: 2025 Efabless Corporation/VSD
 ./dv/spiflash.v:32:// Supported commands:
-[sshekhar@nanodc vsdRiscvScl180]$ 
+[sdgoyal@nanodc vsdRiscvScl180]$ 
 
 # Perform Audit
 
-cd /home/sshekhar/vsdRiscvScl180/rtl
-grep -r -i -n -E "(dummy_por|porb_h|porb_l|por_l|\.porb|\.por\>|input[[:space:]]+por|output[[:space:]]+por)" --include="*.v" --include="*.sv" . > /home/sshekhar/complete_por_audit.txt
+cd /home/sdgoyal/vsdRiscvScl180/rtl
+grep -r -i -n -E "(dummy_por|porb_h|porb_l|por_l|\.porb|\.por\>|input[[:space:]]+por|output[[:space:]]+por)" --include="*.v" --include="*.sv" . > /home/sdgoyal/complete_por_audit.txt
 
-[sshekhar@nanodc rtl]$ grep -r -i -n "rstb\|reset_n\|xres" --include="*.v" --include="*.sv" . | grep -i "input\|inout"
+[sdgoyal@nanodc rtl]$ grep -r -i -n "rstb\|reset_n\|xres" --include="*.v" --include="*.sv" . | grep -i "input\|inout"
 ./caravel_core.v:65:    inout  rstb_h,
 ./caravel_core.v:1397:    // XRES (chip input pin reset) reset level converter
 ./mgmt_core.v:81:	input wire rstb_l_in,
 ./chip_io.v:1124:   		.INP_SEL_H(xres_vss_loop),	  // 1 = use filt_in_h else filter the pad input
 ./chip_io.v:1125:   		.FILT_IN_H(xres_vss_loop),	  // Alternate input for glitch filter
 ./chip_io.v:1126:   		.PULLUP_H(xres_vss_loop),	  // Pullup connection for alternate filter input
-[sshekhar@nanodc rtl]$ grep -r -i -E "(dummy_por|\.porb|\.por\>|input[[:space:]]+por|output[[:space:]]+por)" --include="*.v" --include="*.sv" .
+[sdgoyal@nanodc rtl]$ grep -r -i -E "(dummy_por|\.porb|\.por\>|input[[:space:]]+por|output[[:space:]]+por)" --include="*.v" --include="*.sv" .
 ./caravel_openframe.v:	.porb_h(porb_h),
 ./caravel_openframe.v:	.porb_l(porb_l),
 ./caravel_openframe.v:	.porb_h(porb_h),
@@ -1350,6 +1350,6 @@ grep -r -i -n -E "(dummy_por|porb_h|porb_l|por_l|\.porb|\.por\>|input[[:space:]]
 ./vsdcaravel.v:      .porb_h(porb_h),
 ./vsdcaravel.v:      .por(por_l),
 ./vsdcaravel.v:      .porb_h(porb_h),
-[sshekhar@nanodc rtl]$ 
+[sdgoyal@nanodc rtl]$ 
 
 

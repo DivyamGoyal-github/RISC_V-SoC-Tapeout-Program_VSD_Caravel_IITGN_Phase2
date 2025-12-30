@@ -48,8 +48,14 @@ module openframe_project_wrapper (
     /* Signals exported from the frame area to the user project */
     /* The user may elect to use any of these inputs.		*/
 
-    input	 rstb_h,	// power-on reset, sense inverted, 3.3V domain
-    input	 rstb_l,	// power-on reset, sense inverted, 1.8V domain
+    //input	 porb_h,	// power-on reset, sense inverted, 3.3V domain
+    //input	 porb_l,	// power-on reset, sense inverted, 1.8V domain
+    //input	 por_l,		// power-on reset, noninverted, 1.8V domain
+    //input	 resetb_h,	// master reset, sense inverted, 3.3V domain
+    //input	 resetb_l,	// master reset, sense inverted, 1.8V domain
+
+    input	 rstn_h,	// power-on reset, sense inverted, 3.3V domain
+    input	 rstn_l,	// power-on reset, sense inverted, 1.8V domain
     input	 rst_l,		// power-on reset, noninverted, 1.8V domain
     input	 reset_n_h,	// master reset, sense inverted, 3.3V domain
     input	 reset_n_l,	// master reset, sense inverted, 1.8V domain
@@ -117,12 +123,25 @@ module openframe_project_wrapper (
 		.vssd1(vssd1),
 		.vssd2(vssd2),
 `endif
-	    .rstb_h(rstb_h),
-	    .rstb_l(!rstb_h),
-	    .rst_l(!rstb_h),
+	    //.porb_h(porb_h),
+	    //.porb_l(porb_l),
+	    //.por_l(por_l),
+	    //.resetb_h(resetb_h),
+	    //.resetb_l(resetb_l),
+
+            //.rstb_h(rstb_h),
+	    //.rstb_l(!rstb_h),
+	    //.rst_l(!rstb_h),
+	    //.reset_n_h(reset_n_h),
+	    //.reset_n_l(reset_n_l),
+
+            .rstn_h(rstn_h),
+	    .rstn_l(rstn_l),
+	    .rst_l(rst_l),
 	    .reset_n_h(reset_n_h),
 	    .reset_n_l(reset_n_l),
-	    .mask_rev(mask_rev),
+
+            .mask_rev(mask_rev),
 	    .gpio_in(gpio_in),
 	    .gpio_in_h(gpio_in_h),
 	    .gpio_out(gpio_out),

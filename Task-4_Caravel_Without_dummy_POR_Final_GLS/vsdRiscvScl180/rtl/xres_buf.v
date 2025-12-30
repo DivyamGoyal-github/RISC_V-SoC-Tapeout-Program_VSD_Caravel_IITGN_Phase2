@@ -38,23 +38,13 @@ inout  LVPWR;
 inout  LVGND;
 `endif
 
-/*sky130_fd_sc_hvl__lsbufhv2lv_1 lvlshiftdown (
-`ifdef USE_POWER_PINS
-	.VPWR(VPWR),
-	.VPB(VPWR),
-
-	.LVPWR(LVPWR),
-
-	.VNB(VGND),
-	.VGND(VGND),
-`endif
-	.A(A),
-	.X(X)
-);
-
-*/
 // the SCL180 pdk has inbuilt level-shift in the I/O pads
 // HIGH-TO-LOW
 assign A = X;
+
+// LEVEL SHIFTING NOT NEEDED
+// SCL180 pads (PC3D21) include built-in 3.3V to 1.8V level shifters
+// Direct passthrough is correct
+
 
 endmodule

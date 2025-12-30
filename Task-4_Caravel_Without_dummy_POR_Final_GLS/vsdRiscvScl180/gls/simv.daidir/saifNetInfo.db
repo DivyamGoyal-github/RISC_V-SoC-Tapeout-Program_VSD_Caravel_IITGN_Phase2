@@ -1,4 +1,4 @@
-143
+142
 caravel_clocking
 pll_clk90_divided
 Scal
@@ -236,9 +236,6 @@ Scal
 mgmt_protect_hv
 mprj_vdd_logic1_h
 Scal
-mprj_io
-oeb
-11111111111111111110000000000000000000
 pc3b03ed_wrapper
 output_EN_N
 Scal

@@ -3155,81 +3155,81 @@
         "module",
         526
     ],
+    "mprj_io_buffer": [
+        "mprj_io_buffer",
+        "ZH6eT",
+        "module",
+        527
+    ],
     "housekeeping_spi": [
         "housekeeping_spi",
         "ZzT3Y",
         "module",
-        527
+        528
     ],
     "housekeeping_0000": [
         "housekeeping_0000",
         "zZGur",
         "module",
-        528
+        529
     ],
     "mgmt_protect": [
         "mgmt_protect",
         "ubgDW",
         "module",
-        529
+        530
     ],
     "constant_block": [
         "constant_block",
         "K1Kn0",
         "module",
-        530
+        531
     ],
     "gpio_control_block": [
         "gpio_control_block",
         "U31CN",
         "module",
-        531
+        532
     ],
     "gpio_defaults_block_0000": [
         "gpio_defaults_block_0000",
         "a9CF8",
         "module",
-        532
+        533
     ],
     "gpio_signal_buffering": [
         "gpio_signal_buffering",
         "rh9Gm",
         "module",
-        533
+        534
     ],
     "xres_buf": [
         "xres_buf",
         "UFUqY",
         "module",
-        534
+        535
     ],
     "RAM256_0000": [
         "RAM256_0000",
         "m1Rzf",
         "module",
-        535
+        536
     ],
     "VexRiscv": [
         "VexRiscv",
         "Ey7ir",
         "module",
-        536
+        537
     ],
     "InstructionCache": [
         "InstructionCache",
         "y15By",
         "module",
-        537
+        538
     ],
     "mgmt_core_wrapper": [
         "mgmt_core_wrapper",
         "SzZk1",
-        "module",
-        538
-    ],
-    "mprj_io_buffer": [
-        "mprj_io_buffer",
-        "ZH6eT",
         "module",
         539
     ],

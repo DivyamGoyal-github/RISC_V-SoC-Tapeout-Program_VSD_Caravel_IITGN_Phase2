@@ -1,6 +1,6 @@
 psSimBaseName                      	simv
 psLogFileName                      	compile.log
-psDaiDir                           	/home/dgoyal/vsdRiscvScl180/dv/hkspi/simv.daidir
+psDaiDir                           	/home/sshekhar/vsdRiscvScl180/dv/hkspi/simv.daidir
 destPath                           	csrc/
 fSharedMasterElab                  	0
 fHsimPCSharedLibSpecified          	0

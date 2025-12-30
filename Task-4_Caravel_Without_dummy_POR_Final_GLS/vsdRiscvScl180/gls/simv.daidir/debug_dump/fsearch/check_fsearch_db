@@ -1,6 +1,6 @@
 #!/bin/sh -h 
 
-FILE_PATH="/home/dgoyal/vsdRiscvScl180/gls/simv.daidir/debug_dump/fsearch"
+FILE_PATH="/home/sshekhar/vsdRiscvScl180/gls/simv.daidir/debug_dump/fsearch"
 lockfile="${FILE_PATH}"/lock
 
 FSearch_lock_release() {
@@ -32,13 +32,13 @@ if [ -d "$dir_name"/../../../../../../.. ]; then
     cd "$dir_name"/../../../../../../..
 fi
 
-if [ -f "/home/dgoyal/vsdRiscvScl180/gls/simv.daidir/debug_dump/fsearch/.create_fsearch_db" ]; then
-    if [ ! -f "/home/dgoyal/vsdRiscvScl180/gls/simv.daidir/debug_dump/fsearch/fsearch.db" ]; then
+if [ -f "/home/sshekhar/vsdRiscvScl180/gls/simv.daidir/debug_dump/fsearch/.create_fsearch_db" ]; then
+    if [ ! -f "/home/sshekhar/vsdRiscvScl180/gls/simv.daidir/debug_dump/fsearch/fsearch.db" ]; then
         if [ "$#" -eq 1 ] && [ "x$1" == "x-background" ]; then
             trap FSearch_lock_release EXIT
             (
                 flock 193
-                create_fsearch_db_ctrl "/home/dgoyal/vsdRiscvScl180/gls/simv.daidir/debug_dump/fsearch/.create_fsearch_db"
+                create_fsearch_db_ctrl "/home/sshekhar/vsdRiscvScl180/gls/simv.daidir/debug_dump/fsearch/.create_fsearch_db"
                 exit 193
             ) 193> "$lockfile"
             rstat=$?
@@ -46,12 +46,12 @@ if [ -f "/home/dgoyal/vsdRiscvScl180/gls/simv.daidir/debug_dump/fsearch/.create_
                 exit $rstat
             fi
         else
-            "/home/dgoyal/vsdRiscvScl180/gls/simv.daidir/debug_dump/fsearch/.create_fsearch_db"
-            if [ -f "/home/dgoyal/vsdRiscvScl180/gls/simv.daidir/debug_dump/fsearch/fsearch.stat" ]; then
-               rm -f "/home/dgoyal/vsdRiscvScl180/gls/simv.daidir/debug_dump/fsearch/fsearch.stat"
+            "/home/sshekhar/vsdRiscvScl180/gls/simv.daidir/debug_dump/fsearch/.create_fsearch_db"
+            if [ -f "/home/sshekhar/vsdRiscvScl180/gls/simv.daidir/debug_dump/fsearch/fsearch.stat" ]; then
+               rm -f "/home/sshekhar/vsdRiscvScl180/gls/simv.daidir/debug_dump/fsearch/fsearch.stat"
             fi
         fi
-    elif [ -f "/home/dgoyal/vsdRiscvScl180/gls/simv.daidir/debug_dump/fsearch/fsearch.stat" ]; then
-       rm -f "/home/dgoyal/vsdRiscvScl180/gls/simv.daidir/debug_dump/fsearch/fsearch.stat"
+    elif [ -f "/home/sshekhar/vsdRiscvScl180/gls/simv.daidir/debug_dump/fsearch/fsearch.stat" ]; then
+       rm -f "/home/sshekhar/vsdRiscvScl180/gls/simv.daidir/debug_dump/fsearch/fsearch.stat"
     fi
 fi

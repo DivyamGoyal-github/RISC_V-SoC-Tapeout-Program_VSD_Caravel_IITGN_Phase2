@@ -1,0 +1,41 @@
+Command: /home/sshekhar/vsdRiscvScl180/dv/caravel/mgmt_soc/gpio/./simv -l simulation.log +vcs+dumpvars+gpio.vcd
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version U-2023.03_Full64; Runtime version U-2023.03_Full64;  Dec 18 17:38 2025
+Reading gpio.hex
+gpio.hex loaded into memory
+Memory 5 bytes = 0x81 0x40 0x81 0x41 0x01
++1000 cycles
++1000 cycles
++1000 cycles
++1000 cycles
++1000 cycles
++1000 cycles
++1000 cycles
++1000 cycles
++1000 cycles
++1000 cycles
++1000 cycles
++1000 cycles
++1000 cycles
++1000 cycles
++1000 cycles
++1000 cycles
++1000 cycles
++1000 cycles
++1000 cycles
++1000 cycles
++1000 cycles
++1000 cycles
++1000 cycles
++1000 cycles
++1000 cycles
+[1;31m
+Monitor: Timeout, Test GPIO (RTL) Failed
+[0m
+$finish called from file "gpio_tb.v", line 59.
+$finish at simulation time            499990000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 499990000 ps
+CPU Time:      0.230 seconds;       Data structure size:   0.8Mb
+Thu Dec 18 17:38:38 2025

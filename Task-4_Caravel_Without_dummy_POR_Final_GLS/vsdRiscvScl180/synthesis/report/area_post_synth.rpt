@@ -1,34 +1,36 @@
-Warning: Design 'vsdcaravel' has '119' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'vsdcaravel' has '3' unresolved references. For more detailed information, use the "link" command. (UID-341)
  
 ****************************************
 Report : area
 Design : vsdcaravel
 Version: T-2022.03-SP5
-Date   : Tue Dec 16 17:39:25 2025
+Date   : Tue Dec 23 16:42:22 2025
 ****************************************
 
 Library(s) Used:
 
     tsl18fs120_scl_ff (File: /home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/stdcell/fs120/4M1IL/liberty/lib_flow_ff/tsl18fs120_scl_ff.db)
+    gtech (File: /home/Synopsys/tools/syn/T-2022.03-SP5/libraries/syn/gtech.db)
     tsl18cio250_min (File: /home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/iopad/cio250/4M1L/liberty/tsl18cio250_min.db)
 
-Number of ports:                        15288
-Number of nets:                         30183
-Number of cells:                        24247
-Number of combinational cells:          17196
-Number of sequential cells:              6271
-Number of macros/black boxes:              17
-Number of buf/inv:                       3087
+Number of ports:                        14306
+Number of nets:                         28770
+Number of cells:                        23611
+Number of combinational cells:          16963
+Number of sequential cells:              6257
+Number of macros/black boxes:              19
+Number of buf/inv:                       3351
 Number of references:                       2
 
-Combinational area:             310719.949906
-Buf/Inv area:                    24517.649937
-Noncombinational area:          381975.638954
-Macro/Black Box area:             1395.760063
-Net Interconnect area:           28958.112816
+Combinational area:             302794.709771
+Buf/Inv area:                    26825.329927
+Noncombinational area:          386318.969036
+Macro/Black Box area:             3986.640190
+Net Interconnect area:           26269.500634
 
-Total cell area:                694091.348923
-Total area:                     723049.461739
+Total cell area:                693100.318997
+Total area:                     719369.819631
 
+Information: This design contains unmapped logic. (RPT-7)
 Information: This design contains black box (unknown) components. (RPT-8)
 1

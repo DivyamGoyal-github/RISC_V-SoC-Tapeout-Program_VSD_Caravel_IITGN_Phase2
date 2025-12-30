@@ -2,15 +2,17 @@
 Blackbox Modules Report
 ========================================
 
-Date: Tue Dec 16 17:39:25 2025
+Date: Tue Dec 23 16:42:23 2025
 Design: vsdcaravel
 
 ----------------------------------------
 Module: RAM128
 ----------------------------------------
   Design Status: PRESENT (blackbox)
-  Instance Count: 1
+  Instance Count: 3
   Instances:
+    - chip_core/soc/core/RAM256/BANK128[0].RAM128
+    - chip_core/soc/core/RAM256/BANK128[1].RAM128
     - chip_core/soc/core/RAM128
 
 ----------------------------------------

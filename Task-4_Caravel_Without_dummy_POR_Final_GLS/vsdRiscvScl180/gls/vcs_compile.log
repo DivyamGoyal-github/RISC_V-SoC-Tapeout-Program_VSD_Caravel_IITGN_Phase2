@@ -7,7 +7,7 @@ Command: vcs -full64 -debug_access+all +define+FUNCTIONAL +define+SIM +define+GL
 +libext+.v+.sv -y /home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/stdcell/fs120/4M1IL/verilog/vcs_sim_model \
 +libext+.v+.sv ../rtl/defines.v hkspi_tb.v -l vcs_compile.log -o simv
                          Chronologic VCS (TM)
-         Version U-2023.03_Full64 -- Tue Dec 16 17:43:32 2025
+         Version U-2023.03_Full64 -- Wed Dec 17 16:39:18 2025
 
                     Copyright (c) 1991 - 2023 Synopsys, Inc.
    This software and the associated documentation are proprietary to Synopsys,
@@ -118,12 +118,10 @@ Parsing included file '../rtl/scl180_wrapper/pc3d01.v'.
 Back to file '../rtl/scl180_wrapper/pc3d01_wrapper.v'.
 Parsing included file '../rtl/scl180_wrapper/pc3d01.v'.
 Back to file '../rtl/scl180_wrapper/pc3d01_wrapper.v'.
-Parsing library directory file '../rtl/scl180_wrapper/pt3b02_wrapper.v'
-Parsing included file '../rtl/scl180_wrapper/pt3b02.v'.
-Back to file '../rtl/scl180_wrapper/pt3b02_wrapper.v'.
-Parsing included file '../rtl/scl180_wrapper/pt3b02.v'.
-Back to file '../rtl/scl180_wrapper/pt3b02_wrapper.v'.
+Parsing library directory file '../rtl/scl180_wrapper/pt3b02.v'
 Parsing library directory file '../rtl/clock_div.v'
+Parsing included file '../rtl/defines.v'.
+Back to file '../rtl/clock_div.v'.
 Parsing library directory file '../rtl/digital_pll_controller.v'
 Parsing library directory file '../rtl/dummy_scl180_conb_1.v'
 Parsing library directory file '../rtl/housekeeping_spi.v'
@@ -161,23 +159,7 @@ Parsing included file '../rtl/manual_power_connections.v'.
 Back to file '../rtl/caravel_core.v'.
 Parsing included file '../rtl/empty_macro.v'.
 Back to file '../rtl/caravel_core.v'.
-Back to file '../rtl/vsdcaravel.v'.
-Parsing included file '../rtl/copyright_block.v'.
-Back to file '../rtl/vsdcaravel.v'.
-Parsing included file '../rtl/caravel_logo.v'.
-Back to file '../rtl/vsdcaravel.v'.
-Parsing included file '../rtl/caravel_motto.v'.
-Back to file '../rtl/vsdcaravel.v'.
-Parsing included file '../rtl/open_source.v'.
-Back to file '../rtl/vsdcaravel.v'.
-Parsing included file '../rtl/user_id_textblock.v'.
-Back to file '../rtl/vsdcaravel.v'.
-Parsing included file '../rtl/caravel_core.v'.
-Parsing included file '../rtl/mprj_io_buffer.v'.
-Back to file '../rtl/caravel_core.v'.
-Parsing included file '../rtl/manual_power_connections.v'.
-Back to file '../rtl/caravel_core.v'.
-Parsing included file '../rtl/empty_macro.v'.
+Parsing included file '../rtl/user_defines.v'.
 Back to file '../rtl/caravel_core.v'.
 Back to file '../rtl/vsdcaravel.v'.
 Parsing included file '../rtl/copyright_block.v'.
@@ -196,6 +178,28 @@ Back to file '../rtl/caravel_core.v'.
 Parsing included file '../rtl/manual_power_connections.v'.
 Back to file '../rtl/caravel_core.v'.
 Parsing included file '../rtl/empty_macro.v'.
+Back to file '../rtl/caravel_core.v'.
+Parsing included file '../rtl/user_defines.v'.
+Back to file '../rtl/caravel_core.v'.
+Back to file '../rtl/vsdcaravel.v'.
+Parsing included file '../rtl/copyright_block.v'.
+Back to file '../rtl/vsdcaravel.v'.
+Parsing included file '../rtl/caravel_logo.v'.
+Back to file '../rtl/vsdcaravel.v'.
+Parsing included file '../rtl/caravel_motto.v'.
+Back to file '../rtl/vsdcaravel.v'.
+Parsing included file '../rtl/open_source.v'.
+Back to file '../rtl/vsdcaravel.v'.
+Parsing included file '../rtl/user_id_textblock.v'.
+Back to file '../rtl/vsdcaravel.v'.
+Parsing included file '../rtl/caravel_core.v'.
+Parsing included file '../rtl/mprj_io_buffer.v'.
+Back to file '../rtl/caravel_core.v'.
+Parsing included file '../rtl/manual_power_connections.v'.
+Back to file '../rtl/caravel_core.v'.
+Parsing included file '../rtl/empty_macro.v'.
+Back to file '../rtl/caravel_core.v'.
+Parsing included file '../rtl/user_defines.v'.
 Back to file '../rtl/caravel_core.v'.
 Back to file '../rtl/vsdcaravel.v'.
 Parsing library directory file '/home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/stdcell/fs120/4M1IL/verilog/vcs_sim_model/buffd7.v'
@@ -204,7 +208,7 @@ Top Level Modules:
 TimeScale is 1 ns / 1 ps
 
 Warning-[TFIPC] Too few instance port connections
-../rtl/chip_io.v, 1186
+../rtl/chip_io.v, 1023
 chip_io, "mprj_io mprj_pads( .vddio (vddio),  .vssio (vssio),  .vccd (vccd),  .vssd (vssd),  .vdda1 (vdda1),  .vdda2 (vdda2),  .vssa1 (vssa1),  .vssa2 (vssa2),  .vddio_q (vddio_q),  .vssio_q (vssio_q),  .analog_a (analog_a),  .analog_b (analog_b),  .rstb_h (rstb_h),  .vccd_conb (mprj_io_one),  .io (mprj_io),  .io_out (mprj_io_out),  .oeb (mprj_io_oeb),  .enh (mprj_io_enh),  .inp_dis (mprj_io_inp_dis),  .ib_mode_sel (mprj_io_ib_mode_sel),  .vtrip_sel (mprj_io_vtrip_sel),  .holdover (mprj_io_holdover),  .slow_sel (mprj_io_slow_sel),  .analog_en (mprj_io_analog_en),  .analog_sel (mprj_io_analog_sel),  .analog_pol (mprj_io_analog_pol),  .dm (mprj_io_dm),  .io_in (mprj_io_in),  .analog_io (mprj_analog_io));"
   The above instance has fewer port connections than the module definition.
   Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
@@ -677,7 +681,7 @@ rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
 if [ -x ../simv ]; then chmod a-x ../simv; fi
 g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
 -Wl,-rpath=/home/Synopsys/tools/vcs/U-2023.03/linux64/lib -L/home/Synopsys/tools/vcs/U-2023.03/linux64/lib \
--Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _6362_archive_1.so \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _5265_archive_1.so \
 objs/udps/FqLFq.o objs/udps/fsCp2.o objs/udps/K79QG.o  SIM_l.o      rmapats_mop.o \
 rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf \
 -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /home/Synopsys/tools/vcs/U-2023.03/linux64/lib/vcs_tls.o \
@@ -685,5 +689,5 @@ rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim 
 -ldl  -lc -lm -lpthread -ldl 
 ../simv up to date
 make[1]: Leaving directory `/home/dgoyal/vsdRiscvScl180/gls/csrc'
-CPU time: 1.602 seconds to compile + .339 seconds to elab + .188 seconds to link
+CPU time: 2.133 seconds to compile + .316 seconds to elab + .212 seconds to link
 Verdi KDB elaboration done and the database successfully generated: 0 error(s), 0 warning(s)

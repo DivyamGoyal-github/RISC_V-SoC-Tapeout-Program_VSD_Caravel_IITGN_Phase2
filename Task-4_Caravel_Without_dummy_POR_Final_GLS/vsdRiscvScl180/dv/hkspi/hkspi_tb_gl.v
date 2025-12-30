@@ -422,7 +422,7 @@ module hkspi_tb;
 		.flash_clk(flash_clk),
 		.flash_io0(flash_io0),
 		.flash_io1(flash_io1),
-		.resetb	  (RSTB)
+		.reset_n  (RSTB)
 	);
 
 	spiflash #(

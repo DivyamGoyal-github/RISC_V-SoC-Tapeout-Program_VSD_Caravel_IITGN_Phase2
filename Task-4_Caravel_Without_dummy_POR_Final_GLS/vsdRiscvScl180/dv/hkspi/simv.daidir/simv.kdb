@@ -1,7 +1,7 @@
 rc file Version 1.0
 
 [Design]
-COMPILE_PATH=/home/dgoyal/vsdRiscvScl180/dv/hkspi
+COMPILE_PATH=/home/sshekhar/vsdRiscvScl180/dv/hkspi
 VCS_HOME=/home/Synopsys/tools/vcs/U-2023.03
 VERDI_HOME=
 SystemC=FALSE

@@ -1,4 +1,4 @@
-60
+58
 constant_block
 one_unbuf
 Scal
@@ -77,12 +77,6 @@ Scal
 hkspi_tb.uut.chip_core.gpio_control_in_2.spare_cell
 VPWR
 Scal
-hkspi_tb.uut.padframe.flash_clk_pad.pad
-I
-Scal
-hkspi_tb.uut.padframe.flash_csb_pad.pad
-I
-Scal
 housekeeping
 mgmt_gpio_out_14_prebuff
 Scal
@@ -117,7 +111,7 @@ mgmt_protect
 wb_in_enable
 Scal
 pc3b03ed_wrapper
-output_EN_N
+internal_oen
 Scal
 pc3b03ed_wrapper
 pull_down_enb

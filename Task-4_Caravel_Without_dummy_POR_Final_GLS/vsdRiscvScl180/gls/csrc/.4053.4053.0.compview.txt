@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1765969758.001454768, "rt":3.89, "ut":1.86, "st":0.21}}
+{"vcselab":{"timestamp_begin":1765969761.985743949, "rt":1.66, "ut":0.22, "st":0.05}}
+{"link":{"timestamp_begin":1765969763.701526027, "rt":0.14, "ut":0.07, "st":0.07}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1765969757.050431956}
+{"VCS_COMP_START_TIME": 1765969757.050431956}
+{"VCS_COMP_END_TIME": 1765969763.976609390}
+{"VCS_USER_OPTIONS": "-full64 -debug_access+all +define+FUNCTIONAL +define+SIM +define+GL -timescale=1ns/1ps +v2k -sverilog -lca -kdb +incdir+.. +incdir+../synthesis/output +incdir+../gls +incdir+../rtl +incdir+../rtl +incdir+../rtl/scl180_wrapper +incdir+/home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/iopad/cio250/4M1L/verilog/tsl18cio250/zero +incdir+/home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/stdcell/fs120/4M1IL/verilog/vcs_sim_model -y ../rtl/scl180_wrapper +libext+.v+.sv -y ../rtl +libext+.v+.sv -y ../rtl +libext+.v+.sv -y /home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/iopad/cio250/4M1L/verilog/tsl18cio250/zero +libext+.v+.sv -y /home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/stdcell/fs120/4M1IL/verilog/vcs_sim_model +libext+.v+.sv ../rtl/defines.v hkspi_tb.v -l vcs_compile.log -o simv"}
+{"vcs1": {"peak_mem": 507504}}
+{"vcselab": {"peak_mem": 240740}}

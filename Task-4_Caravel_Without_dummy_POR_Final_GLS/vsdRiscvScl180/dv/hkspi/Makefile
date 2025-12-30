@@ -23,7 +23,7 @@ BEHAVIOURAL_MODELS = ../
 RISCV_TYPE ?= rv32imc
 
 FIRMWARE_PATH = ../
-GCC_PATH?=/usr/bin/gcc
+GCC_PATH?=/home/dgoyal/riscv32-unknown-elf/bin
 GCC_PREFIX?=riscv32-unknown-elf
 
 SIM_DEFINES = +define+FUNCTIONAL +define+SIM

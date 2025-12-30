@@ -21,8 +21,8 @@ module caravel_clocking(
     input VPWR,
     input VGND,
 `endif */
-// Master (negative sense) reset from power-on-reset
-    input rstb_h,
+    //input porb,		// Master (negative sense) reset from power-on-reset
+    input rstn,
     input reset_n, 	// Master (negative sense) reset
     input ext_clk_sel,	// 0=use PLL clock, 1=use external (pad) clock
     input ext_clk,	// External pad (slow) clock
@@ -36,7 +36,8 @@ module caravel_clocking(
     output reset_n_sync	// Output propagated and buffered reset
 );
 
-    wire rstb_l = !rstb_h;
+    //wire rstb_l = !rstb_h;
+    //wire rstn_l = !rstn_h;
     wire pll_clk_sel;
     wire pll_clk_divided;
     wire pll_clk90_divided;
@@ -50,7 +51,7 @@ module caravel_clocking(
 
     assign pll_clk_sel = ~ext_clk_sel;
 
-    assign reset_n_async = rstb_h & reset_n & (!ext_reset);
+    assign reset_n_async = rstn & reset_n & (!ext_reset);
     // Note that this implementation does not guard against switching to
     // the PLL clock if the PLL clock is not present.
 

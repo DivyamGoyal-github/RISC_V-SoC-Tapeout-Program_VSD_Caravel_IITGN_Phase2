@@ -105,17 +105,16 @@ module gpio_signal_buffering_alt (
 
     wire [101:0] buf_in;
     wire [101:0] buf_out;
-
-    sky130_fd_sc_hd__buf_8 signal_buffers [101:0] (
-        `ifdef USE_POWER_PINS
-	    .VPWR(vccd),
-	    .VGND(vssd),
-	    .VPB(vccd),
-	    .VNB(vssd),
-	`endif
-	.A(buf_in),
-	.X(buf_out)
+    
+    
+    // SCL180 FS120 standard cells - 4M1L process
+    tsl18fs120_scl_buf_8 signal_buffers [101:0] (
+        .A(buf_in), .X(buf_out)
     );
+
+    // Decoupling capacitors - direct connection to power/ground
+    // No explicit decap cell needed in SCL180 FS120 library
+    // Power rail capacitance handled by power planning
 
     /* Now chain them all together */
 
@@ -326,14 +325,5 @@ module gpio_signal_buffering_alt (
     assign buf_in[100] = mgmt_io_oeb_unbuf[2];
     assign buf_in[101] = buf_out[100];
     assign mgmt_io_oeb_buf[2] = buf_out[101];
-
-    sky130_ef_sc_hd__decap_12 sigbuf_decaps [59:0] (
-    `ifdef USE_POWER_PINS
-        .VPWR(vccd),
-        .VGND(vssd),
-        .VPB(vccd),
-        .VNB(vssd)
-    `endif
-    );
 
 endmodule

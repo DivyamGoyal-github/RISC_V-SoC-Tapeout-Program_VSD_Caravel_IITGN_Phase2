@@ -1,0 +1,34 @@
+Command: vcs -sverilog +v2k -full64 -debug_access+all -lca -timescale=1ns/1ps +define+FUNCTIONAL \
++define+SIM +define+SCL180 +incdir+../../common +incdir+../../common/generated +incdir+../../common/hw \
++incdir+/home/sshekhar/vsdRiscvScl180/rtl +incdir+/home/sshekhar/vsdRiscvScl180/rtl/scl180_wrapper \
++incdir+/home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/iopad/cio250/4MIL/verilog/tsl18cio250/zero \
+gpio_tb.v -l compile.log -o simv
+                         Chronologic VCS (TM)
+         Version U-2023.03_Full64 -- Thu Dec 18 17:38:35 2025
+
+                    Copyright (c) 1991 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+
+Warning-[LCA_FEATURES_ENABLED] Usage warning
+  LCA features enabled by '-lca' argument on the command line.  For more 
+  information regarding list of LCA features please refer to Chapter "LCA 
+  features" in the VCS Release Notes
+
+The design hasn't changed and need not be recompiled. 
+If you really want to, delete file /home/sshekhar/vsdRiscvScl180/dv/caravel/mgmt_soc/gpio/simv.daidir/.vcs.timestamp and
+run VCS again.
+

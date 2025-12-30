@@ -1,6 +1,6 @@
 #!/bin/sh -f
 
-cd /home/dgoyal/vsdRiscvScl180/gls
+cd /home/sshekhar/vsdRiscvScl180/gls
 export ALTOS_QUEUE="1"
 export ASIC_LIB="/home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/pdk/cdns/sclpdk_v3/HOTCODE/asic_libs"
 export CDS_AUTO_64BIT="ALL"
@@ -13,15 +13,14 @@ export COLORTERM="truecolor"
 export CWB_GL1_YES="1"
 export DISABLE_LIBRARY_MAP_CHECK="1"
 export DISPLAY="localhost:10.0"
-export FLEXLM_BORROWFILE="/home/dgoyal/.nanodc.iitgn.ac.in-borrow.txt"
+export FLEXLM_BORROWFILE="/home/sshekhar/.nanodc.iitgn.ac.in-borrow.txt"
 export FLEXLM_DIAGNOSTICS="3"
-export GCC_PATH="/home/dgoyal/risc_v_tools/riscv32-unknown-elf-gcc-12.1.0"
-export GNOME_TERMINAL_SCREEN="/org/gnome/Terminal/screen/54e7ab71_dda9_4e5c_85f9_ef3f7a11c6ee"
-export GNOME_TERMINAL_SERVICE=":1.30"
-export GROUP="dgoyal"
+export GNOME_TERMINAL_SCREEN="/org/gnome/Terminal/screen/42b2c7c7_2228_4e1d_8064_e29adc869ea7"
+export GNOME_TERMINAL_SERVICE=":1.21"
+export GROUP="sshekhar"
 export HISTCONTROL="ignoredups"
 export HISTSIZE="1000"
-export HOME="/home/dgoyal"
+export HOME="/home/sshekhar"
 export HOST="nanodc.iitgn.ac.in"
 export HOSTNAME="nanodc.iitgn.ac.in"
 export HOSTTYPE="x86_64-linux"
@@ -31,10 +30,10 @@ export LANG="en_IN"
 export LD_LIBRARY_PATH="/home/Synopsys/tools/vcs/U-2023.03/lib:/home/Synopsys/tools/vcs/U-2023.03/linux64/lib:"
 export LESSOPEN="||/usr/bin/lesspipe.sh %s"
 export LM_LICENSE_FILE="27020@c2s.cdacb.in"
-export LOGNAME="dgoyal"
+export LOGNAME="sshekhar"
 export LS_COLORS="rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:"
 export MACHTYPE="x86_64"
-export MAIL="/var/spool/mail/dgoyal"
+export MAIL="/var/spool/mail/sshekhar"
 export MAKEFLAGS=""
 export MAKELEVEL="1"
 export MFLAGS=""
@@ -46,11 +45,11 @@ export OA_UNSUPPORTED_PLAT="linux_rhel50_gcc44x"
 export OLDPWD
 export OSTYPE="linux"
 export OVA_UUM="0"
-export PATH=".:/home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/pdk/cdns/sclpdk_v3/HOTCODE/bin/rfbin:/home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/pdk/cdns/sclpdk_v3/HOTCODE/amslibs/cds_default/cdsware/bin:/home/Synopsys/tools/vcs/U-2023.03/bin:/home/Synopsys/tools/starrc/U-2022.12-SP3/bin:/home/Synopsys/tools/prime/U-2022.12-SP3/bin:/home/Synopsys/tools/icc2/U-2022.12-SP3/bin:/home/Synopsys/tools/syn/T-2022.03-SP5/bin:/home/dgoyal/risc_v_tools/riscv32-unknown-elf-gcc-12.1.0/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/dgoyal/.local/bin:/home/dgoyal/bin"
+export PATH=".:/home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/pdk/cdns/sclpdk_v3/HOTCODE/bin/rfbin:/home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/pdk/cdns/sclpdk_v3/HOTCODE/amslibs/cds_default/cdsware/bin:/home/Synopsys/tools/vcs/U-2023.03/bin:/home/Synopsys/tools/starrc/U-2022.12-SP3/bin:/home/Synopsys/tools/prime/U-2022.12-SP3/bin:/home/Synopsys/tools/icc2/U-2022.12-SP3/bin:/home/Synopsys/tools/syn/T-2022.03-SP5/bin:/home/sshekhar/riscv-tools/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/sshekhar/.local/bin:/home/sshekhar/bin"
 export PERL5="/bin/perl"
 export PRIME_HOME="/home/Synopsys/tools/prime/U-2022.12-SP3"
 export PROJ_ROOT="/home/Synopsys/"
-export PWD="/home/dgoyal/vsdRiscvScl180/gls"
+export PWD="/home/sshekhar/vsdRiscvScl180/gls"
 export QRC_ENABLE_EXTRACTION=""
 export RDS_ADSLIBS="/home/Synopsys/pdk/SCL_PDK_3/SCLPDK_V3.0_KIT/scl180/pdk/cdns/sclpdk_v3/HOTCODE/adslibs"
 export RDS_ADS_MODEL_VER="v1.0"
@@ -97,16 +96,16 @@ export SNPS_FORCE_64BIT="1"
 export SNPS_INTERNAL_VCS_LINUX_OS="linux"
 export SNPS_TEMP="tmp"
 export SNPS_VCS_CLANG_PATH="/home/Synopsys/tools/vcs/U-2023.03/linux64/clang"
-export SNPS_VCS_INTERNAL_CURR_PID="5274"
+export SNPS_VCS_INTERNAL_CURR_PID="4053"
 export SNPS_VCS_INTERNAL_MAKE="make"
 export SNPS_VCS_INTERNAL_MAKE_OPT=""
 export SNPS_VCS_INTERNAL_MEMPRELOAD_USE_LIBC="1"
-export SNPS_VCS_INTERNAL_ROOT_PID="5274"
-export SNPS_VCS_INTERNAL_ROOT_START_TIME="1765887211.752077102"
+export SNPS_VCS_INTERNAL_ROOT_PID="4053"
+export SNPS_VCS_INTERNAL_ROOT_START_TIME="1765969757.050431956"
 export SNPS_VERDI_INTERNAL_LP_XML_NEW_FLOW="1"
-export SSH_CLIENT="10.0.178.40 54128 22"
-export SSH_CONNECTION="10.0.178.40 54128 10.0.117.98 22"
-export SSH_TTY="/dev/pts/1"
+export SSH_CLIENT="10.0.178.37 58738 22"
+export SSH_CONNECTION="10.0.178.37 58738 10.0.117.148 22"
+export SSH_TTY="/dev/pts/0"
 export STARRC_HOME="/home/Synopsys/tools/starrc/U-2022.12-SP3"
 export SYNOPSYS_HOME="/home/Synopsys/tools"
 export SYNOPSYS_SIM="/home/Synopsys/tools/vcs/U-2023.03"
@@ -114,9 +113,9 @@ export SYN_HOME="/home/Synopsys/tools/syn/T-2022.03-SP5"
 export TERM="xterm-256color"
 export TMPDIR="tmp"
 export TOOL_HOME="/home/Synopsys/tools/vcs/U-2023.03/linux64"
-export TURBO_LOG_DIR="/home/dgoyal/vsdRiscvScl180/gls/tmp/vcs_20251216121331_5274"
+export TURBO_LOG_DIR="/home/sshekhar/vsdRiscvScl180/gls/tmp/vcs_20251217110916_4053"
 export UNAME="/bin/uname"
-export USER="dgoyal"
+export USER="sshekhar"
 export VCS_ARCH="linux64"
 export VCS_ARG_ADDED_FOR_TMP="1"
 export VCS_COM="/home/Synopsys/tools/vcs/U-2023.03/linux64/bin/vcs1"
@@ -132,27 +131,27 @@ export VCS_USER_OPTIONS="-full64 -debug_access+all +define+FUNCTIONAL +define+SI
 export VENDOR="unknown"
 export VMR_MODE_FLAG="64"
 export VTE_VERSION="5204"
-export XDG_DATA_DIRS="/home/dgoyal/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share"
-export XDG_RUNTIME_DIR="/run/user/1002"
-export XDG_SESSION_ID="1395"
+export XDG_DATA_DIRS="/home/sshekhar/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share"
+export XDG_RUNTIME_DIR="/run/user/1004"
+export XDG_SESSION_ID="1219"
 export _="/usr/bin/time"
-export sysc_uni_pwd="/home/dgoyal/vsdRiscvScl180/gls"
+export sysc_uni_pwd="/home/sshekhar/vsdRiscvScl180/gls"
 unset VERDI_STUDIO_MODE
 if [ -z "${ELABCOM_DIAGTOOL_PREFIX}" ] && [ -z "${ELABCOM_DIAGTOOL_POSTFIX}" ];
 then
-    unset TURBO_LOG_DIR ;\rm -rf /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/elabcomLog ;/home/Synopsys/tools/vcs/U-2023.03/linux64/bin/elabcom -logdir /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/elabcomLog  -simvdaidir /home/dgoyal/vsdRiscvScl180/gls/simv.daidir  -lib /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/work  -saveLevel  -elab /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/kdb -simflow -simdir /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/kdb_libs -topfile /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/.elabcomTopFile -ssv -ssy  -Lf work +disable_message+C00380+C00381 +disable_message+C00388+C00389  >& /dev/null  && echo Success >& /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/.elabcomReport || echo Fail >& /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/.elabcomReport; \rm -rf /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/work.lib++ /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/kdb_libs/ 
+    unset TURBO_LOG_DIR ;\rm -rf /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/elabcomLog ;/home/Synopsys/tools/vcs/U-2023.03/linux64/bin/elabcom -logdir /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/elabcomLog  -simvdaidir /home/sshekhar/vsdRiscvScl180/gls/simv.daidir  -lib /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/work  -saveLevel  -elab /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/kdb -simflow -simdir /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/kdb_libs -topfile /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/.elabcomTopFile -ssv -ssy  -Lf work +disable_message+C00380+C00381 +disable_message+C00388+C00389  >& /dev/null  && echo Success >& /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/.elabcomReport || echo Fail >& /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/.elabcomReport; \rm -rf /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/work.lib++ /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/kdb_libs/ 
 else
-    unset TURBO_LOG_DIR ;\rm -rf /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/elabcomLog ; ${ELABCOM_DIAGTOOL_PREFIX} /home/Synopsys/tools/vcs/U-2023.03/linux64/bin/elabcom -logdir /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/elabcomLog  -simvdaidir /home/dgoyal/vsdRiscvScl180/gls/simv.daidir  ${ELABCOM_DIAGTOOL_POSTFIX}  -lib /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/work  -saveLevel  -elab /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/kdb -simflow -simdir /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/kdb_libs -topfile /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/.elabcomTopFile -ssv -ssy  -Lf work +disable_message+C00380+C00381 +disable_message+C00388+C00389 
+    unset TURBO_LOG_DIR ;\rm -rf /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/elabcomLog ; ${ELABCOM_DIAGTOOL_PREFIX} /home/Synopsys/tools/vcs/U-2023.03/linux64/bin/elabcom -logdir /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/elabcomLog  -simvdaidir /home/sshekhar/vsdRiscvScl180/gls/simv.daidir  ${ELABCOM_DIAGTOOL_POSTFIX}  -lib /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/work  -saveLevel  -elab /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/kdb -simflow -simdir /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/kdb_libs -topfile /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/.elabcomTopFile -ssv -ssy  -Lf work +disable_message+C00380+C00381 +disable_message+C00388+C00389 
     status=$?
     if [ "$status" == 0 ];
     then
-        echo Success >& /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/.elabcomReport
+        echo Success >& /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/.elabcomReport
     else
-        echo Fail >& /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/.elabcomReport
+        echo Fail >& /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/.elabcomReport
     fi
 
- \rm -rf /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/work.lib++ /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/kdb_libs/ 
+ \rm -rf /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/work.lib++ /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/kdb_libs/ 
 fi
 
 
-sed -i -e 's/^ELAB=FALSE$/ELAB=TRUE/' /home/dgoyal/vsdRiscvScl180/gls/simv.daidir/simv.kdb 
+sed -i -e 's/^ELAB=FALSE$/ELAB=TRUE/' /home/sshekhar/vsdRiscvScl180/gls/simv.daidir/simv.kdb 
