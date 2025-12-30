@@ -1,7 +1,7 @@
 # RISC-V SoC Tapeout Program Documentation
 ---
 
-# 🧠 Silicon to Layout: VSDCaravel Verification & Raven SoC Physical Design (Sky130 → SCL180)
+# Raven SoC Physical Design & VSDCaravel Verification (Sky130 → SCL180) 
 
 ---
 
