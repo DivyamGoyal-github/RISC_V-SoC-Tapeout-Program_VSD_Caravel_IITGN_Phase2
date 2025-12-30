@@ -30,12 +30,6 @@ The objective of this repository is to demonstrate **tapeout-oriented thinking**
 | **Focus Areas**     | PDK migration, physical correctness, timing awareness           |
 
 ---
-Got it 👍
-Below is a **clean replacement** for that entire section, with **all day-wise references removed**, while keeping it **technical, professional, and tapeout-program ready**.
-
-You can **directly replace** your existing section with this.
-
----
 
 ## 📊 Technical Journey Overview
 
