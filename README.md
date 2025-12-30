@@ -89,7 +89,52 @@ This phase involved **deep RTL-level investigation and corrective design actions
   * Reset conditions
   * Clock transitions
   * Module-level interfaces
-  
+
+
+```text
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                              TOP-LEVEL                                          │
+│                            vsdcaravel.v                                         │
+│                                                                                 │
+│  External Reset Pad: resetb => rstb_h (Currently UNUSED for POR, using reset_n) │
+│  ┌───────────────────────────────────────────────────────────────────────────┐  │
+│  │                    dummy_por por (INSTANTIATED)                           │  │
+│  │   vdd3v3, vdd1v8, vss3v3, vss1v8  ─┐                                      │  │
+│  └────────────────────────────────────┼──────────────────────────────────────┘  │
+│                                       │                                         │
+│                                       ▼                                         │
+│                                  ┌─────────┐                                    │
+│                                  │  POR    │                                    │
+│                                  │  MODULE │                                    │
+│                                  └─────────┘                                    │
+│                                       │                                         │
+│        ┌──────────────────────────────┼──────────────────────────────┐          │
+│        │                              │                              │          │
+│        ▼                              ▼                              ▼          │
+│     [porb_h]                       [porb_l]                       [por_l]       │
+│      (3.3V)                         (1.8V)                         (1.8V)       │
+│        │                              │                              │          │
+│        │                              │                              │          │
+│        ▼                              ▼                              ▼          │
+┌──────────────────────────┐  ┌──────────────────────────┐  ┌──────────────────┐  │
+│  chip_io.v               │  │  caravel_core.v          │  │  housekeeping.v  │  │
+│  .porb_h(porb_h)         │  │  .porb_h(porb_h)         │  │  .porb(porb_l)   │  │
+│  .por(por_l)             │  │  .por(por_l)             │  │                  │  │
+│                          │  │                          │  │                  │  │
+│  Enables HV pads         │  │  Drives mgmt_core        │  │  Controls SPI    │  │
+│  during power-up         │  │  reset distribution      │  │  flash control   │  │
+└──────────────────────────┘  └──────────────────────────┘  └──────────────────┘  │
+│        │                              │                              │          │
+│        ▼                              ▼                              ▼          │
+│  ┌─────────────────┐          ┌──────────────┐              ┌──────────────┐    │
+│  │ mprj_io.v       │          │ mgmt_core.v  │              │ flash ports  │    │
+│  │ .porb_h(porb_h) │          │ .porb(porb_l)│              │              │    │
+│  │                 │          │              │              │              │    │
+│  │ Enables HV      │          │ Resets CPU,  │              │              │    │
+│  │ domain pads     │          │ RAMs, Perip. │              │              │    │
+│  └─────────────────┘          └──────────────┘              └──────────────┘    │
+└─────────────────────────────────────────────────────────────────────────────────┘
+```
 * Removed non-synthesizable / dummy constructs (e.g., dummy POR) and replaced them with a **single clean active-low reset (`reset_n`)**
 
 
