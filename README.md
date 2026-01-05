@@ -179,13 +179,6 @@ This stage ensured the Raven SoC was **physically well-structured** and suitable
 
 ---
 
-## 🔹 Part 2: Physical Design of Raven SoC (Core Contribution)
-
-The **major contribution** of this repository is the **complete Physical Design (PD) flow of the Raven SoC**, carried out with a **silicon-first mindset**.
-
-This phase moves beyond simulation and addresses **real fabrication constraints**, where layout, routing, and power integrity determine whether a chip can actually be manufactured.
-
----
 
 ## 🧱 Physical Design Flow Breakdown
 
@@ -206,6 +199,10 @@ Floorplanning defines the **physical foundation** of the chip.
 * Impacts timing closure and power integrity
 * Sets the limits for placement and routing quality
 
+<div align="center" >
+  <img src="./Task-7 Physical design of Raven SOC/assets/sram_placement.png" alt="sram_placement" width="80%">
+</div>
+
 ---
 
 ### 2️⃣ Power Planning
@@ -224,6 +221,14 @@ Power planning ensures **reliable power delivery** across the entire chip.
 * Improve EM (electromigration) reliability
 * Prepare the design for dense routing
 
+<div align="center" >
+  <img src="./Task-7 Physical design of Raven SOC/assets/powerplan.png" alt="powerplan" width="80%">
+</div>
+
+<div align="center" >
+  <img src="./Task-7 Physical design of Raven SOC/assets/power_rails_around_SRAM.png" alt="power_rails_around_SRAM" width="80%">
+</div>
+
 ---
 
 ### 3️⃣ Placement
@@ -236,6 +241,11 @@ Placement translates logical netlists into **physically placed standard cells**.
 * Timing-friendly cell distribution
 * Minimizing long interconnects
 * Preparing clean paths for routing
+
+<div align="center" >
+  <img src="./Task-7 Physical design of Raven SOC/assets/std_cells_placed.png" alt="std_cells_placed" width="80%">
+</div>
+
 
 ---
 
@@ -251,6 +261,12 @@ Routing completes the physical connectivity of the design.
 * Ensuring routability without violations
 
 This step determines whether the design is **manufacturable or not**.
+
+
+<div align="center" >
+  <img src="./Task-7 Physical design of Raven SOC/assets/routing.jpg" alt="std_cells_placed" width="80%">
+</div>
+
 
 ---
 
