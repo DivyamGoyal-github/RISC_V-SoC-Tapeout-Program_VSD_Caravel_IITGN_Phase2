@@ -335,4 +335,4 @@ This implementation reflects **real tapeout-grade SoC design methodology**.
 ✅ GLS passed
 ✅ Documentation complete
 
-**Task-3 successfully completed.**
+**Task-4 successfully completed.**
