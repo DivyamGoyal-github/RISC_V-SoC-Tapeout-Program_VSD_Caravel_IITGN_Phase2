@@ -722,10 +722,33 @@ Commits the floorplan state to the ICC2 database.
 
 ❌ IO pads appeared **inside die interior**
 
+<div align="center" >
+  <img src="./assets/initial_floorplan.png" alt="initial_floorplan" width="80%">
+</div>
+
 ### Root Cause
 
 * Incorrect usage of `create_io_guide`
 * Misinterpretation of `-line` argument
+
+| **Correction Category** | **Problem Identified** | **Solution Implemented** | **Technical Details** | **Outcome Achieved** |
+|------------------------|------------------------|-------------------------|----------------------|---------------------|
+| **Initial Issue Analysis** | Incorrect coordinate specification in `create_io_guide` led to invalid IO guide regions  | Temporarily disabled all manual IO guides to eliminate coordinate-driven errors | Switched to automatic IO placement using `place_io -include_unassigned_pads`  | ICC2 correctly inferred pad-ring geometry and distributed pads along die edges  |
+| **1. Explicit Die and Core Definition** | Ambiguity in die/core interpretation causing inconsistent geometry  | Stabilized floorplan by explicitly defining die and core geometry using die-controlled floorplanning  | -  Die boundaries: 3588 µm × 5188 µm via `initialize_floorplan` <br>-  Uniform 300 µm core offset on all four sides<br>-  Removed die/core interpretation ambiguity | Physical canvas became deterministic and reproducible across runs  |
+| **2. Manual IO Pad Floorplanning** | Loss of explicit control over pad distribution  | Reintroduced manual control cautiously after validating automatic placement  | -  Replaced automatic `place_io` with manual `create_io_guide` <br>-  Created separate IO guides for left, right, top, bottom edges<br>-  Filtered valid pad cells (`pad_cell == true`)<br>-  Aligned guides to die boundaries | Structured pad placement without violating die constraints  |
+| **3. Correct `create_io_guide -line` Usage** | Endpoint-style definitions causing pads to drift into invalid regions  | Corrected interpretation of `-line` argument syntax  | -  Used single starting coordinate only<br>-  Specified positive guide length<br>-  Removed absolute end coordinates<br>-  Computed lengths from usable die span | Eliminated root cause of invalid pad placement  |
+| **4. Intentional Corner Pad Handling** | Uncertainty in corner pad placement methodology  | Excluded corner pads from explicit IO guide definitions  | -  ICC2 automatically inferred corner positions from surrounding pad-ring geometry <br>-  Corner pads repositioned automatically as edge guides corrected<br>-  No manual intervention required | Aligned with standard ICC2 pad-ring handling methodology  |
+| **5. Controlled Scope: Floorplan-Only Flow** | Risk of introducing downstream complexity prematurely  | Intentionally constrained flow to floorplanning stage only  | **Excluded operations:**<br>-  Standard-cell placement<br>-  Macro placement<br>-  Clock Tree Synthesis (CTS)<br>-  Routing<br>-  Power Distribution Network (PDN)<br><br>**Included operations:**<br>-  Die and core definition<br>-  IO pad placement<br>-  Floorplan validation<br>-  DEF generation | Maintained focus on floorplanning correctness without introducing downstream complexity  |
+
+### Implementation Strategy Applied
+
+The correction process followed a systematic **iterative refinement methodology**:
+
+1. **Problem Isolation**: Identified coordinate specification errors as root cause
+2. **Baseline Establishment**: Validated correct behavior using automatic placement
+3. **Incremental Reintroduction**: Cautiously added manual constraints after confirming baseline correctness
+4. **Constraint Validation**: Verified each guide definition before proceeding
+5. **Visual Verification**: Used ICC2 GUI to confirm pad positions on die boundaries
 
 ### Fix Applied
 
@@ -741,25 +764,17 @@ Corner pads were intentionally left to **ICC2 auto-inference**.
 
 ## 📊 Final Floorplan Analysis
 
-| Metric        | Result    |
-| ------------- | --------- |
-| Die Size      | Correct   |
-| Core Margin   | Uniform   |
-| IO Pads       | All edges |
-| Interior Pads | None      |
-| Errors        | Zero      |
+| Final Floorplan Metrics | Result    | Edge-wise Distribution | Pad Count |
+| ----------------------- | --------- | ---------------------- | --------- |
+| Die Size                | Correct   | Top                    | 11        |
+| Core Margin             | Uniform   | Bottom                 | 12        |
+| IO Pads                 | All edges | Left                   | 12        |
+| Interior Pads           | None      | Right                  | 13        |
+| Errors                  | Zero      | **Total**              | **48**    |
 
-### Edge-wise Pad Distribution
-
-| Edge   | Pads |
-| ------ | ---- |
-| Top    | 11   |
-| Bottom | 12   |
-| Left   | 12   |
-| Right  | 13   |
 
 <div align="center" >
-  <img src="./assets/placement.png" alt="placement" width="80%">
+  <img src="./assets/io_pad_placement.png" alt="io_pad_placement" width="80%">
 </div>
 
 In the above image, SRAM Block is macro which is currently not placed inside the area. It is taken care of in the Task 7 consisting of the complete PD Flow for Raven SOC.
